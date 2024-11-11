@@ -9,29 +9,35 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int AndKeyExpression = 0;
-  public static final int BinaryKeyExpression = 1;
-  public static final int ChatBot = 2;
-  public static final int ChatNode = 3;
-  public static final int Connection = 4;
-  public static final int ContinuingChatNode = 5;
-  public static final int KeyExpression = 6;
-  public static final int NotKeyExpression = 7;
-  public static final int OrKeyExpression = 8;
-  public static final int SimpleKeyExpression = 9;
+  public static final int ActionKey = 0;
+  public static final int AndKeyExpression = 1;
+  public static final int BinaryKeyExpression = 2;
+  public static final int ChatBot = 3;
+  public static final int ChatNode = 4;
+  public static final int Connection = 5;
+  public static final int ContinuingChatNode = 6;
+  public static final int Key = 7;
+  public static final int KeyExpression = 8;
+  public static final int NotKeyExpression = 9;
+  public static final int OrKeyExpression = 10;
+  public static final int SimpleKeyExpression = 11;
+  public static final int VariableChatNode = 12;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x13a7dce9ad43efL, 0xa0338212155a1b91L);
+    builder.put(0x22a9042148cdd605L, ActionKey);
     builder.put(0x72ca8e62f371e5baL, AndKeyExpression);
     builder.put(0x72ca8e62f371e5b5L, BinaryKeyExpression);
     builder.put(0x72ca8e62f371e592L, ChatBot);
     builder.put(0x72ca8e62f371e594L, ChatNode);
     builder.put(0x72ca8e62f371e5a6L, Connection);
     builder.put(0x72ca8e62f371e59cL, ContinuingChatNode);
+    builder.put(0x22a9042148cdd604L, Key);
     builder.put(0x72ca8e62f371e5adL, KeyExpression);
     builder.put(0x72ca8e62f371e5bbL, NotKeyExpression);
     builder.put(0x72ca8e62f371e5b9L, OrKeyExpression);
     builder.put(0x72ca8e62f371e5b3L, SimpleKeyExpression);
+    builder.put(0x22a9042148cdd5ffL, VariableChatNode);
     myIndex = builder.seal();
   }
 
