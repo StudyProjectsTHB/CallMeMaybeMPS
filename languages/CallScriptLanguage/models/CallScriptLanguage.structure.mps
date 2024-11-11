@@ -71,6 +71,13 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="7bazAbNsumk" resolve="ChatNode" />
     </node>
+    <node concept="1TJgyj" id="2aD1258OL0k" role="1TKVEi">
+      <property role="IQ2ns" value="2497532009355874324" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="variableChatNodes" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2aD1258NtnZ" resolve="VariableChatNode" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7bazAbNsumk">
     <property role="EcuMT" value="8271580221261604244" />
@@ -83,6 +90,11 @@
     </node>
     <node concept="PrWs8" id="7bazAbNsunb" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="2aD1258Nto3" role="1TKVEi">
+      <property role="IQ2ns" value="2497532009355531779" />
+      <property role="20kJfa" value="variable" />
+      <ref role="20lvS9" node="2aD1258NtnZ" resolve="VariableChatNode" />
     </node>
   </node>
   <node concept="1TIwiD" id="7bazAbNsums">
@@ -106,7 +118,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="key" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7bazAbNsumH" resolve="KeyExpression" />
+      <ref role="20lvS9" node="2aD1258Nto4" resolve="Key" />
     </node>
     <node concept="1TJgyj" id="7zjlSJaqGTw" role="1TKVEi">
       <property role="IQ2ns" value="8706398762545368672" />
@@ -119,7 +131,8 @@
     <property role="EcuMT" value="8271580221261604269" />
     <property role="TrG5h" value="KeyExpression" />
     <property role="R5$K7" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <property role="34LRSv" value="&quot;" />
+    <ref role="1TJDcQ" node="2aD1258Nto4" resolve="Key" />
   </node>
   <node concept="1TIwiD" id="7bazAbNsumN">
     <property role="EcuMT" value="8271580221261604275" />
@@ -175,6 +188,36 @@
       <property role="20kJfa" value="operand" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7bazAbNsumH" resolve="KeyExpression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2aD1258NtnZ">
+    <property role="EcuMT" value="2497532009355531775" />
+    <property role="TrG5h" value="VariableChatNode" />
+    <ref role="1TJDcQ" node="7bazAbNsumk" resolve="ChatNode" />
+    <node concept="1TJgyi" id="2aD1258Nto0" role="1TKVEl">
+      <property role="IQ2nx" value="2497532009355531776" />
+      <property role="TrG5h" value="variableName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="2aD1258Nto1" role="1TKVEi">
+      <property role="IQ2ns" value="2497532009355531777" />
+      <property role="20kJfa" value="chatNode" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7bazAbNsumk" resolve="ChatNode" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2aD1258Nto4">
+    <property role="EcuMT" value="2497532009355531780" />
+    <property role="TrG5h" value="Key" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+  </node>
+  <node concept="1TIwiD" id="2aD1258Nto5">
+    <property role="EcuMT" value="2497532009355531781" />
+    <property role="TrG5h" value="ActionKey" />
+    <property role="34LRSv" value="!" />
+    <ref role="1TJDcQ" node="2aD1258Nto4" resolve="Key" />
+    <node concept="PrWs8" id="2aD1258Nto6" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

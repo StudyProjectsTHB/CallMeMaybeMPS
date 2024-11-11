@@ -9,22 +9,32 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_ActionKey;
   private ConceptPresentation props_AndKeyExpression;
   private ConceptPresentation props_BinaryKeyExpression;
   private ConceptPresentation props_ChatBot;
   private ConceptPresentation props_ChatNode;
   private ConceptPresentation props_Connection;
   private ConceptPresentation props_ContinuingChatNode;
+  private ConceptPresentation props_Key;
   private ConceptPresentation props_KeyExpression;
   private ConceptPresentation props_NotKeyExpression;
   private ConceptPresentation props_OrKeyExpression;
   private ConceptPresentation props_SimpleKeyExpression;
+  private ConceptPresentation props_VariableChatNode;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.ActionKey:
+        if (props_ActionKey == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ActionKey = cpb.create();
+        }
+        return props_ActionKey;
       case LanguageConceptSwitch.AndKeyExpression:
         if (props_AndKeyExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -66,6 +76,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ContinuingChatNode = cpb.create();
         }
         return props_ContinuingChatNode;
+      case LanguageConceptSwitch.Key:
+        if (props_Key == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Key");
+          props_Key = cpb.create();
+        }
+        return props_Key;
       case LanguageConceptSwitch.KeyExpression:
         if (props_KeyExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -93,6 +110,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SimpleKeyExpression = cpb.create();
         }
         return props_SimpleKeyExpression;
+      case LanguageConceptSwitch.VariableChatNode:
+        if (props_VariableChatNode == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_VariableChatNode = cpb.create();
+        }
+        return props_VariableChatNode;
     }
     return null;
   }

@@ -13,16 +13,19 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptActionKey = createDescriptorForActionKey();
   /*package*/ final ConceptDescriptor myConceptAndKeyExpression = createDescriptorForAndKeyExpression();
   /*package*/ final ConceptDescriptor myConceptBinaryKeyExpression = createDescriptorForBinaryKeyExpression();
   /*package*/ final ConceptDescriptor myConceptChatBot = createDescriptorForChatBot();
   /*package*/ final ConceptDescriptor myConceptChatNode = createDescriptorForChatNode();
   /*package*/ final ConceptDescriptor myConceptConnection = createDescriptorForConnection();
   /*package*/ final ConceptDescriptor myConceptContinuingChatNode = createDescriptorForContinuingChatNode();
+  /*package*/ final ConceptDescriptor myConceptKey = createDescriptorForKey();
   /*package*/ final ConceptDescriptor myConceptKeyExpression = createDescriptorForKeyExpression();
   /*package*/ final ConceptDescriptor myConceptNotKeyExpression = createDescriptorForNotKeyExpression();
   /*package*/ final ConceptDescriptor myConceptOrKeyExpression = createDescriptorForOrKeyExpression();
   /*package*/ final ConceptDescriptor myConceptSimpleKeyExpression = createDescriptorForSimpleKeyExpression();
+  /*package*/ final ConceptDescriptor myConceptVariableChatNode = createDescriptorForVariableChatNode();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -37,13 +40,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAndKeyExpression, myConceptBinaryKeyExpression, myConceptChatBot, myConceptChatNode, myConceptConnection, myConceptContinuingChatNode, myConceptKeyExpression, myConceptNotKeyExpression, myConceptOrKeyExpression, myConceptSimpleKeyExpression);
+    return Arrays.asList(myConceptActionKey, myConceptAndKeyExpression, myConceptBinaryKeyExpression, myConceptChatBot, myConceptChatNode, myConceptConnection, myConceptContinuingChatNode, myConceptKey, myConceptKeyExpression, myConceptNotKeyExpression, myConceptOrKeyExpression, myConceptSimpleKeyExpression, myConceptVariableChatNode);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.ActionKey:
+        return myConceptActionKey;
       case LanguageConceptSwitch.AndKeyExpression:
         return myConceptAndKeyExpression;
       case LanguageConceptSwitch.BinaryKeyExpression:
@@ -56,6 +61,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptConnection;
       case LanguageConceptSwitch.ContinuingChatNode:
         return myConceptContinuingChatNode;
+      case LanguageConceptSwitch.Key:
+        return myConceptKey;
       case LanguageConceptSwitch.KeyExpression:
         return myConceptKeyExpression;
       case LanguageConceptSwitch.NotKeyExpression:
@@ -64,6 +71,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptOrKeyExpression;
       case LanguageConceptSwitch.SimpleKeyExpression:
         return myConceptSimpleKeyExpression;
+      case LanguageConceptSwitch.VariableChatNode:
+        return myConceptVariableChatNode;
       default:
         return null;
     }
@@ -74,6 +83,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForActionKey() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CallScriptLanguage", "ActionKey", 0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd605L);
+    b.class_(false, false, false);
+    // extends: CallScriptLanguage.structure.Key
+    b.super_(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd604L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/2497532009355531781");
+    b.version(3);
+    b.alias("!");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForAndKeyExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CallScriptLanguage", "AndKeyExpression", 0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5baL);
     b.class_(false, false, false);
@@ -113,6 +133,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/8271580221261604244");
     b.version(3);
     b.property("text", 0x72ca8e62f371e59dL).type(PrimitiveTypeId.STRING).origin("8271580221261604253").done();
+    b.associate("variable", 0x22a9042148cdd603L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL).optional(true).origin("2497532009355531779").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForConnection() {
@@ -121,7 +142,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/8271580221261604262");
     b.version(3);
     b.associate("chatNode", 0x78d3578bca6ace60L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L).optional(false).origin("8706398762545368672").done();
-    b.aggregate("key", 0x72ca8e62f371e5afL).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5adL).optional(false).ordered(true).multiple(false).origin("8271580221261604271").done();
+    b.aggregate("key", 0x72ca8e62f371e5afL).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd604L).optional(false).ordered(true).multiple(false).origin("8271580221261604271").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForContinuingChatNode() {
@@ -134,11 +155,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("connection", 0x72ca8e62f371e5c1L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5a6L).optional(false).ordered(true).multiple(true).origin("8271580221261604289").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForKey() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CallScriptLanguage", "Key", 0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd604L);
+    b.class_(false, false, false);
+    b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/2497532009355531780");
+    b.version(3);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForKeyExpression() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CallScriptLanguage", "KeyExpression", 0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5adL);
     b.class_(false, true, false);
+    // extends: CallScriptLanguage.structure.Key
+    b.super_(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd604L);
     b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/8271580221261604269");
     b.version(3);
+    b.alias("\"");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForNotKeyExpression() {
@@ -171,6 +202,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(3);
     b.property("key", 0x72ca8e62f371e5b4L).type(PrimitiveTypeId.STRING).origin("8271580221261604276").done();
     b.alias("\"");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForVariableChatNode() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("CallScriptLanguage", "VariableChatNode", 0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL);
+    b.class_(false, false, false);
+    // extends: CallScriptLanguage.structure.ChatNode
+    b.super_(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L);
+    b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/2497532009355531775");
+    b.version(3);
+    b.property("variableName", 0x22a9042148cdd600L).type(PrimitiveTypeId.STRING).origin("2497532009355531776").done();
+    b.associate("chatNode", 0x22a9042148cdd601L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L).optional(false).origin("2497532009355531777").done();
     return b.create();
   }
 }
