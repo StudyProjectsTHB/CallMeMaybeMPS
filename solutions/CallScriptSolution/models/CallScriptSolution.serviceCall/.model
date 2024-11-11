@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:a57e983d-aa19-4452-b9f5-57dd0c701f34(CallScriptSolution.serviceCall)" content="header">
+  <persistence version="9" />
+  <languages>
+    <use id="0013a7dc-e9ad-43ef-a033-8212155a1b91" name="CallScriptLanguage" version="-1" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="12" />
+    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="0" />
+    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="8" />
+    <use id="d5033cee-f632-44b6-b308-89d4fbde34ff" name="jetbrains.mps.build.startup" version="0" />
+  </languages>
+  <imports>
+    <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
+  </imports>
+</model>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <root nodeRef="r:cf01a1f4-6b27-4270-b97c-ca460cccf7e7(ChatBot.build)/2293187598782645706">
+    <file name="ChatBot.xml">
+      <unit id="2293187598782645706" at="1,0,565,10" name="ChatBot.build.ChatBot" />
+    </file>
+  </root>
+  <root nodeRef="r:cf01a1f4-6b27-4270-b97c-ca460cccf7e7(ChatBot.build)/2293187598782645877">
+    <file name="ChatBotDistribution.xml">
+      <unit id="2293187598782645877" at="1,0,222,10" name="ChatBot.build.ChatBotDistribution" />
+    </file>
+  </root>
+  <root nodeRef="r:cf01a1f4-6b27-4270-b97c-ca460cccf7e7(ChatBot.build)/2293187598782646548">
+    <file name="Info.plist.xml">
+      <unit id="2293187598782646548" at="1,0,187,8" name="ChatBot.build.Info$plist" />
+    </file>
+  </root>
+</debug-info>
+
