@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="9yi6nlngnoa1199c36s7db6eyebn68u">
-  <files names="ChatBot.xml:ChatBotDistribution.xml:Info.plist.xml:Main.java:ServiceCall.java:chatbot.bat:chatbot.sh:chatbot.vmoptions:chatbot64.vmoptions" />
+<product version="3" modelHash="d2qjulrdgldsuydjs05omfj1jej9gf2">
+  <files names="CallMeMaybeMPS.xml:CallMeMaybeMPSDistribution.xml:Info.plist.xml:Main.java:ServiceCall.java:callmemaybemps.bat:callmemaybemps.sh:callmemaybemps.vmoptions:callmemaybemps64.vmoptions" />
 </product>
 
