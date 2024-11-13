@@ -3,6 +3,7 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/CallScriptLanguage/CallScriptLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/CallMeMaybeMPS.build/CallMeMaybeMPS.build.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/CallScriptSolution/CallScriptSolution.msd" folder="" />
     </projectModules>
   </component>

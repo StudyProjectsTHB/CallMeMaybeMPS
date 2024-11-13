@@ -12,9 +12,9 @@
           <string>mpr</string>
         </array>
         <key>CFBundleTypeIconFile</key>
-        <string>chatbot.icns</string>
+        <string>callmemaybemps.icns</string>
         <key>CFBundleTypeName</key>
-        <string>ChatBot Project</string>
+        <string>CallMeMaybeMPS Project</string>
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
       </dict>
@@ -36,21 +36,21 @@
       </dict>
     </array>
     <key>CFBundleExecutable</key>
-    <string>chatbot</string>
+    <string>callmemaybemps</string>
     <key>CFBundleIconFile</key>
-    <string>chatbot.icns</string>
+    <string>callmemaybemps.icns</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>ChatBot</string>
+    <string>CallMeMaybeMPS</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleIdentifier</key>
-    <string>com.chatbot</string>
+    <string>com.callmemaybemps</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleGetInfoString</key>
-    <string>ChatBot $version$</string>
+    <string>CallMeMaybeMPS $version$</string>
     <key>CFBundleShortVersionString</key>
     <string>$version$</string>
     <key>CFBundleVersion</key>
@@ -148,7 +148,7 @@
         <string>false</string>
         
         <key>idea.paths.selector</key>
-        <string>ChatBot1.0</string>
+        <string>CallMeMaybeMPS1.0</string>
         
         <key>jna.boot.library.path</key>
         <string>$APP_PACKAGE/Contents/lib/jna</string>
@@ -163,7 +163,7 @@
         <string>true</string>
         
         <key>idea.executable</key>
-        <string>chatbot</string>
+        <string>callmemaybemps</string>
         
         <key>idea.home.path</key>
         <string>$APP_PACKAGE/Contents</string>
@@ -177,7 +177,7 @@
         <key>jbScreenMenuBar.useStubItem</key>
         <string>true</string>
       </dict>
-      <!--Use Contents/bin/chatbot.vmoptions or ~/Library/Preferences/ChatBot1.0/chatbot.vmoptions file to modify VMOptions-->
+      <!--Use Contents/bin/callmemaybemps.vmoptions or ~/Library/Preferences/CallMeMaybeMPS1.0/callmemaybemps.vmoptions file to modify VMOptions-->
       <key>VMOptions</key>
       <string>-XX:+UseCompressedOops</string>
       <key>WorkingDirectory</key>
