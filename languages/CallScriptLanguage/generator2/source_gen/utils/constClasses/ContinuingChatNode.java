@@ -4,21 +4,41 @@ package utils.constClasses;
 
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import java.util.ArrayList;
 
 public class ContinuingChatNode extends ChatNode {
   private List<Connection> connections;
   public ContinuingChatNode(String name, String text, List<Connection> connections) {
-    super(name, text);
+    this(name, text, "", connections);
+  }
+
+  public ContinuingChatNode(String name, String text, String variableName, List<Connection> connections) {
+    super(name, text, variableName);
     this.connections = connections;
   }
 
+
   public String findNextChatNode(String key) {
     for (Connection connection : ListSequence.fromList(connections)) {
-      if (connection.isKeyInExpression(key)) {
+      if (connection.isRightExpression(key)) {
         return connection.getChatNode();
       }
     }
 
     return null;
+  }
+
+  public List<ActionKey> getActionKeys() {
+    List<ActionKey> resultActionKeys = ListSequence.fromList(new ArrayList<ActionKey>());
+    for (Connection connection : ListSequence.fromList(connections)) {
+      if (connection.isActionKeyConnection()) {
+        ActionKey resultActionKey = connection.getActionKey();
+        if (resultActionKey != null) {
+          ListSequence.fromList(resultActionKeys).addElement(resultActionKey);
+        }
+      }
+    }
+
+    return resultActionKeys;
   }
 }

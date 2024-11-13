@@ -9,8 +9,8 @@ public class NotKeyExpression extends KeyExpression {
   public NotKeyExpression(KeyExpression operand) {
     this.operand = operand;
   }
-  public boolean isKeyInExpression(String key) {
-    return !(operand.isKeyInExpression(key));
+  public boolean isRightExpression(String key) {
+    return !(operand.isRightExpression(key));
   }
 
 }

@@ -4,10 +4,10 @@ package utils.constClasses;
 
 
 public class Connection {
-  private KeyExpression key;
+  private Key key;
   private String chatNodeName;
 
-  public Connection(KeyExpression key, String chatNodeName) {
+  public Connection(Key key, String chatNodeName) {
     this.key = key;
     this.chatNodeName = chatNodeName;
   }
@@ -16,7 +16,22 @@ public class Connection {
     return this.chatNodeName;
   }
 
-  public boolean isKeyInExpression(String key) {
-    return this.key.isKeyInExpression(key);
+  public boolean isRightExpression(String key) {
+    return this.key.isRightExpression(key);
+  }
+
+  public boolean isActionKeyConnection() {
+    return key instanceof ActionKey;
+  }
+
+  public ActionKey getActionKey() {
+    if (isActionKeyConnection()) {
+      return as_a2izcv_a0a0a0l(key, ActionKey.class);
+    } else {
+      return null;
+    }
+  }
+  private static <T> T as_a2izcv_a0a0a0l(Object o, Class<T> type) {
+    return (type.isInstance(o) ? (T) o : null);
   }
 }

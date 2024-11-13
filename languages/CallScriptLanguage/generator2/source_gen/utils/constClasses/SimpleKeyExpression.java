@@ -8,7 +8,7 @@ public class SimpleKeyExpression extends KeyExpression {
   public SimpleKeyExpression(String key) {
     this.key = key;
   }
-  public boolean isKeyInExpression(String key) {
+  public boolean isRightExpression(String key) {
     return key.toLowerCase().contains(this.key.toLowerCase());
   }
 }

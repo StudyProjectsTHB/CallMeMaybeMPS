@@ -7,8 +7,8 @@ public class OrKeyExpression extends BinaryKeyExpression {
   public OrKeyExpression(KeyExpression leftOpernad, KeyExpression rightOperand) {
     super(leftOpernad, rightOperand);
   }
-  public boolean isKeyInExpression(String key) {
-    return leftOperand.isKeyInExpression(key) || rightOperand.isKeyInExpression(key);
+  public boolean isRightExpression(String key) {
+    return leftOperand.isRightExpression(key) || rightOperand.isRightExpression(key);
   }
 
 }

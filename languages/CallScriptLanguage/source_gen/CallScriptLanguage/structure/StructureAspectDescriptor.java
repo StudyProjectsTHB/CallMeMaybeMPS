@@ -124,6 +124,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("startChatNode", 0x72ca8e62f371e5a3L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL).optional(false).ordered(true).multiple(false).origin("8271580221261604259").done();
     b.aggregate("middleChatNodes", 0x72ca8e62f371e5a4L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL).optional(true).ordered(true).multiple(true).origin("8271580221261604260").done();
     b.aggregate("endChatNode", 0x72ca8e62f371e5a5L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L).optional(false).ordered(true).multiple(true).origin("8271580221261604261").done();
+    b.aggregate("variableChatNodes", 0x22a9042148d31014L).target(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL).optional(true).ordered(true).multiple(true).origin("2497532009355874324").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForChatNode() {
