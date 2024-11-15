@@ -20,7 +20,105 @@
       <unit at="25,0,69,0" name="CallScriptLanguage.editor.Connection_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="16,0,60,0" name="CallScriptLanguage.editor.EditorAspectDescriptorImpl" />
+      <unit at="16,0,64,0" name="CallScriptLanguage.editor.EditorAspectDescriptorImpl" />
+    </file>
+  </root>
+  <root nodeRef="r:636cdc73-2606-4507-9239-596c3fbd72d8(CallScriptLanguage.editor)/8346969612422836866">
+    <file name="KeyExpression_Editor.java">
+      <node id="8346969612422836866" at="11,79,12,79" concept="6" />
+      <node id="8346969612422836866" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="8346969612422836866" at="11,79,12,79" />
+      <scope id="8346969612422836866" at="11,0,14,0">
+        <var name="editorContext" id="8346969612422836866" />
+        <var name="node" id="8346969612422836866" />
+      </scope>
+      <unit id="8346969612422836866" at="10,0,15,0" name="CallScriptLanguage.editor.KeyExpression_Editor" />
+    </file>
+    <file name="KeyExpression_EditorBuilder_a.java">
+      <node id="8346969612422836866" at="22,93,23,19" concept="9" />
+      <node id="8346969612422836866" at="23,19,24,18" concept="1" />
+      <node id="8346969612422836866" at="29,26,30,18" concept="6" />
+      <node id="8346969612422836866" at="33,39,34,30" concept="6" />
+      <node id="8346969612423800176" at="37,41,38,93" concept="5" />
+      <node id="8346969612423800176" at="38,93,39,46" concept="1" />
+      <node id="8346969612423800176" at="39,46,40,28" concept="1" />
+      <node id="8346969612423800176" at="40,28,41,31" concept="1" />
+      <node id="8346969612423800176" at="41,31,42,34" concept="5" />
+      <node id="8346969612423991675" at="42,34,43,76" concept="1" />
+      <node id="8346969612423991676" at="43,76,44,77" concept="1" />
+      <node id="8346969612424184529" at="44,77,45,98" concept="1" />
+      <node id="8346969612423800176" at="45,98,46,40" concept="1" />
+      <node id="8346969612423800176" at="46,40,47,34" concept="1" />
+      <node id="8346969612423800176" at="47,34,48,22" concept="6" />
+      <node id="8346969612422836866" at="19,0,21,0" concept="2" trace="myNode" />
+      <node id="8346969612422836866" at="33,0,36,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="8346969612422836866" at="22,0,26,0" concept="0" trace="KeyExpression_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="8346969612422836866" at="27,0,32,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="8346969612423800176" at="37,0,50,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="8346969612422836866" at="29,26,30,18" />
+      <scope id="8346969612422836866" at="33,39,34,30" />
+      <scope id="8346969612422836866" at="22,93,24,18" />
+      <scope id="8346969612422836866" at="33,0,36,0" />
+      <scope id="8346969612422836866" at="22,0,26,0">
+        <var name="context" id="8346969612422836866" />
+        <var name="node" id="8346969612422836866" />
+      </scope>
+      <scope id="8346969612422836866" at="27,0,32,0" />
+      <scope id="8346969612423800176" at="37,41,48,22">
+        <var name="editorCell" id="8346969612423800176" />
+        <var name="style" id="8346969612423800176" />
+      </scope>
+      <scope id="8346969612423800176" at="37,0,50,0" />
+      <unit id="8346969612422836866" at="18,0,51,0" name="CallScriptLanguage.editor.KeyExpression_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:636cdc73-2606-4507-9239-596c3fbd72d8(CallScriptLanguage.editor)/8346969612423220416">
+    <file name="Key_Editor.java">
+      <node id="8346969612423220416" at="11,79,12,69" concept="6" />
+      <node id="8346969612423220416" at="11,0,14,0" concept="4" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="8346969612423220416" at="11,79,12,69" />
+      <scope id="8346969612423220416" at="11,0,14,0">
+        <var name="editorContext" id="8346969612423220416" />
+        <var name="node" id="8346969612423220416" />
+      </scope>
+      <unit id="8346969612423220416" at="10,0,15,0" name="CallScriptLanguage.editor.Key_Editor" />
+    </file>
+    <file name="Key_EditorBuilder_a.java">
+      <node id="8346969612423220416" at="22,83,23,19" concept="9" />
+      <node id="8346969612423220416" at="23,19,24,18" concept="1" />
+      <node id="8346969612423220416" at="29,26,30,18" concept="6" />
+      <node id="8346969612423220416" at="33,39,34,30" concept="6" />
+      <node id="8346969612423800147" at="37,41,38,93" concept="5" />
+      <node id="8346969612423800147" at="38,93,39,46" concept="1" />
+      <node id="8346969612423800147" at="39,46,40,28" concept="1" />
+      <node id="8346969612423800147" at="40,28,41,31" concept="1" />
+      <node id="8346969612423800147" at="41,31,42,34" concept="5" />
+      <node id="8346969612423991643" at="42,34,43,76" concept="1" />
+      <node id="8346969612423991645" at="43,76,44,77" concept="1" />
+      <node id="8346969612424184560" at="44,77,45,98" concept="1" />
+      <node id="8346969612423800147" at="45,98,46,40" concept="1" />
+      <node id="8346969612423800147" at="46,40,47,34" concept="1" />
+      <node id="8346969612423800147" at="47,34,48,22" concept="6" />
+      <node id="8346969612423220416" at="19,0,21,0" concept="2" trace="myNode" />
+      <node id="8346969612423220416" at="33,0,36,0" concept="4" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="8346969612423220416" at="22,0,26,0" concept="0" trace="Key_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="8346969612423220416" at="27,0,32,0" concept="4" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="8346969612423800147" at="37,0,50,0" concept="4" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="8346969612423220416" at="29,26,30,18" />
+      <scope id="8346969612423220416" at="33,39,34,30" />
+      <scope id="8346969612423220416" at="22,83,24,18" />
+      <scope id="8346969612423220416" at="33,0,36,0" />
+      <scope id="8346969612423220416" at="22,0,26,0">
+        <var name="context" id="8346969612423220416" />
+        <var name="node" id="8346969612423220416" />
+      </scope>
+      <scope id="8346969612423220416" at="27,0,32,0" />
+      <scope id="8346969612423800147" at="37,41,48,22">
+        <var name="editorCell" id="8346969612423800147" />
+        <var name="style" id="8346969612423800147" />
+      </scope>
+      <scope id="8346969612423800147" at="37,0,50,0" />
+      <unit id="8346969612423220416" at="18,0,51,0" name="CallScriptLanguage.editor.Key_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:636cdc73-2606-4507-9239-596c3fbd72d8(CallScriptLanguage.editor)/8706398762544245723">

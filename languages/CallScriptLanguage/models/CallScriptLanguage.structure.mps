@@ -131,7 +131,6 @@
     <property role="EcuMT" value="8271580221261604269" />
     <property role="TrG5h" value="KeyExpression" />
     <property role="R5$K7" value="true" />
-    <property role="34LRSv" value="&quot;" />
     <ref role="1TJDcQ" node="2aD1258Nto4" resolve="Key" />
   </node>
   <node concept="1TIwiD" id="7bazAbNsumN">
@@ -214,7 +213,7 @@
   <node concept="1TIwiD" id="2aD1258Nto5">
     <property role="EcuMT" value="2497532009355531781" />
     <property role="TrG5h" value="ActionKey" />
-    <property role="34LRSv" value="A" />
+    <property role="34LRSv" value="+" />
     <ref role="1TJDcQ" node="2aD1258Nto4" resolve="Key" />
     <node concept="PrWs8" id="2aD1258Nto6" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />

@@ -35,6 +35,7 @@
         <property id="1186403771423" name="style" index="Vbekb" />
       </concept>
       <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
+      <concept id="1186404574412" name="jetbrains.mps.lang.editor.structure.BackgroundColorStyleClassItem" flags="ln" index="Veino" />
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
         <property id="1221209241505" name="value" index="1lJzqX" />
@@ -47,6 +48,7 @@
         <property id="1215007802031" name="value" index="3$6WeP" />
       </concept>
       <concept id="1215007883204" name="jetbrains.mps.lang.editor.structure.PaddingLeftStyleClassItem" flags="ln" index="3$7fVu" />
+      <concept id="1215007897487" name="jetbrains.mps.lang.editor.structure.PaddingRightStyleClassItem" flags="ln" index="3$7jql" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
@@ -338,6 +340,36 @@
         <property role="3F0ifm" value="%chatNode%" />
       </node>
       <node concept="2iRkQZ" id="NBaVM6RBFw" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7fmpadFsna2">
+    <ref role="1XX52x" to="q9yp:7bazAbNsumH" resolve="KeyExpression" />
+    <node concept="3F0ifn" id="7fmpadFw2lK" role="2wV5jI">
+      <property role="3F0ifm" value="" />
+      <node concept="3$7fVu" id="7fmpadFwL5V" role="3F10Kt">
+        <property role="3$6WeP" value="1" />
+      </node>
+      <node concept="3$7jql" id="7fmpadFwL5W" role="3F10Kt">
+        <property role="3$6WeP" value="1" />
+      </node>
+      <node concept="Veino" id="7fmpadFxwbh" role="3F10Kt">
+        <property role="Vb096" value="fLwANPn/red" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7fmpadFtON0">
+    <ref role="1XX52x" to="q9yp:2aD1258Nto4" resolve="Key" />
+    <node concept="3F0ifn" id="7fmpadFw2lj" role="2wV5jI">
+      <property role="3F0ifm" value="" />
+      <node concept="3$7fVu" id="7fmpadFwL5r" role="3F10Kt">
+        <property role="3$6WeP" value="1" />
+      </node>
+      <node concept="3$7jql" id="7fmpadFwL5t" role="3F10Kt">
+        <property role="3$6WeP" value="1" />
+      </node>
+      <node concept="Veino" id="7fmpadFxwbK" role="3F10Kt">
+        <property role="Vb096" value="fLwANPn/red" />
+      </node>
     </node>
   </node>
 </model>
