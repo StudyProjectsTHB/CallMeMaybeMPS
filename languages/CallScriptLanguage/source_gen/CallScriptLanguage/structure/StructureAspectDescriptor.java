@@ -91,7 +91,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:7147c60d-47c0-4484-9b2a-659efddb50e6(CallScriptLanguage.structure)/2497532009355531781");
     b.version(3);
-    b.alias("!");
+    b.alias("A");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAndKeyExpression() {

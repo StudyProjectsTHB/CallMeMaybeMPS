@@ -48,6 +48,7 @@
       </concept>
       <concept id="1215007883204" name="jetbrains.mps.lang.editor.structure.PaddingLeftStyleClassItem" flags="ln" index="3$7fVu" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
         <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
@@ -75,6 +76,7 @@
     <node concept="3EZMnI" id="7zjlSJamqJt" role="2wV5jI">
       <node concept="2iRkQZ" id="7zjlSJamqJu" role="2iSdaV" />
       <node concept="3F0A7n" id="7zjlSJamvJH" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Name des ChatBots&gt;" />
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         <node concept="VSNWy" id="7zjlSJamPuv" role="3F10Kt">
           <property role="1lJzqX" value="25" />
@@ -83,11 +85,17 @@
           <property role="Vbekb" value="g1_k_vY/BOLD" />
         </node>
       </node>
+      <node concept="3F0ifn" id="NBaVM714N2" role="3EZMnx">
+        <property role="3F0ifm" value="Startknoten" />
+      </node>
       <node concept="3F1sOY" id="7zjlSJamZNH" role="3EZMnx">
         <ref role="1NtTu8" to="q9yp:7bazAbNsumz" resolve="startChatNode" />
         <node concept="27z8qx" id="7zjlSJapMUv" role="3F10Kt">
           <property role="3$6WeP" value="2" />
         </node>
+      </node>
+      <node concept="3F0ifn" id="NBaVM714N4" role="3EZMnx">
+        <property role="3F0ifm" value="Gesprächsverlauf" />
       </node>
       <node concept="3F2HdR" id="7zjlSJanpEp" role="3EZMnx">
         <ref role="1NtTu8" to="q9yp:7bazAbNsum$" resolve="middleChatNodes" />
@@ -109,6 +117,9 @@
           <node concept="l2Vlx" id="7zjlSJayYwM" role="2iSdaV" />
           <node concept="VPM3Z" id="7zjlSJayYwN" role="3F10Kt" />
         </node>
+      </node>
+      <node concept="3F0ifn" id="NBaVM714N6" role="3EZMnx">
+        <property role="3F0ifm" value="Endknoten" />
       </node>
       <node concept="3F2HdR" id="7zjlSJanpEw" role="3EZMnx">
         <ref role="1NtTu8" to="q9yp:7bazAbNsum_" resolve="endChatNode" />
@@ -137,6 +148,7 @@
     <ref role="1XX52x" to="q9yp:7bazAbNsumk" resolve="ChatNode" />
     <node concept="3EZMnI" id="7zjlSJamSpQ" role="2wV5jI">
       <node concept="3F0A7n" id="7zjlSJamVza" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Name der Chat-Node&gt;" />
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         <node concept="Vb9p2" id="7zjlSJamVzf" role="3F10Kt">
           <property role="Vbekb" value="g1_k_vY/BOLD" />
@@ -149,10 +161,25 @@
         </node>
       </node>
       <node concept="3F0A7n" id="7zjlSJamVzd" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Was soll gesagt werden? (text)&gt;" />
         <ref role="1NtTu8" to="q9yp:7bazAbNsumt" resolve="text" />
         <node concept="3$7fVu" id="7zjlSJan8zH" role="3F10Kt">
           <property role="3$6WeP" value="4" />
         </node>
+      </node>
+      <node concept="3EZMnI" id="NBaVM6SHHD" role="3EZMnx">
+        <node concept="VPM3Z" id="NBaVM6SHHF" role="3F10Kt" />
+        <node concept="1iCGBv" id="NBaVM6SHHJ" role="3EZMnx">
+          <property role="1$x2rV" value="&lt;Variablen angeben, falls nötig&gt;" />
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
+          <node concept="1sVBvm" id="NBaVM6SHHL" role="1sWHZn">
+            <node concept="3F0A7n" id="NBaVM6SHHR" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+            </node>
+          </node>
+        </node>
+        <node concept="2iRfu4" id="NBaVM6SHHI" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="7zjlSJamSpT" role="2iSdaV" />
     </node>
@@ -161,6 +188,7 @@
     <ref role="1XX52x" to="q9yp:7bazAbNsums" resolve="ContinuingChatNode" />
     <node concept="3EZMnI" id="7zjlSJanuth" role="2wV5jI">
       <node concept="3F0A7n" id="7zjlSJanuti" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;" />
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         <node concept="Vb9p2" id="7zjlSJanutj" role="3F10Kt">
           <property role="Vbekb" value="g1_k_vY/BOLD" />
@@ -198,6 +226,19 @@
             </node>
           </node>
         </node>
+      </node>
+      <node concept="3EZMnI" id="NBaVM6SHI8" role="3EZMnx">
+        <node concept="VPM3Z" id="NBaVM6SHIa" role="3F10Kt" />
+        <node concept="1iCGBv" id="NBaVM6SHIi" role="3EZMnx">
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
+          <node concept="1sVBvm" id="NBaVM6SHIk" role="1sWHZn">
+            <node concept="3F0A7n" id="NBaVM6SHIq" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+            </node>
+          </node>
+        </node>
+        <node concept="2iRfu4" id="NBaVM6SHId" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="7zjlSJanuto" role="2iSdaV" />
     </node>
@@ -270,6 +311,33 @@
         <ref role="1NtTu8" to="q9yp:7bazAbNsumR" resolve="rightOperand" />
       </node>
       <node concept="2iRfu4" id="7zjlSJanWEh" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="NBaVM6RBFn">
+    <ref role="1XX52x" to="q9yp:2aD1258Nto5" resolve="ActionKey" />
+    <node concept="3EZMnI" id="NBaVM70nxG" role="2wV5jI">
+      <node concept="3F0ifn" id="NBaVM70nxI" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;&lt;" />
+      </node>
+      <node concept="2iRfu4" id="NBaVM70nxJ" role="2iSdaV" />
+      <node concept="3F0A7n" id="NBaVM70ny5" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="NBaVM70ny3" role="3EZMnx">
+        <property role="3F0ifm" value="&gt;&gt;" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="NBaVM6RBFr">
+    <ref role="1XX52x" to="q9yp:2aD1258NtnZ" resolve="VariableChatNode" />
+    <node concept="3EZMnI" id="NBaVM6RBFt" role="2wV5jI">
+      <node concept="3F0A7n" id="NBaVM6S2yI" role="3EZMnx">
+        <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+      </node>
+      <node concept="3F0ifn" id="NBaVM6S2yT" role="3EZMnx">
+        <property role="3F0ifm" value="%chatNode%" />
+      </node>
+      <node concept="2iRkQZ" id="NBaVM6RBFw" role="2iSdaV" />
     </node>
   </node>
 </model>

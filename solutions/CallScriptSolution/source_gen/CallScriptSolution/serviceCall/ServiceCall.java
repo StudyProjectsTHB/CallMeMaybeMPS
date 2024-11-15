@@ -13,6 +13,7 @@ import utils.constClasses.AndKeyExpression;
 import jetbrains.mps.internal.collections.runtime.LinkedListSequence;
 import java.util.LinkedList;
 import utils.constClasses.ChatNode;
+import utils.constClasses.VariableChatNode;
 
 public class ServiceCall extends ChatBot {
 
@@ -20,6 +21,7 @@ public class ServiceCall extends ChatBot {
     this.setStartChatNode(new ContinuingChatNode("start", "Herzlich willkommen. Wie kann ich Ihnen helfen.", ListSequence.fromListAndArray(new ArrayList<Connection>(), new Connection(new OrKeyExpression(new SimpleKeyExpression("kündigen"), new SimpleKeyExpression("wechseln")), "change contract"), new Connection(new AndKeyExpression(new SimpleKeyExpression("bestellen"), new SimpleKeyExpression("vertrag")), "new contract"), new Connection(new SimpleKeyExpression(""), "start"))));
     ListSequence.fromList(this.middleChatNodes).addSequence(LinkedListSequence.fromLinkedListNew(LinkedListSequence.fromListAndArray(new LinkedList<ContinuingChatNode>(), new ContinuingChatNode("new contract", "Sie wollen also Ihren vertrag ändern. Ist das richtig?", ListSequence.fromListAndArray(new ArrayList<Connection>(), new Connection(new OrKeyExpression(new OrKeyExpression(new SimpleKeyExpression("ja"), new SimpleKeyExpression("stimmt")), new SimpleKeyExpression("genau")), "new contract yes"), new Connection(new OrKeyExpression(new OrKeyExpression(new SimpleKeyExpression("nein"), new SimpleKeyExpression("ne")), new SimpleKeyExpression("nö")), "start"), new Connection(new SimpleKeyExpression(""), "new contract"))), new ContinuingChatNode("change contract", "Sie wollen also Ihren Vertrag ändern. Ist das richtig?", ListSequence.fromListAndArray(new ArrayList<Connection>(), new Connection(new OrKeyExpression(new OrKeyExpression(new SimpleKeyExpression("ja"), new SimpleKeyExpression("stimmt")), new SimpleKeyExpression("genau")), "change contract yes"), new Connection(new OrKeyExpression(new OrKeyExpression(new SimpleKeyExpression("nein"), new SimpleKeyExpression("ne")), new SimpleKeyExpression("nö")), "start"), new Connection(new SimpleKeyExpression(""), "change contract"))))));
     ListSequence.fromList(this.endChatNodes).addSequence(LinkedListSequence.fromLinkedListNew(LinkedListSequence.fromListAndArray(new LinkedList<ChatNode>(), new ChatNode("change contract yes", "Das ist schade. Bis dann."), new ChatNode("new contract yes", "Das ist toll. Das wird dich 100 Euro mehr kosten.  "))));
+    ListSequence.fromList(this.variableChatNodes).addSequence(LinkedListSequence.fromLinkedListNew(LinkedListSequence.fromLinkedList(new LinkedList<VariableChatNode>())));
   }
 
 }
