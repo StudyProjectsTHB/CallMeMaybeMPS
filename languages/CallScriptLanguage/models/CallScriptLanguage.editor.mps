@@ -14,6 +14,7 @@
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
       <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
+      <concept id="1226339751946" name="jetbrains.mps.lang.editor.structure.PaddingTopStyleClassItem" flags="ln" index="27yT$n" />
       <concept id="1226339813308" name="jetbrains.mps.lang.editor.structure.PaddingBottomStyleClassItem" flags="ln" index="27z8qx" />
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
@@ -28,8 +29,12 @@
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
+      <concept id="1186402211651" name="jetbrains.mps.lang.editor.structure.StyleSheet" flags="ng" index="V5hpn">
+        <child id="1186402402630" name="styles" index="V601i" />
+      </concept>
       <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
         <property id="1186403713874" name="color" index="Vb096" />
+        <child id="1186403803051" name="query" index="VblUZ" />
       </concept>
       <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
         <property id="1186403771423" name="style" index="Vbekb" />
@@ -40,15 +45,21 @@
       <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
         <property id="1221209241505" name="value" index="1lJzqX" />
       </concept>
+      <concept id="3383245079137382180" name="jetbrains.mps.lang.editor.structure.StyleClass" flags="ig" index="14StLt" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1225456267680" name="jetbrains.mps.lang.editor.structure.RGBColor" flags="ng" index="1iSF2X">
+        <property id="1225456424731" name="value" index="1iTho6" />
+      </concept>
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ngI" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1215007762405" name="jetbrains.mps.lang.editor.structure.FloatStyleClassItem" flags="ln" index="3$6MrZ">
         <property id="1215007802031" name="value" index="3$6WeP" />
       </concept>
       <concept id="1215007883204" name="jetbrains.mps.lang.editor.structure.PaddingLeftStyleClassItem" flags="ln" index="3$7fVu" />
-      <concept id="1215007897487" name="jetbrains.mps.lang.editor.structure.PaddingRightStyleClassItem" flags="ln" index="3$7jql" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
@@ -60,6 +71,7 @@
         <child id="1073389446424" name="childCellModel" index="3EZMnx" />
       </concept>
       <concept id="1073389577006" name="jetbrains.mps.lang.editor.structure.CellModel_Constant" flags="sn" stub="3610246225209162225" index="3F0ifn">
+        <property id="1082639509531" name="nullText" index="ilYzB" />
         <property id="1073389577007" name="text" index="3F0ifm" />
       </concept>
       <concept id="1073389658414" name="jetbrains.mps.lang.editor.structure.CellModel_Property" flags="sg" stub="730538219796134133" index="3F0A7n" />
@@ -68,8 +80,14 @@
       </concept>
       <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
+      <concept id="1187258617779" name="jetbrains.mps.lang.editor.structure.ForegroundNullColorStyleClassItem" flags="ln" index="1I8cUB" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
     </language>
   </registry>
@@ -80,21 +98,21 @@
       <node concept="3F0A7n" id="7zjlSJamvJH" role="3EZMnx">
         <property role="1$x2rV" value="&lt;Name des ChatBots&gt;" />
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        <node concept="VSNWy" id="7zjlSJamPuv" role="3F10Kt">
-          <property role="1lJzqX" value="25" />
-        </node>
-        <node concept="Vb9p2" id="7zjlSJamPux" role="3F10Kt">
-          <property role="Vbekb" value="g1_k_vY/BOLD" />
-        </node>
+        <ref role="1k5W1q" node="7ePDp5VuxT0" resolve="ChatBotName" />
       </node>
       <node concept="3F0ifn" id="NBaVM714N2" role="3EZMnx">
         <property role="3F0ifm" value="Startknoten" />
+        <ref role="1k5W1q" node="7ePDp5VuxT9" resolve="ChatNodeCategory" />
       </node>
       <node concept="3F1sOY" id="7zjlSJamZNH" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Startknoten erstellen&gt;" />
         <ref role="1NtTu8" to="q9yp:7bazAbNsumz" resolve="startChatNode" />
         <node concept="27z8qx" id="7zjlSJapMUv" role="3F10Kt">
           <property role="3$6WeP" value="2" />
         </node>
+      </node>
+      <node concept="3F0ifn" id="7ePDp5VuNRt" role="3EZMnx">
+        <property role="3F0ifm" value="-----------------------------------" />
       </node>
       <node concept="3F0ifn" id="NBaVM714N4" role="3EZMnx">
         <property role="3F0ifm" value="Gesprächsverlauf" />
@@ -103,7 +121,7 @@
         <ref role="1NtTu8" to="q9yp:7bazAbNsum$" resolve="middleChatNodes" />
         <node concept="2iRkQZ" id="7zjlSJanpEs" role="2czzBx" />
         <node concept="VPM3Z" id="7zjlSJanpEt" role="3F10Kt" />
-        <node concept="27z8qx" id="7zjlSJapMUt" role="3F10Kt">
+        <node concept="3$7fVu" id="7ePDp5VoAPp" role="3F10Kt">
           <property role="3$6WeP" value="2" />
         </node>
         <node concept="3EZMnI" id="7zjlSJayYwH" role="2czzBI">
@@ -120,6 +138,36 @@
           <node concept="VPM3Z" id="7zjlSJayYwN" role="3F10Kt" />
         </node>
       </node>
+      <node concept="3F0ifn" id="7ePDp5VvkZ_" role="3EZMnx">
+        <property role="3F0ifm" value="-----------------------------------" />
+      </node>
+      <node concept="3F0ifn" id="7ePDp5VoAPi" role="3EZMnx">
+        <property role="3F0ifm" value="Variablenknoten" />
+      </node>
+      <node concept="3F2HdR" id="7ePDp5VnDYa" role="3EZMnx">
+        <ref role="1NtTu8" to="q9yp:2aD1258OL0k" />
+        <node concept="2iRkQZ" id="7ePDp5VnDYd" role="2czzBx" />
+        <node concept="VPM3Z" id="7ePDp5VnDYe" role="3F10Kt" />
+        <node concept="3$7fVu" id="7ePDp5VoAPs" role="3F10Kt">
+          <property role="3$6WeP" value="2" />
+        </node>
+        <node concept="3EZMnI" id="7ePDp5VnDYh" role="2czzBI">
+          <node concept="3F0ifn" id="7ePDp5VnDYj" role="3EZMnx">
+            <property role="3F0ifm" value="&lt;neue Variablenblock hinzufügen...&gt;" />
+            <node concept="VechU" id="7ePDp5VnDYm" role="3F10Kt">
+              <property role="Vb096" value="fLJRk5_/gray" />
+            </node>
+            <node concept="3$7fVu" id="7ePDp5VnDYo" role="3F10Kt">
+              <property role="3$6WeP" value="2" />
+            </node>
+          </node>
+          <node concept="l2Vlx" id="7ePDp5VnDYk" role="2iSdaV" />
+          <node concept="VPM3Z" id="7ePDp5VnDYl" role="3F10Kt" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="7ePDp5VuNTB" role="3EZMnx">
+        <property role="3F0ifm" value="-----------------------------------" />
+      </node>
       <node concept="3F0ifn" id="NBaVM714N6" role="3EZMnx">
         <property role="3F0ifm" value="Endknoten" />
       </node>
@@ -132,7 +180,7 @@
         </node>
         <node concept="3EZMnI" id="7zjlSJayYwO" role="2czzBI">
           <node concept="3F0ifn" id="7zjlSJayYwR" role="3EZMnx">
-            <property role="3F0ifm" value="&lt;neuen end Block hinzufügen...&gt;" />
+            <property role="3F0ifm" value="&lt;neuen Endblock hinzufügen...&gt;" />
             <node concept="VechU" id="7zjlSJayYwS" role="3F10Kt">
               <property role="Vb096" value="fLJRk5_/gray" />
             </node>
@@ -162,18 +210,18 @@
           <property role="3$6WeP" value="2" />
         </node>
       </node>
-      <node concept="3F0A7n" id="7zjlSJamVzd" role="3EZMnx">
-        <property role="1$x2rV" value="&lt;Was soll gesagt werden? (text)&gt;" />
-        <ref role="1NtTu8" to="q9yp:7bazAbNsumt" resolve="text" />
-        <node concept="3$7fVu" id="7zjlSJan8zH" role="3F10Kt">
-          <property role="3$6WeP" value="4" />
+      <node concept="3EZMnI" id="7ePDp5VnSKq" role="3EZMnx">
+        <node concept="2iRfu4" id="7ePDp5VnSKr" role="2iSdaV" />
+        <node concept="3F0A7n" id="7zjlSJamVzd" role="3EZMnx">
+          <property role="1$x2rV" value="&lt;Was soll gesagt werden? (text)&gt;" />
+          <ref role="1NtTu8" to="q9yp:7bazAbNsumt" resolve="text" />
+          <node concept="3$7fVu" id="7zjlSJan8zH" role="3F10Kt">
+            <property role="3$6WeP" value="4" />
+          </node>
         </node>
-      </node>
-      <node concept="3EZMnI" id="NBaVM6SHHD" role="3EZMnx">
-        <node concept="VPM3Z" id="NBaVM6SHHF" role="3F10Kt" />
         <node concept="1iCGBv" id="NBaVM6SHHJ" role="3EZMnx">
-          <property role="1$x2rV" value="&lt;Variablen angeben, falls nötig&gt;" />
-          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
+          <property role="1$x2rV" value="&lt;no variable&gt;" />
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" />
           <node concept="1sVBvm" id="NBaVM6SHHL" role="1sWHZn">
             <node concept="3F0A7n" id="NBaVM6SHHR" role="2wV5jI">
               <property role="1Intyy" value="true" />
@@ -181,7 +229,6 @@
             </node>
           </node>
         </node>
-        <node concept="2iRfu4" id="NBaVM6SHHI" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="7zjlSJamSpT" role="2iSdaV" />
     </node>
@@ -190,7 +237,7 @@
     <ref role="1XX52x" to="q9yp:7bazAbNsums" resolve="ContinuingChatNode" />
     <node concept="3EZMnI" id="7zjlSJanuth" role="2wV5jI">
       <node concept="3F0A7n" id="7zjlSJanuti" role="3EZMnx">
-        <property role="1$x2rV" value="&lt;" />
+        <property role="1$x2rV" value="&lt;Name des Chat-Node&gt;" />
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         <node concept="Vb9p2" id="7zjlSJanutj" role="3F10Kt">
           <property role="Vbekb" value="g1_k_vY/BOLD" />
@@ -211,6 +258,7 @@
           </node>
         </node>
         <node concept="1iCGBv" id="39YBGns$LGb" role="3EZMnx">
+          <property role="1$x2rV" value="&lt;no variable&gt;" />
           <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
           <node concept="1sVBvm" id="39YBGns$LGc" role="1sWHZn">
             <node concept="3F0A7n" id="39YBGns$LGd" role="2wV5jI">
@@ -280,11 +328,17 @@
   </node>
   <node concept="24kQdi" id="7zjlSJanWDU">
     <ref role="1XX52x" to="q9yp:7bazAbNsumN" resolve="SimpleKeyExpression" />
-    <node concept="3F0A7n" id="7zjlSJanWDZ" role="2wV5jI">
-      <property role="1O74Pk" value="true" />
-      <ref role="1NtTu8" to="q9yp:7bazAbNsumO" resolve="key" />
-      <node concept="3$7fVu" id="7zjlSJapFM1" role="3F10Kt">
-        <property role="3$6WeP" value="0" />
+    <node concept="3EZMnI" id="7ePDp5VqVLG" role="2wV5jI">
+      <node concept="2iRfu4" id="7ePDp5VqVLH" role="2iSdaV" />
+      <node concept="3F0ifn" id="7ePDp5VqVLJ" role="3EZMnx">
+        <property role="3F0ifm" value="Word: " />
+      </node>
+      <node concept="3F0A7n" id="7zjlSJanWDZ" role="3EZMnx">
+        <property role="1O74Pk" value="true" />
+        <ref role="1NtTu8" to="q9yp:7bazAbNsumO" resolve="key" />
+        <node concept="3$7fVu" id="7zjlSJapFM1" role="3F10Kt">
+          <property role="3$6WeP" value="0" />
+        </node>
       </node>
     </node>
   </node>
@@ -319,7 +373,7 @@
     <ref role="1XX52x" to="q9yp:2aD1258Nto5" resolve="ActionKey" />
     <node concept="3EZMnI" id="NBaVM70nxG" role="2wV5jI">
       <node concept="3F0ifn" id="NBaVM70nxI" role="3EZMnx">
-        <property role="3F0ifm" value="&lt;&lt;" />
+        <property role="3F0ifm" value="Action: &lt;&lt;" />
       </node>
       <node concept="2iRfu4" id="NBaVM70nxJ" role="2iSdaV" />
       <node concept="3F0A7n" id="NBaVM70ny5" role="3EZMnx">
@@ -333,11 +387,66 @@
   <node concept="24kQdi" id="NBaVM6RBFr">
     <ref role="1XX52x" to="q9yp:2aD1258NtnZ" resolve="VariableChatNode" />
     <node concept="3EZMnI" id="NBaVM6RBFt" role="2wV5jI">
-      <node concept="3F0A7n" id="NBaVM6S2yI" role="3EZMnx">
-        <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+      <node concept="3F0A7n" id="7ePDp5VpjIc" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Name des ChatNode&gt;" />
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="Vb9p2" id="7ePDp5VpjId" role="3F10Kt">
+          <property role="Vbekb" value="g1_k_vY/BOLD" />
+        </node>
+        <node concept="VSNWy" id="7ePDp5VpjIe" role="3F10Kt">
+          <property role="1lJzqX" value="15" />
+        </node>
+        <node concept="3$7fVu" id="7ePDp5VpjIf" role="3F10Kt">
+          <property role="3$6WeP" value="2" />
+        </node>
       </node>
-      <node concept="3F0ifn" id="NBaVM6S2yT" role="3EZMnx">
-        <property role="3F0ifm" value="%chatNode%" />
+      <node concept="3EZMnI" id="7ePDp5VpjIg" role="3EZMnx">
+        <node concept="VPM3Z" id="7ePDp5VpjIh" role="3F10Kt" />
+        <node concept="3F0A7n" id="7ePDp5VpjIi" role="3EZMnx">
+          <ref role="1NtTu8" to="q9yp:7bazAbNsumt" resolve="text" />
+          <node concept="3$7fVu" id="7ePDp5VpjIj" role="3F10Kt">
+            <property role="3$6WeP" value="4" />
+          </node>
+        </node>
+        <node concept="1iCGBv" id="7ePDp5VpjIk" role="3EZMnx">
+          <property role="1$x2rV" value="&lt;no variable&gt;" />
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" />
+          <node concept="1sVBvm" id="7ePDp5VpjIl" role="1sWHZn">
+            <node concept="3F0A7n" id="7ePDp5VpjIm" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+            </node>
+          </node>
+        </node>
+        <node concept="2iRfu4" id="7ePDp5VpjIn" role="2iSdaV" />
+      </node>
+      <node concept="3F0A7n" id="7ePDp5VrIGU" role="3EZMnx">
+        <property role="1$x2rV" value="&lt;Name der Variablen&gt;" />
+        <ref role="1NtTu8" to="q9yp:2aD1258Nto0" resolve="variableName" />
+        <node concept="3$7fVu" id="7ePDp5Vs0A7" role="3F10Kt">
+          <property role="3$6WeP" value="4" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="7ePDp5Vp4x$" role="3EZMnx">
+        <node concept="2iRfu4" id="7ePDp5Vp4x_" role="2iSdaV" />
+        <node concept="3F0ifn" id="7ePDp5Vp4yb" role="3EZMnx">
+          <property role="3F0ifm" value="--&gt;" />
+          <node concept="3$7fVu" id="7ePDp5Vq8Fj" role="3F10Kt">
+            <property role="3$6WeP" value="4" />
+          </node>
+        </node>
+        <node concept="1iCGBv" id="7ePDp5Vmfvd" role="3EZMnx">
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto1" resolve="chatNode" />
+          <node concept="1sVBvm" id="7ePDp5Vmfvf" role="1sWHZn">
+            <node concept="3F0A7n" id="7ePDp5Vmfvl" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+          <node concept="3$7fVu" id="7ePDp5VoP$d" role="3F10Kt">
+            <property role="3$6WeP" value="2" />
+          </node>
+        </node>
       </node>
       <node concept="2iRkQZ" id="NBaVM6RBFw" role="2iSdaV" />
     </node>
@@ -346,29 +455,88 @@
     <ref role="1XX52x" to="q9yp:7bazAbNsumH" resolve="KeyExpression" />
     <node concept="3F0ifn" id="7fmpadFw2lK" role="2wV5jI">
       <property role="3F0ifm" value="" />
-      <node concept="3$7fVu" id="7fmpadFwL5V" role="3F10Kt">
-        <property role="3$6WeP" value="1" />
-      </node>
-      <node concept="3$7jql" id="7fmpadFwL5W" role="3F10Kt">
-        <property role="3$6WeP" value="1" />
-      </node>
+      <property role="ilYzB" value="&lt;Expresion-Key-Art auswählen: Simple (&quot;), Or (|), And (&amp;), Not (!)&gt;" />
       <node concept="Veino" id="7fmpadFxwbh" role="3F10Kt">
         <property role="Vb096" value="fLwANPn/red" />
+        <node concept="1iSF2X" id="7ePDp5Vug8d" role="VblUZ">
+          <property role="1iTho6" value="563e40" />
+        </node>
+      </node>
+      <node concept="1I8cUB" id="7ePDp5Vug8f" role="3F10Kt">
+        <node concept="1iSF2X" id="7ePDp5Vug8h" role="VblUZ">
+          <property role="1iTho6" value="ff635f" />
+        </node>
       </node>
     </node>
   </node>
   <node concept="24kQdi" id="7fmpadFtON0">
     <ref role="1XX52x" to="q9yp:2aD1258Nto4" resolve="Key" />
-    <node concept="3F0ifn" id="7fmpadFw2lj" role="2wV5jI">
-      <property role="3F0ifm" value="" />
-      <node concept="3$7fVu" id="7fmpadFwL5r" role="3F10Kt">
-        <property role="3$6WeP" value="1" />
-      </node>
-      <node concept="3$7jql" id="7fmpadFwL5t" role="3F10Kt">
-        <property role="3$6WeP" value="1" />
-      </node>
-      <node concept="Veino" id="7fmpadFxwbK" role="3F10Kt">
+    <node concept="3F0ifn" id="7ePDp5VrtId" role="2wV5jI">
+      <property role="ilYzB" value="&lt;Key-Art auswählen: Action (+), Simple (&quot;), Or (|), And (&amp;), Not (!)&gt;" />
+      <node concept="1I8cUB" id="7ePDp5VtqWJ" role="3F10Kt">
         <property role="Vb096" value="fLwANPn/red" />
+        <node concept="1iSF2X" id="7ePDp5VtYqs" role="VblUZ">
+          <property role="1iTho6" value="ff635f" />
+        </node>
+      </node>
+      <node concept="Veino" id="7ePDp5VtGCK" role="3F10Kt">
+        <node concept="1iSF2X" id="7ePDp5VtGEU" role="VblUZ">
+          <property role="1iTho6" value="563e40" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="V5hpn" id="7ePDp5VuxRj">
+    <property role="TrG5h" value="CallMeMaybeStyles" />
+    <node concept="14StLt" id="7ePDp5VuxT0" role="V601i">
+      <property role="TrG5h" value="ChatBotName" />
+      <node concept="VSNWy" id="7ePDp5VuxT3" role="3F10Kt">
+        <property role="1lJzqX" value="30" />
+      </node>
+      <node concept="Vb9p2" id="7ePDp5VuxT6" role="3F10Kt">
+        <property role="Vbekb" value="g1_k_vY/BOLD" />
+      </node>
+    </node>
+    <node concept="14StLt" id="7ePDp5VuxT9" role="V601i">
+      <property role="TrG5h" value="ChatNodeCategory" />
+      <node concept="VSNWy" id="7ePDp5VuxTc" role="3F10Kt">
+        <property role="1lJzqX" value="22" />
+      </node>
+      <node concept="Vb9p2" id="7ePDp5VuxTf" role="3F10Kt">
+        <property role="Vbekb" value="g1_k_vY/BOLD" />
+      </node>
+    </node>
+    <node concept="14StLt" id="7ePDp5VvKjM" role="V601i">
+      <property role="TrG5h" value="Seperator" />
+      <node concept="27z8qx" id="7ePDp5VvKjP" role="3F10Kt">
+        <property role="3$6WeP" value="3" />
+      </node>
+      <node concept="27yT$n" id="7ePDp5VvKjS" role="3F10Kt">
+        <property role="3$6WeP" value="3" />
+      </node>
+    </node>
+    <node concept="14StLt" id="7ePDp5VuxSC" role="V601i">
+      <property role="TrG5h" value="ChatNode" />
+      <node concept="VSNWy" id="7ePDp5VuxSF" role="3F10Kt">
+        <property role="1lJzqX" value="22" />
+      </node>
+      <node concept="3$7fVu" id="7ePDp5VuxSI" role="3F10Kt">
+        <property role="3$6WeP" value="2" />
+      </node>
+    </node>
+    <node concept="14StLt" id="7ePDp5VuxSL" role="V601i">
+      <property role="TrG5h" value="ChatNodeAttribute" />
+      <node concept="VSNWy" id="7ePDp5VuxSO" role="3F10Kt">
+        <property role="1lJzqX" value="18" />
+      </node>
+      <node concept="3$7fVu" id="7ePDp5VuxSR" role="3F10Kt">
+        <property role="3$6WeP" value="4" />
+      </node>
+    </node>
+    <node concept="14StLt" id="7ePDp5VuxSU" role="V601i">
+      <property role="TrG5h" value="Reference" />
+      <node concept="Vb9p2" id="7ePDp5VuxSX" role="3F10Kt">
+        <property role="Vbekb" value="g1_kEg4/ITALIC" />
       </node>
     </node>
   </node>

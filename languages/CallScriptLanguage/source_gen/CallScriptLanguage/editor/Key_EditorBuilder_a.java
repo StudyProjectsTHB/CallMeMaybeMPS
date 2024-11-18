@@ -11,9 +11,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import jetbrains.mps.editor.runtime.style.Padding;
-import jetbrains.mps.editor.runtime.style.Measure;
-import jetbrains.mps.nodeEditor.MPSColors;
+import java.awt.Color;
 
 /*package*/ class Key_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -40,11 +38,10 @@ import jetbrains.mps.nodeEditor.MPSColors;
     editorCell.setBig(true);
     setCellContext(editorCell);
     Style style = new StyleImpl();
-    style.set(StyleAttributes.PADDING_LEFT, new Padding(1, Measure.SPACES));
-    style.set(StyleAttributes.PADDING_RIGHT, new Padding(1, Measure.SPACES));
-    style.set(StyleAttributes.BACKGROUND_COLOR, getStyleRegistry().getSimpleColor(MPSColors.red));
+    style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
+    style.set(StyleAttributes.BACKGROUND_COLOR, getStyleRegistry().getSimpleColor(new Color(5652032)));
     editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
+    editorCell.setDefaultText("<Key-Art auswählen: Action (+), Simple (\"), Or (|), And (&), Not (!)>");
     return editorCell;
   }
 }
