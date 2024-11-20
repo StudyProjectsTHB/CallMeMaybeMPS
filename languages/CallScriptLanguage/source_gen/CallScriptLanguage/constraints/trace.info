@@ -13,6 +13,12 @@
     <file name="ConstraintsAspectDescriptor.java">
       <unit at="13,0,29,0" name="CallScriptLanguage.constraints.ConstraintsAspectDescriptor" />
     </file>
+    <file name="GeneratedFeedbackAspectConstraints.java">
+      <unit at="10,0,17,0" name="CallScriptLanguage.constraints.GeneratedFeedbackAspectConstraints" />
+    </file>
+    <file name="GeneratedRulesConstraintsAspect.java">
+      <unit at="14,0,28,0" name="CallScriptLanguage.constraints.GeneratedRulesConstraintsAspect" />
+    </file>
   </root>
   <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/8706398762545315676">
     <file name="ChatNode_Constraints.java">
@@ -81,6 +87,64 @@
       <unit id="8706398762545315676" at="64,0,67,0" name="CallScriptLanguage.constraints.ChatNode_Constraints$PROPS" />
       <unit id="8706398762545315677" at="26,0,53,0" name="CallScriptLanguage.constraints.ChatNode_Constraints$Name_Property" />
       <unit id="8706398762545315676" at="21,0,68,0" name="CallScriptLanguage.constraints.ChatNode_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/8957642992059005291">
+    <file name="ChatNode_ConstraintRules.java">
+      <node id="8957642992059005291" at="24,0,25,0" concept="6" trace="CONCEPT" />
+      <node id="8957642992059005294" at="26,0,27,0" concept="6" trace="check_id8957642992059005294" />
+      <node id="8957642992059005291" at="28,0,29,0" concept="6" trace="RULES" />
+      <node id="8957642992059005291" at="32,43,33,17" concept="5" />
+      <node id="8957642992059005294" at="37,0,38,0" concept="6" trace="SOURCE_NODE_REF" />
+      <node id="8957642992059005294" at="38,0,39,0" concept="6" trace="ID_hasWayToEnd" />
+      <node id="8957642992059005294" at="40,31,41,88" concept="8" />
+      <node id="8957642992059005294" at="45,63,46,182" concept="5" />
+      <node id="8957642992059005294" at="50,67,51,18" concept="5" />
+      <node id="8957642992059005291" at="56,42,57,19" concept="8" />
+      <node id="8957642992059005291" at="61,0,62,0" concept="6" trace="ChatBot$6V" />
+      <node id="8957642992059005294" at="40,0,43,0" concept="0" trace="Rule_hasWayToEnd#()V" />
+      <node id="8957642992059005291" at="56,0,59,0" concept="0" trace="ChatNode_ConstraintRules#()V" />
+      <node id="8957642992059005294" at="44,0,48,0" concept="3" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992059005294" at="49,0,53,0" concept="3" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992059005291" at="30,0,35,0" concept="3" trace="getDeclaredRules#()Ljava/util/List;" />
+      <scope id="8957642992059005291" at="32,43,33,17" />
+      <scope id="8957642992059005294" at="40,31,41,88" />
+      <scope id="8957642992059005294" at="45,63,46,182" />
+      <scope id="8957642992059005294" at="50,67,51,18" />
+      <scope id="8957642992059005291" at="56,42,57,19" />
+      <scope id="8957642992059005294" at="40,0,43,0" />
+      <scope id="8957642992059005291" at="56,0,59,0" />
+      <scope id="8957642992059005294" at="44,0,48,0">
+        <var name="context" id="8957642992059005294" />
+      </scope>
+      <scope id="8957642992059005294" at="49,0,53,0">
+        <var name="context" id="8957642992059005294" />
+      </scope>
+      <scope id="8957642992059005291" at="30,0,35,0" />
+      <unit id="8957642992059005291" at="60,0,63,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$CONCEPTS" />
+      <unit id="8957642992059005294" at="36,0,55,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$Rule_hasWayToEnd" />
+      <unit id="8957642992059005291" at="23,0,64,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules" />
+    </file>
+    <file name="ChatNode_ConstraintsFeedback.java">
+      <node id="8957642992059005291" at="20,0,21,0" concept="6" trace="CONCEPT" />
+      <node id="8957642992059005293" at="25,73,26,94" concept="5" />
+      <node id="8957642992059005291" at="30,0,31,0" concept="6" trace="PROVIDERS" />
+      <node id="8957642992059005291" at="32,41,33,19" concept="8" />
+      <node id="8957642992059005291" at="38,58,39,30" concept="5" />
+      <node id="8957642992059005291" at="32,0,35,0" concept="0" trace="ChatNode_ConstraintsFeedback#()V" />
+      <node id="8957642992059005293" at="23,0,28,0" concept="3" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8957642992059005291" at="36,0,41,0" concept="3" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="8957642992059005293" at="22,0,29,0" concept="6" trace="MSGPROVIDER_WhenConstraintRuleFails_g9qiff_a" />
+      <scope id="8957642992059005293" at="25,73,26,94" />
+      <scope id="8957642992059005291" at="32,41,33,19" />
+      <scope id="8957642992059005291" at="38,58,39,30" />
+      <scope id="8957642992059005291" at="32,0,35,0" />
+      <scope id="8957642992059005293" at="23,0,28,0">
+        <var name="context" id="8957642992059005293" />
+      </scope>
+      <scope id="8957642992059005291" at="36,0,41,0" />
+      <unit id="8957642992059005293" at="22,111,28,3" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback$1" />
+      <unit id="8957642992059005291" at="19,0,42,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback" />
     </file>
   </root>
 </debug-info>
