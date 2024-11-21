@@ -8,10 +8,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
-import java.awt.Color;
 
 /*package*/ class KeyExpression_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -37,10 +33,6 @@ import java.awt.Color;
     editorCell.setCellId("Constant_y0g0ga_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.BACKGROUND_COLOR, getStyleRegistry().getSimpleColor(new Color(5652032)));
-    style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
-    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("<Expresion-Key-Art auswählen: Simple (\"), Or (|), And (&), Not (!)>");
     return editorCell;
   }

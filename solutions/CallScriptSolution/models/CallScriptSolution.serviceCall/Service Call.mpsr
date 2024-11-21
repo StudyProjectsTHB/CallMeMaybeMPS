@@ -171,7 +171,7 @@
     </node>
     <node concept="21IQJQ" id="4y5FiRBB0VI" role="21IQJ7">
       <property role="TrG5h" value="new contract yes" />
-      <property role="21IQJZ" value="Das ist toll. Das wird dich 100 Euro mehr kosten.  " />
+      <property role="21IQJZ" value="Das ist toll. Das wird dich 100 Euro mehr kosten." />
     </node>
   </node>
 </model>
