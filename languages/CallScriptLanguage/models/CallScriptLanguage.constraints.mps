@@ -343,6 +343,38 @@
           </node>
         </node>
       </node>
+      <node concept="1DCEPf" id="7LfWdtQAqCG" role="3OnDbr">
+        <node concept="3Qq5Rn" id="7LfWdtQAqCI" role="2j4cqI">
+          <property role="EcuMT" value="8957642992061622830" />
+          <property role="TrG5h" value="isVariableCreatedBefore" />
+          <node concept="2K0Yjh" id="7LfWdtQAqCK" role="2K0Fuo">
+            <node concept="2OqwBi" id="7LfWdtQArfb" role="2K0yoH">
+              <node concept="1PxgMI" id="7LfWdtQAr44" role="2Oq$k0">
+                <property role="1BlNFB" value="true" />
+                <node concept="chp4Y" id="7LfWdtQAr4s" role="3oSUPX">
+                  <ref role="cht4Q" to="q9yp:7bazAbNsumi" resolve="ChatBot" />
+                </node>
+                <node concept="3QpRc$" id="7LfWdtQAqI2" role="1m5AlR">
+                  <ref role="3QpVTF" to="prp3:yXuRM1RLuH" resolve="parentNode" />
+                </node>
+              </node>
+              <node concept="2qgKlT" id="7LfWdtQArUT" role="2OqNvi">
+                <ref role="37wK5l" to="apbn:7LfWdtQwd34" resolve="hasChatNodeVariableCreatedBefore" />
+                <node concept="3QpRc$" id="7LfWdtQArZQ" role="37wK5m">
+                  <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DCEQD" id="7LfWdtQAqCO" role="1DCEQI">
+          <node concept="16I2mz" id="7LfWdtQAsVS" role="16N$OO">
+            <node concept="16N$OT" id="7LfWdtQAsVT" role="16I2mt">
+              <property role="16N$OU" value="A used variable should be declared in all paths of the previous chat nodes." />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="1M2fIO" id="7LfWdtQv4SH">
