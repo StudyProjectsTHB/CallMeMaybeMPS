@@ -21,6 +21,7 @@
         <child id="8271580221261604259" name="startChatNode" index="21IQJ1" />
         <child id="8271580221261604260" name="middleChatNodes" index="21IQJ6" />
         <child id="8271580221261604261" name="endChatNode" index="21IQJ7" />
+        <child id="2497532009355874324" name="variableChatNodes" index="1EuxgP" />
       </concept>
       <concept id="8271580221261604244" name="CallScriptLanguage.structure.ChatNode" flags="ng" index="21IQJQ">
         <property id="8271580221261604253" name="text" index="21IQJZ" />
@@ -28,6 +29,11 @@
       <concept id="8271580221261604252" name="CallScriptLanguage.structure.ContinuingChatNode" flags="ng" index="21IQJY">
         <child id="8271580221261604289" name="connection" index="21IQIz" />
       </concept>
+      <concept id="2497532009355531775" name="CallScriptLanguage.structure.VariableChatNode" flags="ng" index="1Epd7u">
+        <property id="2497532009355531776" name="variableName" index="1Epd8x" />
+        <reference id="2497532009355531777" name="chatNode" index="1Epd8w" />
+      </concept>
+      <concept id="2497532009355531781" name="CallScriptLanguage.structure.ActionKey" flags="ng" index="1Epd8$" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
@@ -37,6 +43,12 @@
   </registry>
   <node concept="21IQJK" id="4y5FiRBB0Vo">
     <property role="TrG5h" value="Service Call" />
+    <node concept="1Epd7u" id="7ePDp5Vq8Fi" role="1EuxgP">
+      <property role="1Epd8x" value="costumer-number" />
+      <property role="21IQJZ" value="Wie lautet Ihre Kundennummer?" />
+      <property role="TrG5h" value="Kundennummer eingeben" />
+      <ref role="1Epd8w" node="4y5FiRBB0VF" resolve="new contract" />
+    </node>
     <node concept="21IQJY" id="4y5FiRBB0VF" role="21IQJ6">
       <property role="TrG5h" value="new contract" />
       <property role="21IQJZ" value="Sie wollen also Ihren vertrag ändern. Ist das richtig?" />
@@ -52,7 +64,7 @@
             </node>
           </node>
           <node concept="21IQJh" id="4y5FiRBB0Wf" role="21IQJl">
-            <property role="21IQJm" value="genau" />
+            <property role="21IQJm" value="genau " />
           </node>
         </node>
       </node>
@@ -114,11 +126,17 @@
       </node>
       <node concept="21IQJ4" id="4y5FiRBB0WS" role="21IQIz">
         <ref role="2MIpBF" node="4y5FiRBB0VB" resolve="change contract" />
-        <node concept="21IQJh" id="4y5FiRBB0WT" role="21IQJd" />
+        <node concept="21IQJh" id="7fmpadFr5Vc" role="21IQJd" />
+      </node>
+      <node concept="21IQJ4" id="7ePDp5VsR7Z" role="21IQIz">
+        <ref role="2MIpBF" node="4y5FiRBB0VF" resolve="new contract" />
+        <node concept="1Epd8$" id="7ePDp5VsRlz" role="21IQJd">
+          <property role="TrG5h" value="blabla" />
+        </node>
       </node>
     </node>
     <node concept="21IQJY" id="4y5FiRBB0Vp" role="21IQJ1">
-      <property role="TrG5h" value="start" />
+      <property role="TrG5h" value="Willkommen" />
       <property role="21IQJZ" value="Herzlich willkommen. Wie kann ich Ihnen helfen." />
       <node concept="21IQJ4" id="4y5FiRBB0Vq" role="21IQIz">
         <ref role="2MIpBF" node="4y5FiRBB0VB" resolve="change contract" />
@@ -153,7 +171,7 @@
     </node>
     <node concept="21IQJQ" id="4y5FiRBB0VI" role="21IQJ7">
       <property role="TrG5h" value="new contract yes" />
-      <property role="21IQJZ" value="Das ist toll. Das wird dich 100 Euro mehr kosten.  " />
+      <property role="21IQJZ" value="Das ist toll. Das wird dich 100 Euro mehr kosten." />
     </node>
   </node>
 </model>
