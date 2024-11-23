@@ -8,9 +8,10 @@ import jetbrains.mps.openapi.editor.style.Style;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.MPSFonts;
+import java.awt.Color;
 import jetbrains.mps.editor.runtime.style.Padding;
 import jetbrains.mps.editor.runtime.style.Measure;
-import java.awt.Color;
+import jetbrains.mps.nodeEditor.MPSColors;
 
 public class CallMeMaybeStyles_StyleSheet {
   public static class ChatBotNameStyleClass extends AbstractStyleClass {
@@ -22,6 +23,7 @@ public class CallMeMaybeStyles_StyleSheet {
     public void apply(Style style, EditorCell editorCell) {
       style.set(StyleAttributes.FONT_SIZE, 30);
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
@@ -32,20 +34,33 @@ public class CallMeMaybeStyles_StyleSheet {
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.FONT_SIZE, 20);
+      style.set(StyleAttributes.FONT_SIZE, 25);
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
     }
 
   }
-  public static class SeperatorStyleClass extends AbstractStyleClass {
-    public SeperatorStyleClass(EditorBuilderEnvironment builderEnv) {
+  public static class ListStyleClass extends AbstractStyleClass {
+    public ListStyleClass(EditorBuilderEnvironment builderEnv) {
       super(builderEnv);
     }
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.PADDING_BOTTOM, new Padding(3, Measure.SPACES));
-      style.set(StyleAttributes.PADDING_TOP, new Padding(3, Measure.SPACES));
+      style.set(StyleAttributes.SELECTABLE, false);
+    }
+
+  }
+  public static class ChatNodeNamePrefixStyleClass extends AbstractStyleClass {
+    public ChatNodeNamePrefixStyleClass(EditorBuilderEnvironment builderEnv) {
+      super(builderEnv);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.FONT_SIZE, 18);
+      style.set(StyleAttributes.PADDING_LEFT, new Padding(2, Measure.SPACES));
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
@@ -56,8 +71,35 @@ public class CallMeMaybeStyles_StyleSheet {
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.PADDING_LEFT, new Padding(2, Measure.SPACES));
+      style.set(StyleAttributes.FONT_SIZE, 18);
       style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
+    }
+
+  }
+  public static class ChatNodeTextStyleClass extends AbstractStyleClass {
+    public ChatNodeTextStyleClass(EditorBuilderEnvironment builderEnv) {
+      super(builderEnv);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.PADDING_LEFT, new Padding(6, Measure.SPACES));
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
+    }
+
+  }
+  public static class VariableValueStyleClass extends AbstractStyleClass {
+    public VariableValueStyleClass(EditorBuilderEnvironment builderEnv) {
+      super(builderEnv);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.gray));
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(5732959)));
     }
 
   }
@@ -68,20 +110,31 @@ public class CallMeMaybeStyles_StyleSheet {
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.PADDING_LEFT, new Padding(4, Measure.SPACES));
-      style.set(StyleAttributes.FONT_STYLE, MPSFonts.PLAIN);
+      style.set(StyleAttributes.PADDING_LEFT, new Padding(6, Measure.SPACES));
     }
 
   }
-  public static class TextToSpeakStyleClass extends AbstractStyleClass {
-    public TextToSpeakStyleClass(EditorBuilderEnvironment builderEnv) {
+  public static class ExprKeyStyleClass extends AbstractStyleClass {
+    public ExprKeyStyleClass(EditorBuilderEnvironment builderEnv) {
       super(builderEnv);
     }
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.FONT_STYLE, MPSFonts.ITALIC);
-      style.set(StyleAttributes.PADDING_LEFT, new Padding(4, Measure.SPACES));
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(3577406)));
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
+    }
+
+  }
+  public static class SimpleExprKeyStyleClass extends AbstractStyleClass {
+    public SimpleExprKeyStyleClass(EditorBuilderEnvironment builderEnv) {
+      super(builderEnv);
+    }
+
+    @Override
+    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(3577406)));
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.gray));
     }
 
   }
@@ -92,53 +145,42 @@ public class CallMeMaybeStyles_StyleSheet {
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(5864107)));
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(4360181)));
       style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
-  public static class ExpressionKeyStyleClass extends AbstractStyleClass {
-    public ExpressionKeyStyleClass(EditorBuilderEnvironment builderEnv) {
+  public static class RefStyleClass extends AbstractStyleClass {
+    public RefStyleClass(EditorBuilderEnvironment builderEnv) {
       super(builderEnv);
     }
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(3577406)));
-    }
-
-  }
-  public static class MissingIfEmptyStyleClass extends AbstractStyleClass {
-    public MissingIfEmptyStyleClass(EditorBuilderEnvironment builderEnv) {
-      super(builderEnv);
-    }
-
-    @Override
-    public void apply(Style style, EditorCell editorCell) {
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(14390850)));
       style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
-  public static class MissingOptionalStyleClass extends AbstractStyleClass {
-    public MissingOptionalStyleClass(EditorBuilderEnvironment builderEnv) {
+  public static class VariableNameStyleClass extends AbstractStyleClass {
+    public VariableNameStyleClass(EditorBuilderEnvironment builderEnv) {
       super(builderEnv);
     }
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(5732959)));
+      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(3510476)));
+      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
-  public static class MissingStyleClass extends AbstractStyleClass {
-    public MissingStyleClass(EditorBuilderEnvironment builderEnv) {
+  public static class SeperatorStyleClass extends AbstractStyleClass {
+    public SeperatorStyleClass(EditorBuilderEnvironment builderEnv) {
       super(builderEnv);
     }
 
     @Override
     public void apply(Style style, EditorCell editorCell) {
-      style.set(StyleAttributes.NULL_TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
-      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(new Color(16737119)));
     }
 
   }
