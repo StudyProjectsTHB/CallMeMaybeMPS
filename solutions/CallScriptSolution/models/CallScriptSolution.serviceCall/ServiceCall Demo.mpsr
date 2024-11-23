@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model ref="r:a57e983d-aa19-4452-b9f5-57dd0c701f34(CallScriptSolution.serviceCall)" content="root">
+  <persistence version="9" />
+  <imports />
+  <registry>
+    <language id="0013a7dc-e9ad-43ef-a033-8212155a1b91" name="CallScriptLanguage">
+      <concept id="8271580221261604262" name="CallScriptLanguage.structure.Connection" flags="ng" index="21IQJ4">
+        <reference id="8706398762545368672" name="chatNode" index="2MIpBF" />
+        <child id="8271580221261604271" name="key" index="21IQJd" />
+      </concept>
+      <concept id="8271580221261604275" name="CallScriptLanguage.structure.SimpleKeyExpression" flags="ng" index="21IQJh">
+        <property id="8271580221261604276" name="key" index="21IQJm" />
+      </concept>
+      <concept id="8271580221261604277" name="CallScriptLanguage.structure.BinaryKeyExpression" flags="ng" index="21IQJn">
+        <child id="8271580221261604278" name="leftOperand" index="21IQJk" />
+        <child id="8271580221261604279" name="rightOperand" index="21IQJl" />
+      </concept>
+      <concept id="8271580221261604282" name="CallScriptLanguage.structure.AndKeyExpression" flags="ng" index="21IQJo" />
+      <concept id="8271580221261604281" name="CallScriptLanguage.structure.OrKeyExpression" flags="ng" index="21IQJr" />
+      <concept id="8271580221261604242" name="CallScriptLanguage.structure.ChatBot" flags="ng" index="21IQJK">
+        <child id="8271580221261604259" name="startChatNode" index="21IQJ1" />
+        <child id="8271580221261604260" name="middleChatNodes" index="21IQJ6" />
+        <child id="8271580221261604261" name="endChatNode" index="21IQJ7" />
+        <child id="2497532009355874324" name="variableChatNodes" index="1EuxgP" />
+      </concept>
+      <concept id="8271580221261604244" name="CallScriptLanguage.structure.ChatNode" flags="ng" index="21IQJQ">
+        <property id="8271580221261604253" name="text" index="21IQJZ" />
+        <reference id="2497532009355531779" name="variable" index="1Epd8y" />
+      </concept>
+      <concept id="8271580221261604252" name="CallScriptLanguage.structure.ContinuingChatNode" flags="ng" index="21IQJY">
+        <child id="8271580221261604289" name="connection" index="21IQIz" />
+      </concept>
+      <concept id="2497532009355531775" name="CallScriptLanguage.structure.VariableChatNode" flags="ng" index="1Epd7u">
+        <property id="2497532009355531776" name="variableName" index="1Epd8x" />
+        <reference id="2497532009355531777" name="chatNode" index="1Epd8w" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ngI" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="21IQJK" id="2qSbJK4g7II">
+    <property role="TrG5h" value="ServiceCall Demo" />
+    <node concept="1Epd7u" id="2qSbJK4gGrY" role="1EuxgP">
+      <property role="TrG5h" value="Get contract number" />
+      <property role="21IQJZ" value="Bitte geben Sie jetzt Ihre Vertragsnummer an." />
+      <property role="1Epd8x" value="contract number" />
+      <ref role="1Epd8w" node="2qSbJK4gGuW" resolve="Is contract number" />
+    </node>
+    <node concept="21IQJY" id="2qSbJK4gGAv" role="21IQJ6">
+      <property role="TrG5h" value="New contract" />
+      <property role="21IQJZ" value="Sie wollen also einen Vertrag abschließen?" />
+      <node concept="21IQJ4" id="2qSbJK4gGAw" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gG$K" resolve="New contract yes" />
+        <node concept="21IQJr" id="2qSbJK4gGBo" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGB$" role="21IQJk">
+            <property role="21IQJm" value="Ja" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGBu" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGBA" role="21IQJk">
+              <property role="21IQJm" value="Stimmt" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGBC" role="21IQJl">
+              <property role="21IQJm" value="Genau" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGBE" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
+        <node concept="21IQJr" id="2qSbJK4gGBG" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGBS" role="21IQJk">
+            <property role="21IQJm" value="Nein" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGBM" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGBU" role="21IQJk">
+              <property role="21IQJm" value="Ne" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGBW" role="21IQJl">
+              <property role="21IQJm" value="Auf keinen Fall" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="21IQJY" id="2qSbJK4gGgJ" role="21IQJ6">
+      <property role="TrG5h" value="Change contract" />
+      <property role="21IQJZ" value="Sie wollen also Ihren Vertrag kündigen ist das richtig?" />
+      <node concept="21IQJ4" id="2qSbJK4gGgK" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGrY" resolve="Get contract number" />
+        <node concept="21IQJr" id="2qSbJK4gGod" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGoI" role="21IQJk">
+            <property role="21IQJm" value="Ja" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGpb" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGph" role="21IQJk">
+              <property role="21IQJm" value="Stimmt" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGpj" role="21IQJl">
+              <property role="21IQJm" value="Genau" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGqj" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
+        <node concept="21IQJr" id="2qSbJK4gGqK" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGqQ" role="21IQJk">
+            <property role="21IQJm" value="Nein" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGqU" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGr0" role="21IQJk">
+              <property role="21IQJm" value="Ne" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGr2" role="21IQJl">
+              <property role="21IQJm" value="Auf keinen Fall" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGrv" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change Contract" />
+        <node concept="21IQJh" id="2qSbJK4gGrx" role="21IQJd" />
+      </node>
+    </node>
+    <node concept="21IQJY" id="2qSbJK4gGuW" role="21IQJ6">
+      <property role="TrG5h" value="Is contract number" />
+      <property role="21IQJZ" value="Ist das Ihre Vertragsnummer:" />
+      <ref role="1Epd8y" node="2qSbJK4gGrY" resolve="Get contract number" />
+      <node concept="21IQJ4" id="2qSbJK4gGuX" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4g7IM" resolve="Change contract number" />
+        <node concept="21IQJr" id="2qSbJK4gGwF" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGwL" role="21IQJk">
+            <property role="21IQJm" value="Ja" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGxh" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGxn" role="21IQJk">
+              <property role="21IQJm" value="Genau" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGxp" role="21IQJl">
+              <property role="21IQJm" value="Stimmt" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGxr" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGrY" resolve="Get contract number" />
+        <node concept="21IQJr" id="2qSbJK4gGxS" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGxY" role="21IQJk">
+            <property role="21IQJm" value="Nein" />
+          </node>
+          <node concept="21IQJr" id="2qSbJK4gGy0" role="21IQJl">
+            <node concept="21IQJh" id="2qSbJK4gGy6" role="21IQJk">
+              <property role="21IQJm" value="Ne" />
+            </node>
+            <node concept="21IQJh" id="2qSbJK4gGy8" role="21IQJl">
+              <property role="21IQJm" value="Auf keinen Fall" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGy_" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGuW" resolve="Is contract number" />
+        <node concept="21IQJh" id="2qSbJK4gGyB" role="21IQJd" />
+      </node>
+    </node>
+    <node concept="21IQJY" id="2qSbJK4g7IJ" role="21IQJ1">
+      <property role="TrG5h" value="Start" />
+      <property role="21IQJZ" value="Herzlich willkommen, wie kann ich Ihnen helfen?" />
+      <node concept="21IQJ4" id="2qSbJK4g7IK" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change contract" />
+        <node concept="21IQJr" id="2qSbJK4g7OH" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gq1P" role="21IQJk">
+            <property role="21IQJm" value="Kündigen" />
+          </node>
+          <node concept="21IQJh" id="2qSbJK4gq5f" role="21IQJl">
+            <property role="21IQJm" value="wechseln" />
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGiT" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGAv" resolve="New contract" />
+        <node concept="21IQJo" id="2qSbJK4gGjm" role="21IQJd">
+          <node concept="21IQJh" id="2qSbJK4gGjR" role="21IQJk">
+            <property role="21IQJm" value="bestellen" />
+          </node>
+          <node concept="21IQJh" id="2qSbJK4gGjT" role="21IQJl">
+            <property role="21IQJm" value="Vertrag" />
+          </node>
+        </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGkL" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
+        <node concept="21IQJh" id="2qSbJK4gGkN" role="21IQJd" />
+      </node>
+    </node>
+    <node concept="21IQJQ" id="2qSbJK4g7IM" role="21IQJ7">
+      <property role="TrG5h" value="Change contract number" />
+      <property role="21IQJZ" value="Das ist natürlich schade. Bis dahin." />
+    </node>
+    <node concept="21IQJQ" id="2qSbJK4gG$K" role="21IQJ7">
+      <property role="TrG5h" value="New contract yes" />
+      <property role="21IQJZ" value="Das ist toll und wird sie 100 € mehr kosten. " />
+    </node>
+  </node>
+</model>
+
