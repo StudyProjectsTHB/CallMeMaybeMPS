@@ -53,7 +53,7 @@
       <property role="TrG5h" value="New contract" />
       <property role="21IQJZ" value="Sie wollen also einen Vertrag abschließen?" />
       <node concept="21IQJ4" id="2qSbJK4gGAw" role="21IQIz">
-        <ref role="2MIpBF" node="4y5FiRBB0VI" resolve="new contract yes" />
+        <ref role="2MIpBF" node="2qSbJK4gG$K" resolve="New contract yes" />
         <node concept="21IQJr" id="2qSbJK4gGBo" role="21IQJd">
           <node concept="21IQJh" id="2qSbJK4gGB$" role="21IQJk">
             <property role="21IQJm" value="Ja" />
@@ -130,7 +130,7 @@
       <property role="21IQJZ" value="Ist das Ihre Vertragsnummer:" />
       <ref role="1Epd8y" node="2qSbJK4gGrY" resolve="Get contract number" />
       <node concept="21IQJ4" id="2qSbJK4gGuX" role="21IQIz">
-        <ref role="2MIpBF" node="4y5FiRBB0VE" resolve="change contract yes" />
+        <ref role="2MIpBF" node="2qSbJK4g7IM" resolve="Change contract number" />
         <node concept="21IQJr" id="2qSbJK4gGwF" role="21IQJd">
           <node concept="21IQJh" id="2qSbJK4gGwL" role="21IQJk">
             <property role="21IQJm" value="Ja" />
@@ -170,7 +170,7 @@
       <property role="TrG5h" value="Start" />
       <property role="21IQJZ" value="Herzlich willkommen, wie kann ich Ihnen helfen?" />
       <node concept="21IQJ4" id="2qSbJK4g7IK" role="21IQIz">
-        <ref role="2MIpBF" node="4y5FiRBB0VB" resolve="change contract" />
+        <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change contract" />
         <node concept="21IQJr" id="2qSbJK4g7OH" role="21IQJd">
           <node concept="21IQJh" id="2qSbJK4gq1P" role="21IQJk">
             <property role="21IQJm" value="Kündigen" />
@@ -181,7 +181,7 @@
         </node>
       </node>
       <node concept="21IQJ4" id="2qSbJK4gGiT" role="21IQIz">
-        <ref role="2MIpBF" node="4y5FiRBB0VF" resolve="new contract" />
+        <ref role="2MIpBF" node="2qSbJK4gGAv" resolve="New contract" />
         <node concept="21IQJo" id="2qSbJK4gGjm" role="21IQJd">
           <node concept="21IQJh" id="2qSbJK4gGjR" role="21IQJk">
             <property role="21IQJm" value="bestellen" />
