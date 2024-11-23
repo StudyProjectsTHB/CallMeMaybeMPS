@@ -42,9 +42,6 @@ import jetbrains.mps.openapi.editor.cells.CellActionType;
 import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import jetbrains.mps.nodeEditor.MPSColors;
-import jetbrains.mps.editor.runtime.style.Padding;
-import jetbrains.mps.editor.runtime.style.Measure;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -285,10 +282,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     private EditorCell createConstant_0() {
       EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<neue Verbindung hinzufügen>");
       editorCell.setCellId("Constant_uvdubr_a0c0");
-      Style style = new StyleImpl();
-      style.set(StyleAttributes.TEXT_COLOR, getStyleRegistry().getSimpleColor(MPSColors.gray));
-      style.set(StyleAttributes.PADDING_LEFT, new Padding(4, Measure.SPACES));
-      editorCell.getStyle().putAll(style);
       editorCell.setDefaultText("");
       return editorCell;
     }
