@@ -2,29 +2,29 @@
 
 set "ziel=.\dist"
 
-echo Language kopieren!
+echo Copy Language!
 set "quelle=.\languages\CallScriptLanguage\generator2\classes_gen"
 robocopy "%quelle%" "%ziel%" /E
-echo Language kopiert!
+echo Language copied!
 
-echo Solution kopieren!
+echo Copy Solution!
 set "quelle=.\solutions\CallScriptSolution\classes_gen"
 robocopy "%quelle%" "%ziel%" /E
-echo Solution kopiert!
+echo Solution copied!
 
-echo JAR bauen!
+echo Build JAR!
 
 cd %ziel%
 
 jar cmvf manifest.txt CallMeMaybe.jar -C . .
 
-echo JAR gebaut!
+echo JAR built!
 
-echo JAR ausfuehren!
+echo Execute JAR!
 
 java -jar CallMeMaybe.jar
 
-echo JAR ausgefuehrt!
+echo JAR executed!
 
-echo JAR ist ausfuehrbar mit:
+echo JAR can be executed with the following command:
 echo java -jar .\dist\CallMeMaybe.jar
