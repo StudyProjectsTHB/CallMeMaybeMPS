@@ -17,6 +17,9 @@ import jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo;
 import jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo;
 import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import CallScriptLanguage.editor.CallMeMaybeStyles_StyleSheet.ExprKeyStyleClass;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 /*package*/ class BinaryKeyExpression_EditorBuilder_a extends AbstractEditorBuilder {
@@ -100,11 +103,14 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
     protected String getNoTargetText() {
-      return "<no leftOperand>";
+      return "<left Expresion>";
     }
   }
   private EditorCell createComponent_0() {
     EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
+    Style style = new StyleImpl();
+    new ExprKeyStyleClass(this).apply(style, editorCell);
+    editorCell.getStyle().putAll(style);
     return editorCell;
   }
   private EditorCell createRefNode_1() {
@@ -159,7 +165,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
     protected String getNoTargetText() {
-      return "<no rightOperand>";
+      return "<right Expresion>";
     }
   }
 
