@@ -21,9 +21,11 @@ jar cmvf manifest.txt CallMeMaybe.jar -C . .
 echo JAR built!
 
 echo Execute JAR!
+echo ----------------
 
 java -jar CallMeMaybe.jar
 
+echo ----------------
 echo JAR executed!
 
 echo JAR can be executed with the following command:
