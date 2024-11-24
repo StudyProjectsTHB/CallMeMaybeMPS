@@ -39,7 +39,7 @@ import CallScriptLanguage.editor.CallMeMaybeStyles_StyleSheet.ExprKeyStyleClass;
     Style style = new StyleImpl();
     new ExprKeyStyleClass(this).apply(style, editorCell);
     editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("<Expresion-Key-Art auswählen: Simple (\"), Or (|), And (&), Not (!)>");
+    editorCell.setDefaultText("<Choose kind of expression-key: Action (+), Simple (\"), Or (|), And (&), Not (!)>");
     return editorCell;
   }
 }

@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 public class Main {
   public static void main(String[] args) throws IOException {
     BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    ServiceCall chatBot = new ServiceCall();
+    ServiceCallDemo chatBot = new ServiceCallDemo();
 
     while (!(chatBot.isFinished())) {
       String text = chatBot.getCurrentText();
