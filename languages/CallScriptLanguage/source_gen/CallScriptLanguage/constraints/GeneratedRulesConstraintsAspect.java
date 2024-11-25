@@ -19,9 +19,11 @@ public final class GeneratedRulesConstraintsAspect implements RulesConstraintsAs
     switch (conceptIndex.index(cncpt)) {
       case 0:
         return new ChatNode_ConstraintRules();
+      case 1:
+        return new VariableChatNode_ConstraintRules();
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L), MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL)).seal();
 }

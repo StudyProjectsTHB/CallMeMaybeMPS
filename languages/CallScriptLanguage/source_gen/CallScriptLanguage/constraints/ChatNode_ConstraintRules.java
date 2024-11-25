@@ -25,8 +25,9 @@ public final class ChatNode_ConstraintRules extends BaseRulesConstraintsDescript
 
   public static final Rule<ContainmentContext> check_id8957642992059005294 = new Rule_hasWayToEnd();
   public static final Rule<ContainmentContext> check_id8957642992061622830 = new Rule_isVariableCreatedBefore();
+  public static final Rule<ContainmentContext> check_id6813169283234558537 = new Rule_isNameUnique();
 
-  private static final List<Rule<?>> RULES = Collections.unmodifiableList(Arrays.<Rule<?>>asList(check_id8957642992059005294, check_id8957642992061622830));
+  private static final List<Rule<?>> RULES = Collections.unmodifiableList(Arrays.<Rule<?>>asList(check_id8957642992059005294, check_id8957642992061622830, check_id6813169283234558537));
 
   @NotNull
   @Override
@@ -65,6 +66,26 @@ public final class ChatNode_ConstraintRules extends BaseRulesConstraintsDescript
     @Override
     public boolean check(@NotNull ContainmentContext context) {
       return (boolean) ChatBot__BehaviorDescriptor.hasChatNodeVariableCreatedBefore_id7LfWdtQwd34.invoke(SNodeOperations.as(context.getParentNode(), CONCEPTS.ChatBot$6V), context.getChildNode());
+    }
+
+    @Override
+    public boolean appliesTo(@NotNull ContainmentContext context) {
+      return true;
+    }
+
+  }
+
+  public static final class Rule_isNameUnique extends BaseRule<ContainmentContext> {
+    private static final SNodeReference SOURCE_NODE_REF = PersistenceFacade.getInstance().createNodeReference("r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/6813169283234558537");
+    public static final RuleId ID_isNameUnique = new RuleId(6813169283234558537L, SOURCE_NODE_REF);
+
+    public Rule_isNameUnique() {
+      super(CONCEPT, PredefinedRuleKinds.CAN_BE_CHILD, ID_isNameUnique, SOURCE_NODE_REF);
+    }
+
+    @Override
+    public boolean check(@NotNull ContainmentContext context) {
+      return (boolean) ChatBot__BehaviorDescriptor.isChatNodeNameUnique_id5UdflQ9Lz7_.invoke(SNodeOperations.as(context.getParentNode(), CONCEPTS.ChatBot$6V), context.getChildNode());
     }
 
     @Override

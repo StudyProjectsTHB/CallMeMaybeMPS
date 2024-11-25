@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.util.LinkedList;
 import java.util.Set;
 import jetbrains.mps.internal.collections.runtime.SetSequence;
@@ -34,11 +34,14 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, "CallScriptLanguage.structure.ChatBot");
 
   public static final SMethod<String> generateClassName_id4y5FiRByVhd = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("generateClassName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(5225773355303154765L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2();
+  public static final SMethod<Boolean> isChatNodeNameUnique_id5UdflQ9Lz7_ = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isChatNodeNameUnique").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283234148837L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> isVariabelNameUnique_id5UdflQ9PGRG = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isVariabelNameUnique").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283235237356L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> hasChatNodeWayToEnd_id7LfWdtQrZBy = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasChatNodeWayToEnd").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8957642992058890722L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> hasChatNodeVariableCreatedBefore_id7LfWdtQwd34 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasChatNodeVariableCreatedBefore").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8957642992059994308L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   /*package*/ static final SMethod<List<SNode>> findNextChatNodes_id7LfWdtQzcm7 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("findNextChatNodes").modifiers(0, AccessPrivileges.PRIVATE).concept(CONCEPT).baseMethodId(8957642992060777863L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> getAllChatNodes_id5UdflQ9MnNv = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("getAllChatNodes").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283234364639L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(generateClassName_id4y5FiRByVhd, hasChatNodeWayToEnd_id7LfWdtQrZBy, hasChatNodeVariableCreatedBefore_id7LfWdtQwd34, findNextChatNodes_id7LfWdtQzcm7);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(generateClassName_id4y5FiRByVhd, isChatNodeNameUnique_id5UdflQ9Lz7_, isVariabelNameUnique_id5UdflQ9PGRG, hasChatNodeWayToEnd_id7LfWdtQrZBy, hasChatNodeVariableCreatedBefore_id7LfWdtQwd34, findNextChatNodes_id7LfWdtQzcm7, getAllChatNodes_id5UdflQ9MnNv);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
 
@@ -51,6 +54,14 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
       name += part.substring(1, part.length());
     }
     return name;
+  }
+  /*package*/ static boolean isChatNodeNameUnique_id5UdflQ9Lz7_(@NotNull SNode __thisNode__, final SNode chatNode) {
+    List<SNode> allChatNodes = ChatBot__BehaviorDescriptor.getAllChatNodes_id5UdflQ9MnNv.invoke(__thisNode__);
+
+    return !(ListSequence.fromList(allChatNodes).any((it) -> it != chatNode && SPropertyOperations.getString(it, PROPS.name$MnvL).equals(SPropertyOperations.getString(chatNode, PROPS.name$MnvL))));
+  }
+  /*package*/ static boolean isVariabelNameUnique_id5UdflQ9PGRG(@NotNull SNode __thisNode__, final SNode variableChatNode) {
+    return !(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)).any((it) -> variableChatNode != it && SPropertyOperations.getString(it, PROPS.variableName$itx_).equals(SPropertyOperations.getString(variableChatNode, PROPS.variableName$itx_))));
   }
   /*package*/ static boolean hasChatNodeWayToEnd_id7LfWdtQrZBy(@NotNull SNode __thisNode__, SNode chatNode) {
     if (SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1) == null || ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1)).count() == 0) {
@@ -200,6 +211,27 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
     return ListSequence.fromList(new LinkedList<>());
 
   }
+  /*package*/ static List<SNode> getAllChatNodes_id5UdflQ9MnNv(@NotNull SNode __thisNode__) {
+    List<SNode> allChatNodes = ListSequence.fromList(new LinkedList<>());
+    if (SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE) != null) {
+      ListSequence.fromList(allChatNodes).addElement(SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1)));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0)));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)));
+    }
+
+    return allChatNodes;
+
+  }
 
   /*package*/ ChatBot__BehaviorDescriptor() {
   }
@@ -219,11 +251,17 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
       case 0:
         return (T) ((String) generateClassName_id4y5FiRByVhd(node));
       case 1:
-        return (T) ((Boolean) hasChatNodeWayToEnd_id7LfWdtQrZBy(node, (SNode) parameters[0]));
+        return (T) ((Boolean) isChatNodeNameUnique_id5UdflQ9Lz7_(node, (SNode) parameters[0]));
       case 2:
-        return (T) ((Boolean) hasChatNodeVariableCreatedBefore_id7LfWdtQwd34(node, (SNode) parameters[0]));
+        return (T) ((Boolean) isVariabelNameUnique_id5UdflQ9PGRG(node, (SNode) parameters[0]));
       case 3:
+        return (T) ((Boolean) hasChatNodeWayToEnd_id7LfWdtQrZBy(node, (SNode) parameters[0]));
+      case 4:
+        return (T) ((Boolean) hasChatNodeVariableCreatedBefore_id7LfWdtQwd34(node, (SNode) parameters[0]));
+      case 5:
         return (T) ((List<SNode>) findNextChatNodes_id7LfWdtQzcm7(node, (SNode) parameters[0]));
+      case 6:
+        return (T) ((List<SNode>) getAllChatNodes_id5UdflQ9MnNv(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -259,8 +297,8 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink endChatNode$6_D1 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a5L, "endChatNode");
     /*package*/ static final SContainmentLink variableChatNodes$Yau7 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x22a9042148d31014L, "variableChatNodes");
+    /*package*/ static final SContainmentLink endChatNode$6_D1 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a5L, "endChatNode");
     /*package*/ static final SContainmentLink middleChatNodes$6_q0 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a4L, "middleChatNodes");
     /*package*/ static final SContainmentLink startChatNode$6wfE = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a3L, "startChatNode");
     /*package*/ static final SReferenceLink chatNode$itKA = MetaAdapterFactory.getReferenceLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, 0x22a9042148cdd601L, "chatNode");
