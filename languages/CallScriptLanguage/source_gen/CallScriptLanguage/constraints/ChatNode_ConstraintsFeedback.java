@@ -26,8 +26,15 @@ public final class ChatNode_ConstraintsFeedback extends BaseFeedbackDescriptor {
       return new MessageProvider.StringMsg("All child nodes should lead to an end chat node");
     }
   };
+  private static final FeedbackProvider<ContainmentContext> MSGPROVIDER_WhenConstraintRuleFails_g9qiff_b = new BaseMessageProvider<ContainmentContext>(new FailingRuleProblemId(ChatNode_ConstraintRules.Rule_isVariableCreatedBefore.ID_isVariableCreatedBefore)) {
+    @NotNull
+    @Override
+    public MessageProvider.Msg yieldMessage(ContainmentContext context) {
+      return new MessageProvider.StringMsg("A used variable should be declared in all paths of the previous chat nodes.");
+    }
+  };
 
-  private static final List<FeedbackProvider> PROVIDERS = Collections.unmodifiableList(Arrays.<FeedbackProvider>asList(MSGPROVIDER_WhenConstraintRuleFails_g9qiff_a));
+  private static final List<FeedbackProvider> PROVIDERS = Collections.unmodifiableList(Arrays.<FeedbackProvider>asList(MSGPROVIDER_WhenConstraintRuleFails_g9qiff_a, MSGPROVIDER_WhenConstraintRuleFails_g9qiff_b));
 
   public ChatNode_ConstraintsFeedback() {
     super(CONCEPT);

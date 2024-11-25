@@ -370,7 +370,7 @@
         <node concept="1DCEQD" id="7LfWdtQAqCO" role="1DCEQI">
           <node concept="16I2mz" id="7LfWdtQAsVS" role="16N$OO">
             <node concept="16N$OT" id="7LfWdtQAsVT" role="16I2mt">
-              <property role="16N$OU" value="A used variable should be declared in all paths of the previous chat nodes." />
+              <property role="16N$OU" value="A used variable should be declared in all previous paths of the chat node." />
             </node>
           </node>
         </node>

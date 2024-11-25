@@ -24,8 +24,9 @@ public final class ChatNode_ConstraintRules extends BaseRulesConstraintsDescript
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L, "CallScriptLanguage.structure.ChatNode");
 
   public static final Rule<ContainmentContext> check_id8957642992059005294 = new Rule_hasWayToEnd();
+  public static final Rule<ContainmentContext> check_id8957642992061622830 = new Rule_isVariableCreatedBefore();
 
-  private static final List<Rule<?>> RULES = Collections.unmodifiableList(Arrays.<Rule<?>>asList(check_id8957642992059005294));
+  private static final List<Rule<?>> RULES = Collections.unmodifiableList(Arrays.<Rule<?>>asList(check_id8957642992059005294, check_id8957642992061622830));
 
   @NotNull
   @Override
@@ -44,6 +45,26 @@ public final class ChatNode_ConstraintRules extends BaseRulesConstraintsDescript
     @Override
     public boolean check(@NotNull ContainmentContext context) {
       return (boolean) ChatBot__BehaviorDescriptor.hasChatNodeWayToEnd_id7LfWdtQrZBy.invoke(SNodeOperations.as(context.getParentNode(), CONCEPTS.ChatBot$6V), context.getChildNode());
+    }
+
+    @Override
+    public boolean appliesTo(@NotNull ContainmentContext context) {
+      return true;
+    }
+
+  }
+
+  public static final class Rule_isVariableCreatedBefore extends BaseRule<ContainmentContext> {
+    private static final SNodeReference SOURCE_NODE_REF = PersistenceFacade.getInstance().createNodeReference("r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/8957642992061622830");
+    public static final RuleId ID_isVariableCreatedBefore = new RuleId(8957642992061622830L, SOURCE_NODE_REF);
+
+    public Rule_isVariableCreatedBefore() {
+      super(CONCEPT, PredefinedRuleKinds.CAN_BE_CHILD, ID_isVariableCreatedBefore, SOURCE_NODE_REF);
+    }
+
+    @Override
+    public boolean check(@NotNull ContainmentContext context) {
+      return (boolean) ChatBot__BehaviorDescriptor.hasChatNodeVariableCreatedBefore_id7LfWdtQwd34.invoke(SNodeOperations.as(context.getParentNode(), CONCEPTS.ChatBot$6V), context.getChildNode());
     }
 
     @Override
