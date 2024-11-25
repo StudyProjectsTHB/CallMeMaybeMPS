@@ -41,7 +41,7 @@
     <tar destfile="${build.layout}/CallMeMaybeMPS-${CallMeMaybeMPS.build.number}.tar.gz" compression="gzip" longfile="gnu">
       <fileset dir="${artifacts.CallMeMaybeMPS}" />
       <tarfileset file="${mps_home}/lib/jna/amd64/libjnidispatch.so" prefix="lib/jna" />
-      <tarfileset file="${mps_home}/lib/pty4j/x86-64/libpty.so" prefix="lib/pty4j/linux/x86-64" />
+      <tarfileset file="${mps_home}/lib/pty4j/win\x86-64/libpty.so" prefix="lib/pty4j/linux/x86-64" />
       <tarfileset dir="${mps_home}/bin/linux" prefix="bin" filemode="755" />
       <tarfileset dir="${build.tmp}/default/CallMeMaybeMPS-_dl__lbrace_build.number_rbrace_.tar.gz_f755" filemode="755" prefix="bin" />
       <tarfileset dir="${build.tmp}/default/CallMeMaybeMPS-_dl__lbrace_build.number_rbrace_.tar.gz" />
