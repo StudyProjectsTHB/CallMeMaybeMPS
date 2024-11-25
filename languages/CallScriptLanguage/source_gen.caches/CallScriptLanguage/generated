@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <product version="3" modelHash="-7w2rkgfwyx2heqpwcdyu95o9k57cq2r">
+=======
+<product version="3" modelHash="-16xkp9qf5mdp4j9n0qy5ncavysclg4l">
+>>>>>>> refs/heads/master
   <files names="Language.java" />
 </product>
 

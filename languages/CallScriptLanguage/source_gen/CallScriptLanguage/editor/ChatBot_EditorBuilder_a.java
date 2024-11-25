@@ -90,7 +90,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       final SProperty property = PROPS.name$MnvL;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<Name des ChatBots>");
+      editorCell.setDefaultText("<Name of the chat bot>");
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       new ChatBotNameStyleClass(this).apply(style, editorCell);
@@ -109,7 +109,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Startknoten");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Starting Node");
     editorCell.setCellId("Constant_txg7da_b0");
     Style style = new StyleImpl();
     new ChatNodeCategoryStyleClass(this).apply(style, editorCell);
@@ -172,7 +172,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<Startknoten erstellen>";
+      return "<Create starting node>";
     }
   }
   private EditorCell createConstant_1() {
@@ -185,7 +185,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Gesprächsverlauf");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Conversation history");
     editorCell.setCellId("Constant_txg7da_e0");
     Style style = new StyleImpl();
     new ChatNodeCategoryStyleClass(this).apply(style, editorCell);
@@ -279,7 +279,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
     private EditorCell createConstant_3() {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<neuen mittleren Block hinzufügen...>");
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<add new middle node...>");
       editorCell.setCellId("Constant_txg7da_a0f0");
       Style style = new StyleImpl();
       new ChatNodeNamePrefixStyleClass(this).apply(style, editorCell);
@@ -298,7 +298,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_5() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Variablenknoten");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Variable nodes");
     editorCell.setCellId("Constant_txg7da_h0");
     Style style = new StyleImpl();
     new ChatNodeCategoryStyleClass(this).apply(style, editorCell);
@@ -392,7 +392,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
     private EditorCell createConstant_6() {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<neue Variablenblock hinzufügen...>");
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<add new variable node...>");
       editorCell.setCellId("Constant_txg7da_a0i0");
       Style style = new StyleImpl();
       new ChatNodeNamePrefixStyleClass(this).apply(style, editorCell);
@@ -411,7 +411,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_8() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Endknoten");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Ending nodes");
     editorCell.setCellId("Constant_txg7da_k0");
     Style style = new StyleImpl();
     new ChatNodeCategoryStyleClass(this).apply(style, editorCell);
@@ -505,7 +505,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
     private EditorCell createConstant_9() {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<neuen Endblock hinzufügen...>");
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<add new ending node...>");
       editorCell.setCellId("Constant_txg7da_a0l0");
       Style style = new StyleImpl();
       new ChatNodeNamePrefixStyleClass(this).apply(style, editorCell);

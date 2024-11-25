@@ -103,7 +103,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
     protected String getNoTargetText() {
-      return "<no leftOperand>";
+      return "<left Expresion>";
     }
   }
   private EditorCell createComponent_0() {
@@ -165,7 +165,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       }
     }
     protected String getNoTargetText() {
-      return "<no rightOperand>";
+      return "<right Expresion>";
     }
   }
 

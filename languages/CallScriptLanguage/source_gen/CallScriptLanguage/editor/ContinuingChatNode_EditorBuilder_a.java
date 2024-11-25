@@ -105,7 +105,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       final SProperty property = PROPS.name$MnvL;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<Name des Chat-Node>");
+      editorCell.setDefaultText("<Name of the chat node>");
       editorCell.setCellId("property_name");
       Style style = new StyleImpl();
       new ChatNodeNameStyleClass(this).apply(style, editorCell);
@@ -139,7 +139,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       final SProperty property = PROPS.text$6uQy;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no text>");
+      editorCell.setDefaultText("<What should be said? (text)>");
       editorCell.setCellId("property_text");
       Style style = new StyleImpl();
       new ChatNodeTextStyleClass(this).apply(style, editorCell);
@@ -320,7 +320,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
     private EditorCell createConstant_1() {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<neue Verbindung hinzufügen>");
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<add new connection...>");
       editorCell.setCellId("Constant_uvdubr_a0c0");
       Style style = new StyleImpl();
       new ExprKeyStyleClass(this).apply(style, editorCell);
