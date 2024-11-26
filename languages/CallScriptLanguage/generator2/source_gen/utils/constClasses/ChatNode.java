@@ -21,7 +21,7 @@ public class ChatNode {
   }
 
   public String getTextToSay(List<VariableChatNode> variableChatNodes) {
-    VariableChatNode matching = ListSequence.fromList(variableChatNodes).findFirst((it) -> it.name.equals(ChatNode.this.variableName));
+    VariableChatNode matching = ListSequence.fromList(variableChatNodes).findFirst((it) -> it.getVariableName().equals(ChatNode.this.variableName));
     if (matching != null) {
       return text + " " + matching.getValue();
     } else {

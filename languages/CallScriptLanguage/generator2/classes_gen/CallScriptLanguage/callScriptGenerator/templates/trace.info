@@ -6,13 +6,13 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="QueriesGenerated.java">
-      <unit at="434,0,440,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$PROPS" />
-      <unit at="419,0,433,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$LINKS" />
+      <unit at="437,0,443,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$PROPS" />
+      <unit at="422,0,436,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$LINKS" />
       <unit at="166,0,183,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$RRC" />
       <unit at="316,0,334,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$PVQ" />
       <unit at="283,0,304,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$SNsQ" />
       <unit at="214,0,269,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated$SNQ" />
-      <unit at="34,0,441,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated" />
+      <unit at="34,0,444,0" name="CallScriptLanguage.callScriptGenerator.templates.QueriesGenerated" />
     </file>
   </root>
   <root nodeRef="r:6946d831-a531-4bbc-811a-661471006dd5(CallScriptLanguage.callScriptGenerator.templates@generator)/3036021755340612906">
@@ -210,23 +210,29 @@
   </root>
   <root nodeRef="r:6946d831-a531-4bbc-811a-661471006dd5(CallScriptLanguage.callScriptGenerator.templates@generator)/5225773355303138971">
     <file name="QueriesGenerated.java">
-      <node id="615978663794313152" at="39,83,40,86" concept="2" />
-      <node id="615978663794323313" at="42,83,43,86" concept="2" />
+      <node id="615978663794313152" at="39,83,40,364" concept="2" />
+      <node id="615978663794323313" at="42,83,43,361" concept="2" />
       <node id="3036021755342161820" at="156,14,157,56" concept="0" />
       <node id="615978663794312068" at="157,56,158,55" concept="0" />
       <node id="3036021755342161820" at="174,15,175,58" concept="2" />
       <node id="615978663794312068" at="176,15,177,58" concept="2" />
+      <node id="3134173118000425193" at="418,52,419,40" concept="2" />
       <node id="615978663794312232" at="39,0,42,0" concept="3" trace="rule_Condition_0_0#(Ljetbrains/mps/generator/template/BaseMappingRuleContext;)Z" />
       <node id="615978663794322393" at="42,0,45,0" concept="3" trace="rule_Condition_0_1#(Ljetbrains/mps/generator/template/BaseMappingRuleContext;)Z" />
-      <scope id="615978663794312233" at="39,83,40,86" />
-      <scope id="615978663794322394" at="42,83,43,86" />
+      <node id="3134173118000425193" at="418,0,421,0" concept="3" trace="isEmptyString#(Ljava/lang/String;)Z" />
+      <scope id="615978663794312233" at="39,83,40,364" />
+      <scope id="615978663794322394" at="42,83,43,361" />
       <scope id="3036021755342161820" at="174,15,175,58" />
       <scope id="615978663794312068" at="176,15,177,58" />
+      <scope id="3134173118000425193" at="418,52,419,40" />
       <scope id="615978663794312232" at="39,0,42,0">
         <var name="_context" id="615978663794312232" />
       </scope>
       <scope id="615978663794322393" at="42,0,45,0">
         <var name="_context" id="615978663794322393" />
+      </scope>
+      <scope id="3134173118000425193" at="418,0,421,0">
+        <var name="str" id="3134173118000425193" />
       </scope>
     </file>
   </root>

@@ -4,13 +4,11 @@ package utils.constClasses;
 
 
 public class VariableChatNode extends ChatNode {
-  private String variableName;
   private String chatNodeName;
   private String value;
 
-  public VariableChatNode(String name, String text, String vairableName, String chatNodeName) {
-    super(name, text);
-    this.variableName = vairableName;
+  public VariableChatNode(String name, String text, String variableName, String chatNodeName) {
+    super(name, text, variableName);
     this.chatNodeName = chatNodeName;
   }
 

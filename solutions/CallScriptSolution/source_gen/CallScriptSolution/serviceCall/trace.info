@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
+  <root nodeRef="r:a57e983d-aa19-4452-b9f5-57dd0c701f34(CallScriptSolution.serviceCall)/2790031629093993390">
+    <file name="Main.java">
+      <node id="2790031629093993390" at="10,61,11,81" concept="2" />
+      <node id="2790031629093993390" at="11,81,12,52" concept="2" />
+      <node id="2790031629093993390" at="12,52,13,0" concept="3" />
+      <node id="2790031629093993390" at="14,37,15,45" concept="2" />
+      <node id="2790031629093993390" at="15,45,16,31" concept="1" />
+      <node id="2790031629093993390" at="16,31,17,39" concept="2" />
+      <node id="2790031629093993390" at="17,39,18,34" concept="1" />
+      <node id="2790031629093993390" at="19,5,20,43" concept="2" />
+      <node id="2790031629093993390" at="20,43,21,29" concept="1" />
+      <node id="2790031629093993390" at="21,29,22,0" concept="3" />
+      <node id="2790031629093993390" at="13,0,19,5" concept="5" />
+      <node id="2790031629093993390" at="10,0,24,0" concept="4" trace="main#([Ljava/lang/String;)V" />
+      <scope id="2790031629093993390" at="14,37,18,34">
+        <var name="input" id="2790031629093993390" />
+        <var name="text" id="2790031629093993390" />
+      </scope>
+      <scope id="2790031629093993390" at="10,61,22,0">
+        <var name="chatBot" id="2790031629093993390" />
+        <var name="reader" id="2790031629093993390" />
+        <var name="text" id="2790031629093993390" />
+      </scope>
+      <scope id="2790031629093993390" at="10,0,24,0">
+        <var name="args" id="2790031629093993390" />
+      </scope>
+      <unit id="2790031629093993390" at="9,0,25,0" name="CallScriptSolution.serviceCall.Main" />
+    </file>
+    <file name="ServiceCallDemo.java">
+      <node id="2790031629093993390" at="21,28,22,546" concept="1" />
+      <node id="2790031629093993390" at="22,546,23,1832" concept="1" />
+      <node id="2790031629093993390" at="23,1832,24,323" concept="1" />
+      <node id="2790031629093993390" at="24,323,25,308" concept="1" />
+      <node id="2790031629093993390" at="21,0,27,0" concept="0" trace="ServiceCallDemo#()V" />
+      <scope id="2790031629093993390" at="21,28,25,308" />
+      <scope id="2790031629093993390" at="21,0,27,0" />
+      <unit id="2790031629093993390" at="19,0,29,0" name="CallScriptSolution.serviceCall.ServiceCallDemo" />
+    </file>
+  </root>
+  <root nodeRef="r:a57e983d-aa19-4452-b9f5-57dd0c701f34(CallScriptSolution.serviceCall)/7366077868164928434">
+    <file name="CallMeMaybeMPS.xml">
+      <unit id="7366077868164928434" at="1,0,488,10" name="CallScriptSolution.serviceCall.CallMeMaybeMPS" />
+    </file>
+  </root>
+</debug-info>
+

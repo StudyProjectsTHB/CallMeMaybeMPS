@@ -6,11 +6,11 @@ import jetbrains.mps.generator.runtime.Generated;
 import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.BaseMappingRuleContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import CallScriptLanguage.behavior.ChatBot__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 import java.util.Map;
 import jetbrains.mps.generator.impl.query.ReductionRuleCondition;
@@ -37,10 +37,10 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static boolean rule_Condition_0_0(final BaseMappingRuleContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null;
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null && SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_) != null && !(isEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_)));
   }
   public static boolean rule_Condition_0_1(final BaseMappingRuleContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) == null;
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null || SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_) != null || isEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_));
   }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
     return (String) ChatBot__BehaviorDescriptor.generateClassName_id4y5FiRByVhd.invoke(_context.getNode());
@@ -415,6 +415,9 @@ public class QueriesGenerated extends QueryProviderBase {
     quotedNode_1 = nb.getResult();
     return quotedNode_1;
   }
+  private static boolean isEmptyString(String str) {
+    return str == null || str.isEmpty();
+  }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink variable$Q63F = MetaAdapterFactory.getReferenceLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L, 0x22a9042148cdd603L, "variable");
@@ -432,9 +435,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
 
   private static final class PROPS {
+    /*package*/ static final SProperty variableName$itx_ = MetaAdapterFactory.getProperty(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, 0x22a9042148cdd600L, "variableName");
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
     /*package*/ static final SProperty text$6uQy = MetaAdapterFactory.getProperty(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L, 0x72ca8e62f371e59dL, "text");
     /*package*/ static final SProperty key$6IO5 = MetaAdapterFactory.getProperty(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5b3L, 0x72ca8e62f371e5b4L, "key");
-    /*package*/ static final SProperty variableName$itx_ = MetaAdapterFactory.getProperty(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, 0x22a9042148cdd600L, "variableName");
   }
 }
