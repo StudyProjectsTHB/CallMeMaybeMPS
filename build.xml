@@ -3,22 +3,21 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/CallMeMaybeMPS" />
   <property name="build.layout" location="${build.dir}/artifacts/CallMeMaybeMPS" />
-  <tstamp>
-    <format property="date" pattern="yyyyMMdd" />
-  </tstamp>
-  <property name="build.number" value="241.SNAPSHOT" />
   <property name="mps_home" location="" />
-  <property name="artifacts.mpsStandalone" location="${mps_home}" />
-  <property name="artifacts.mpsMakePlugin" location="${mps_home}/plugins" />
-  <property name="artifacts.mpsCore" location="${mps_home}/plugins" />
-  <property name="artifacts.mpsVcs" location="${mps_home}/plugins" />
-  <property name="artifacts.mpsPlugins" location="${mps_home}/plugins" />
-  <property file="${artifacts.mpsStandalone}/build.properties" prefix="import.mpsStandalone" />
-  <property name="mpsBootstrapCore.version.major" value="${import.mpsStandalone.mpsBootstrapCore.version.major}" />
-  <property name="mpsBootstrapCore.version.minor" value="${import.mpsStandalone.mpsBootstrapCore.version.minor}" />
-  <property name="mpsBootstrapCore.version.bugfixNr" value="${import.mpsStandalone.mpsBootstrapCore.version.bugfixNr}" />
-  <property name="mpsBootstrapCore.version.eap" value="${import.mpsStandalone.mpsBootstrapCore.version.eap}" />
-  <property name="mpsBootstrapCore.version" value="${import.mpsStandalone.mpsBootstrapCore.version}" />
+  <property name="artifacts.mps" location="${mps_home}" />
+  <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
+  <property name="mps.build.number" value="${import.mps.mps.build.number}" />
+  <property name="mps.date" value="${import.mps.mps.date}" />
+  <property name="mps.build.vcs.number" value="${import.mps.mps.build.vcs.number}" />
+  <property name="mps.teamcity.buildConfName" value="${import.mps.mps.teamcity.buildConfName}" />
+  <property name="mps.idea.platform.build.number" value="${import.mps.mps.idea.platform.build.number}" />
+  <property name="mps.mps.build.counter" value="${import.mps.mps.mps.build.counter}" />
+  <property name="mps.runtimeBuild" value="${import.mps.mps.runtimeBuild}" />
+  <property name="mpsBootstrapCore.version.major" value="${import.mps.mpsBootstrapCore.version.major}" />
+  <property name="mpsBootstrapCore.version.minor" value="${import.mps.mpsBootstrapCore.version.minor}" />
+  <property name="mpsBootstrapCore.version.bugfixNr" value="${import.mps.mpsBootstrapCore.version.bugfixNr}" />
+  <property name="mpsBootstrapCore.version.eap" value="${import.mps.mpsBootstrapCore.version.eap}" />
+  <property name="mpsBootstrapCore.version" value="${import.mps.mpsBootstrapCore.version}" />
   <property name="environment" value="env" />
   <property name="env.JAVA_HOME" value="${java.home}/.." />
   <property name="jdk.home" value="${env.JAVA_HOME}" />
@@ -26,8 +25,8 @@
   <property name="mps.ant.log" value="warn" />
   
   <path id="path.mps.ant.path">
-    <pathelement location="${artifacts.mpsStandalone}/lib/ant/lib/ant-mps.jar" />
-    <fileset dir="${artifacts.mpsStandalone}/lib">
+    <pathelement location="${artifacts.mps}/lib/ant/lib/ant-mps.jar" />
+    <fileset dir="${artifacts.mps}/lib">
       <include name="util-8.jar" />
     </fileset>
   </path>
@@ -36,91 +35,11 @@
   
   <generator-settings id="m2m-defaults" strictMode="true" parallelThreads="8" inplaceTransform="false" warnWrongChild="true" createStaticRefs="true" skipUnmodifiedModels="${mps.generator.skipUnmodifiedModels}" />
   
-  <target name="assemble" depends="classes, declare-mps-tasks, collect-tips-mps-tips, fetchDependencies">
-    <mkdir dir="${build.layout}/languages" />
-    <copy todir="${build.layout}/languages">
-      <fileset dir="${artifacts.mpsStandalone}/languages" />
-    </copy>
-    <mkdir dir="${build.layout}/license" />
-    <copy todir="${build.layout}/license">
-      <fileset dir="${artifacts.mpsStandalone}/license" />
-    </copy>
-    <copy file="${artifacts.mpsStandalone}/LICENSE.txt" todir="${build.layout}" />
-    <mkdir dir="${build.layout}/bin" />
-    <copy todir="${build.layout}/bin">
-      <fileset dir="${artifacts.mpsStandalone}/bin">
-        <include name="log.xml" />
-      </fileset>
-    </copy>
-    <copy todir="${build.layout}/bin">
-      <fileset file="${mps_home}/bin/idea.properties" />
-      <filterchain>
-        <tokenfilter>
-          <replaceregex pattern="\.MPS(\w+)" replace="\.${build.number}" flags="g" />
-        </tokenfilter>
-      </filterchain>
-    </copy>
-    <mkdir dir="${build.layout}/lib" />
-    <copy todir="${build.layout}/lib">
-      <fileset dir="${artifacts.mpsStandalone}/lib">
-        <exclude name="jna/" />
-        <exclude name="pty4j/" />
-        <exclude name="MPS-src.zip" />
-        <exclude name="branding.jar" />
-        <exclude name="mps-tips.jar" />
-      </fileset>
-    </copy>
-    <jar destfile="${build.layout}/lib/mps-tips.jar" duplicate="preserve">
-      <fileset file="${build.tmp}/out/mps-tips/mps-tips/**" />
-    </jar>
-    <mkdir dir="${build.tmp}/default/branding.jar" />
-    <mkdir dir="${build.tmp}/default/branding.jar/idea" />
-    <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
-      <component>
-        <version major="1" minor="0.0" eap="false" />
-        <build number="${build.number}" date="${date}" />
-        <logo url="/splash.png" textcolor="FFFFFF" progressColor="FFFFFF" />
-        <icon svg="/callmemaybemps.svg" svg-small="/callmemaybemps_16.svg" />
-        <package code="code" />
-        <names product="CallMeMaybeMPS" fullname="CallMeMaybeMPS" script="callmemaybemps" />
-        
-        <welcome-screen logo-url="/logo.png" />
-        
-        <plugins url="https://plugins.jetbrains.com/" />
-        
-        
-      </component>
-    </echoxml>
-    <jar destfile="${build.layout}/lib/branding.jar" duplicate="preserve">
-      <fileset file="${basedir}/icons/callmemaybemps.svg" />
-      <fileset file="${basedir}/icons/callmemaybemps_16.svg" />
-      <fileset file="${basedir}/icons/logo.png" />
-      <fileset file="${basedir}/icons/splash.png" />
-      <fileset dir="${build.tmp}/default/branding.jar" />
-    </jar>
-    <mkdir dir="${build.layout}/plugins" />
-    <mkdir dir="${build.layout}/plugins/vcs-svn" />
-    <copy todir="${build.layout}/plugins/vcs-svn">
-      <fileset dir="${artifacts.mpsVcs}/vcs-svn" />
-    </copy>
-    <mkdir dir="${build.layout}/plugins/vcs-git" />
-    <copy todir="${build.layout}/plugins/vcs-git">
-      <fileset dir="${artifacts.mpsVcs}/vcs-git" />
-    </copy>
-    <mkdir dir="${build.layout}/plugins/mps-core" />
-    <copy todir="${build.layout}/plugins/mps-core">
-      <fileset dir="${artifacts.mpsCore}/mps-core" />
-    </copy>
-    <mkdir dir="${build.layout}/plugins/mps-make" />
-    <copy todir="${build.layout}/plugins/mps-make">
-      <fileset dir="${artifacts.mpsMakePlugin}/mps-make" />
-    </copy>
-    <mkdir dir="${build.layout}/plugins/mps-rcp" />
-    <copy todir="${build.layout}/plugins/mps-rcp">
-      <fileset dir="${artifacts.mpsPlugins}/mps-rcp" />
-    </copy>
-    <mkdir dir="${build.layout}/plugins/CallMeMaybeMPS" />
-    <mkdir dir="${build.layout}/plugins/CallMeMaybeMPS/lib" />
+  <target name="assemble" depends="classes, declare-mps-tasks">
+    <mkdir dir="${build.layout}" />
+    <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.zip" />
+    <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS" />
+    <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/lib" />
     <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.jar" />
     <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.jar/META-INF" />
     <echoxml file="${build.tmp}/default/CallMeMaybeMPS.jar/META-INF/plugin.xml">
@@ -138,11 +57,11 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/lib/CallMeMaybeMPS.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/lib/CallMeMaybeMPS.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/default/CallMeMaybeMPS.jar" />
     </jar>
-    <mkdir dir="${build.layout}/plugins/CallMeMaybeMPS/languages" />
-    <mkdir dir="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS" />
+    <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages" />
+    <mkdir dir="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS" />
     <mkdir dir="${build.tmp}/default/CallScriptLanguage.jar" />
     <mkdir dir="${build.tmp}/default/CallScriptLanguage.jar/META-INF" />
     <echoxml file="${build.tmp}/default/CallScriptLanguage.jar/META-INF/module.xml">
@@ -228,7 +147,7 @@
         <sources jar="CallScriptLanguage-src.jar" descriptor="CallScriptLanguage.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/CallScriptLanguage" />
       <fileset dir="${basedir}/languages/CallScriptLanguage/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/CallScriptLanguage.jar" />
@@ -276,7 +195,7 @@
         <sources jar="CallScriptLanguage-src.jar" descriptor="CallScriptLanguage.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/CallScriptLanguage.generator00" />
       <fileset dir="${basedir}/languages/CallScriptLanguage/generator2/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/CallScriptLanguage-generator.jar" />
@@ -287,7 +206,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-CallScriptLanguage-generator2-templates">
       <fileset dir="${basedir}/languages/CallScriptLanguage/generator2/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptLanguage-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/CallScriptLanguage/generator2/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -311,7 +230,6 @@
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="rt" />
           <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" kind="rt" />
-          <module ref="0013a7dc-e9ad-43ef-a033-8212155a1b91(CallScriptLanguage)" kind="cl" />
           <module ref="6ea03c43-749c-4b49-aa09-7de501f8cd87(CallScriptLanguage.generator00)" kind="cl" />
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" kind="cl" />
           <module ref="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" kind="cl" />
@@ -330,7 +248,7 @@
         <sources jar="CallScriptSolution-src.jar" descriptor="CallScriptSolution.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptSolution.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptSolution.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/CallScriptSolution" />
       <fileset dir="${basedir}/solutions/CallScriptSolution/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/CallScriptSolution.jar" />
@@ -338,7 +256,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-CallScriptSolution-models">
       <fileset dir="${basedir}/solutions/CallScriptSolution/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/plugins/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptSolution-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/CallMeMaybeMPS.zip/CallMeMaybeMPS/languages/CallMeMaybeMPS/CallScriptSolution-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/solutions/CallScriptSolution/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -348,8 +266,10 @@
       <zipfileset file="${basedir}/solutions/CallScriptSolution/CallScriptSolution.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-CallScriptSolution-models" prefix="module/models" />
     </jar>
-    <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=1.0</echo>
-    <echo file="${build.layout}/build.properties">CallMeMaybeMPS.date=${date}${line.separator}CallMeMaybeMPS.build.number=${build.number}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
+    <zip destfile="${build.layout}/CallMeMaybeMPS.zip">
+      <fileset dir="${build.tmp}/default/CallMeMaybeMPS.zip" />
+    </zip>
+    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mps.runtimeBuild=${mps.runtimeBuild}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
   </target>
   
   <target name="buildDependents" />
@@ -377,7 +297,8 @@
     <echo message="generating" />
     <generate fork="true" logLevel="${mps.ant.log}">      
       <settings refid="m2m-defaults" />
-      <plugin path="${artifacts.mpsCore}/mps-core" id="jetbrains.mps.core" />
+      <plugin path="${artifacts.mps}/plugins/mps-build" id="jetbrains.mps.build" />
+      <plugin path="${artifacts.mps}/plugins/mps-core" id="jetbrains.mps.core" />
       <chunk>
         <module file="${basedir}/languages/CallScriptLanguage/CallScriptLanguage.mpl" />
       </chunk>
@@ -406,54 +327,54 @@
         <path location="${basedir}/languages/CallScriptLanguage/source_gen" />
       </src>
       <classpath>
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-textgen.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util-8.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/forms_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-frontback.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-impl.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/jps-model.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/testFramework.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/stats.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/trove.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
+        <fileset file="${artifacts.mps}/lib/app-client.jar" />
+        <fileset file="${artifacts.mps}/lib/lib.jar" />
+        <fileset file="${artifacts.mps}/lib/lib-client.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util-8.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-frontback.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
+        <fileset file="${artifacts.mps}/lib/trove.jar" />
+        <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.analyzers.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.dataFlow.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/runtimes/jetbrains.mps.lang.smodel.query.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/CallScriptLanguage">
@@ -470,50 +391,50 @@
         <path location="${basedir}/languages/CallScriptLanguage/generator2/source_gen" />
       </src>
       <classpath>
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-textgen.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/CallScriptLanguage" />
-        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util-8.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/forms_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-frontback.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-impl.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/jps-model.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/testFramework.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/stats.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/trove.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/app.jar" />
+        <fileset file="${artifacts.mps}/lib/app-client.jar" />
+        <fileset file="${artifacts.mps}/lib/lib.jar" />
+        <fileset file="${artifacts.mps}/lib/lib-client.jar" />
+        <fileset file="${artifacts.mps}/lib/util.jar" />
+        <fileset file="${artifacts.mps}/lib/util_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/util-8.jar" />
+        <fileset file="${artifacts.mps}/lib/forms_rt.jar" />
+        <fileset file="${artifacts.mps}/lib/java-frontback.jar" />
+        <fileset file="${artifacts.mps}/lib/java-impl.jar" />
+        <fileset file="${artifacts.mps}/lib/jps-model.jar" />
+        <fileset file="${artifacts.mps}/lib/testFramework.jar" />
+        <fileset file="${artifacts.mps}/lib/stats.jar" />
+        <fileset file="${artifacts.mps}/lib/platform-loader.jar" />
+        <fileset file="${artifacts.mps}/lib/trove.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure-generator.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/CallScriptLanguage.generator00">
@@ -521,7 +442,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.CallScriptSolution" depends="java.compile.CallScriptLanguage, java.compile.CallScriptLanguage.generator00, fetchDependencies">
+  <target name="java.compile.CallScriptSolution" depends="java.compile.CallScriptLanguage.generator00, fetchDependencies">
     <mkdir dir="${basedir}/solutions/CallScriptSolution/source_gen" />
     <mkdir dir="${build.tmp}/java/out/CallScriptSolution" />
     <javac destdir="${build.tmp}/java/out/CallScriptSolution" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -530,52 +451,28 @@
         <path location="${basedir}/solutions/CallScriptSolution/source_gen" />
       </src>
       <classpath>
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-context.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-constraints-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-messages-for-rules.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-references.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-generator.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-persistence.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-project-check.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/mps-textgen.jar" />
-        <pathelement path="${build.tmp}/java/out/CallScriptLanguage" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-generator.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-persistence.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <pathelement path="${build.tmp}/java/out/CallScriptLanguage.generator00" />
-        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/app-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/lib-client.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/util-8.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/forms_rt.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-frontback.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/java-impl.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/jps-model.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/testFramework.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/stats.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/platform-loader.jar" />
-        <fileset file="${artifacts.mpsStandalone}/lib/trove.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/util-8.jar" />
+        <fileset file="${artifacts.mps}/lib/trove.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/CallScriptSolution">
@@ -587,27 +484,5 @@
     <delete dir="${basedir}/languages/CallScriptLanguage/source_gen" />
     <delete dir="${basedir}/languages/CallScriptLanguage/generator2/source_gen" />
     <delete dir="${basedir}/solutions/CallScriptSolution/source_gen" />
-  </target>
-  
-  <target name="collect-tips-mps-tips">
-    <mkdir dir="${build.tmp}/out/mps-tips/mps-tips/tips/css" />
-    <mkdir dir="${build.tmp}/out/mps-tips/mps-tips/tips/images" />
-    <unjar src="${mps_home}/lib/mps-tips.jar" dest="${build.tmp}/out/mps-tips/mps-tips">
-      <patternset>
-        <include name="tips/**" />
-      </patternset>
-    </unjar>
-    <mkdir dir="${build.tmp}/out/mps-tips/mps-tips/META-INF" />
-    <fileset id="contents" includes="*.*" dir="${build.tmp}/out/mps-tips/mps-tips/tips" />
-    <property name="mps-tips.prop.contents" refid="contents" />
-    <echoxml file="${build.tmp}/out/mps-tips/mps-tips/META-INF/IdeTipsAndTricks.xml">
-      <idea-plugin>
-        <extensions defaultExtensionNs="com.intellij">
-          <tipAndTrick file="${mps-tips.prop.contents}" />
-        </extensions>
-      </idea-plugin>
-    </echoxml>
-    <replace file="${build.tmp}/out/mps-tips/mps-tips/META-INF/IdeTipsAndTricks.xml" token=";" value="&quot;/&gt;&#xD;&#x0009;&lt;tipAndTrick file=&quot;" />
-    <replace file="${build.tmp}/out/mps-tips/mps-tips/META-INF/IdeTipsAndTricks.xml" token="&lt;tipAndTrick file=&quot;&quot; /&gt;" value="" />
   </target>
 </project>
