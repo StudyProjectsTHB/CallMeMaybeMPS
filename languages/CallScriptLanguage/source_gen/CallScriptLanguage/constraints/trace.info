@@ -1,86 +1,275 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
-  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
-  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
-  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,29,0" name="CallScriptLanguage.constraints.ConstraintsAspectDescriptor" />
+      <unit at="10,0,20,0" name="CallScriptLanguage.constraints.ConstraintsAspectDescriptor" />
+    </file>
+    <file name="GeneratedFeedbackAspectConstraints.java">
+      <unit at="10,0,17,0" name="CallScriptLanguage.constraints.GeneratedFeedbackAspectConstraints" />
+    </file>
+    <file name="GeneratedRulesConstraintsAspect.java">
+      <unit at="14,0,32,0" name="CallScriptLanguage.constraints.GeneratedRulesConstraintsAspect" />
     </file>
   </root>
-  <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/8706398762545315676">
-    <file name="ChatNode_Constraints.java">
-      <node id="8706398762545315676" at="22,33,23,32" concept="8" />
-      <node id="8706398762545315677" at="27,59,28,58" concept="8" />
-      <node id="8706398762545316831" at="31,40,32,66" concept="5" />
-      <node id="8706398762545315677" at="35,68,36,82" concept="1" />
-      <node id="8706398762545319811" at="38,82,39,71" concept="1" />
-      <node id="8706398762545315677" at="42,109,43,99" concept="4" />
-      <node id="8706398762545315677" at="44,53,45,159" concept="1" />
-      <node id="8706398762545315677" at="46,7,47,20" concept="5" />
-      <node id="8706398762546803579" at="49,97,50,451" concept="5" />
-      <node id="8706398762545315676" at="54,84,55,119" concept="4" />
-      <node id="8706398762545315677" at="55,119,56,61" concept="1" />
-      <node id="8706398762545315676" at="56,61,57,22" concept="5" />
-      <node id="8706398762545315676" at="61,0,62,0" concept="6" trace="ChatNode$7T" />
-      <node id="8706398762545315676" at="65,0,66,0" concept="6" trace="name$MnvL" />
-      <node id="8706398762545315676" at="22,0,25,0" concept="0" trace="ChatNode_Constraints#()V" />
-      <node id="8706398762545315677" at="27,0,30,0" concept="0" trace="Name_Property#(Ljetbrains/mps/smodel/runtime/ConstraintsDescriptor;)V" />
-      <node id="8706398762545315677" at="38,0,41,0" concept="7" trace="staticSetPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)V" />
-      <node id="8706398762545315677" at="43,99,46,7" concept="2" />
-      <node id="8706398762545315677" at="49,0,52,0" concept="7" trace="staticValidateProperty#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Z" />
-      <node id="8706398762545315677" at="30,0,34,0" concept="3" trace="getValue#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Object;" />
-      <node id="8706398762545315677" at="34,0,38,0" concept="3" trace="setPropertyValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;)V" />
-      <node id="8706398762545315676" at="53,0,59,0" concept="3" trace="getSpecifiedProperties#()Ljava/util/Map;" />
-      <node id="8706398762545315677" at="41,0,49,0" concept="3" trace="validateValue#(Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/Object;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
-      <scope id="8706398762545315676" at="22,33,23,32" />
-      <scope id="8706398762545315677" at="27,59,28,58" />
-      <scope id="8706398762545315755" at="31,40,32,66" />
-      <scope id="8706398762545315677" at="35,68,36,82" />
-      <scope id="8706398762545319696" at="38,82,39,71" />
-      <scope id="8706398762545315677" at="44,53,45,159" />
-      <scope id="8706398762545708242" at="49,97,50,451" />
-      <scope id="8706398762545315676" at="22,0,25,0" />
-      <scope id="8706398762545315677" at="27,0,30,0">
-        <var name="container" id="8706398762545315677" />
+  <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/2505654946972595604">
+    <file name="ContinuingChatNode_ConstraintRules.java">
+      <node id="2505654946972595604" at="22,0,23,0" concept="3" trace="CONCEPT" />
+      <node id="2505654946972595609" at="24,0,25,0" concept="3" trace="check_id2505654946972595609" />
+      <node id="2505654946974364973" at="25,0,26,0" concept="3" trace="check_id2505654946974364973" />
+      <node id="2505654946972595604" at="27,0,28,0" concept="3" trace="RULES" />
+      <node id="2505654946972595604" at="31,43,32,17" concept="2" />
+      <node id="2505654946972595609" at="36,0,37,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="2505654946972595609" at="37,0,38,0" concept="3" trace="ID_hasLastDefaultConnection" />
+      <node id="2505654946972595609" at="39,44,40,101" concept="4" />
+      <node id="2505654946972595609" at="44,63,45,132" concept="2" />
+      <node id="2505654946972595609" at="49,67,50,18" concept="2" />
+      <node id="2505654946974364973" at="56,0,57,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="2505654946974364973" at="57,0,58,0" concept="3" trace="ID_hasOnlyLastAsDefaultConnection" />
+      <node id="2505654946974364973" at="59,50,60,107" concept="4" />
+      <node id="2505654946974364973" at="64,63,65,138" concept="2" />
+      <node id="2505654946974364973" at="69,67,70,18" concept="2" />
+      <node id="2505654946972595604" at="75,52,76,19" concept="4" />
+      <node id="2505654946972595609" at="39,0,42,0" concept="0" trace="Rule_hasLastDefaultConnection#()V" />
+      <node id="2505654946974364973" at="59,0,62,0" concept="0" trace="Rule_hasOnlyLastAsDefaultConnection#()V" />
+      <node id="2505654946972595604" at="75,0,78,0" concept="0" trace="ContinuingChatNode_ConstraintRules#()V" />
+      <node id="2505654946972595609" at="43,0,47,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="2505654946972595609" at="48,0,52,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="2505654946974364973" at="63,0,67,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="2505654946974364973" at="68,0,72,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="2505654946972595604" at="29,0,34,0" concept="1" trace="getDeclaredRules#()Ljava/util/List;" />
+      <scope id="2505654946972595604" at="31,43,32,17" />
+      <scope id="2505654946972595609" at="39,44,40,101" />
+      <scope id="2505654946972595609" at="44,63,45,132" />
+      <scope id="2505654946972595609" at="49,67,50,18" />
+      <scope id="2505654946974364973" at="59,50,60,107" />
+      <scope id="2505654946974364973" at="64,63,65,138" />
+      <scope id="2505654946974364973" at="69,67,70,18" />
+      <scope id="2505654946972595604" at="75,52,76,19" />
+      <scope id="2505654946972595609" at="39,0,42,0" />
+      <scope id="2505654946974364973" at="59,0,62,0" />
+      <scope id="2505654946972595604" at="75,0,78,0" />
+      <scope id="2505654946972595609" at="43,0,47,0">
+        <var name="context" id="2505654946972595609" />
       </scope>
-      <scope id="8706398762545315677" at="38,0,41,0">
-        <var name="node" id="8706398762545315677" />
-        <var name="propertyValue" id="8706398762545315677" />
+      <scope id="2505654946972595609" at="48,0,52,0">
+        <var name="context" id="2505654946972595609" />
       </scope>
-      <scope id="8706398762545315677" at="49,0,52,0">
-        <var name="node" id="8706398762545315677" />
-        <var name="propertyValue" id="8706398762545315677" />
+      <scope id="2505654946974364973" at="63,0,67,0">
+        <var name="context" id="2505654946974364973" />
       </scope>
-      <scope id="8706398762545315676" at="54,84,57,22">
-        <var name="properties" id="8706398762545315676" />
+      <scope id="2505654946974364973" at="68,0,72,0">
+        <var name="context" id="2505654946974364973" />
       </scope>
-      <scope id="8706398762545315677" at="30,0,34,0">
-        <var name="node" id="8706398762545315677" />
+      <scope id="2505654946972595604" at="29,0,34,0" />
+      <unit id="2505654946972595609" at="35,0,54,0" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintRules$Rule_hasLastDefaultConnection" />
+      <unit id="2505654946974364973" at="55,0,74,0" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintRules$Rule_hasOnlyLastAsDefaultConnection" />
+      <unit id="2505654946972595604" at="21,0,79,0" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintRules" />
+    </file>
+    <file name="ContinuingChatNode_ConstraintsFeedback.java">
+      <node id="2505654946972595604" at="20,0,21,0" concept="3" trace="CONCEPT" />
+      <node id="2505654946972595608" at="25,73,26,246" concept="2" />
+      <node id="2505654946974364971" at="32,73,33,137" concept="2" />
+      <node id="2505654946972595604" at="37,0,38,0" concept="3" trace="PROVIDERS" />
+      <node id="2505654946972595604" at="39,51,40,19" concept="4" />
+      <node id="2505654946972595604" at="45,58,46,30" concept="2" />
+      <node id="2505654946972595604" at="39,0,42,0" concept="0" trace="ContinuingChatNode_ConstraintsFeedback#()V" />
+      <node id="2505654946972595608" at="23,0,28,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="2505654946974364971" at="30,0,35,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="2505654946972595604" at="43,0,48,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="2505654946972595608" at="22,0,29,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_v5y4rx_a" />
+      <node id="2505654946974364971" at="29,0,36,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_v5y4rx_b" />
+      <scope id="2505654946972595608" at="25,73,26,246" />
+      <scope id="2505654946974364971" at="32,73,33,137" />
+      <scope id="2505654946972595604" at="39,51,40,19" />
+      <scope id="2505654946972595604" at="45,58,46,30" />
+      <scope id="2505654946972595604" at="39,0,42,0" />
+      <scope id="2505654946972595608" at="23,0,28,0">
+        <var name="context" id="2505654946972595608" />
       </scope>
-      <scope id="8706398762545315677" at="34,0,38,0">
-        <var name="node" id="8706398762545315677" />
-        <var name="propertyValue" id="8706398762545315677" />
+      <scope id="2505654946974364971" at="30,0,35,0">
+        <var name="context" id="2505654946974364971" />
       </scope>
-      <scope id="8706398762545315677" at="42,109,47,20">
-        <var name="result" id="8706398762545315677" />
+      <scope id="2505654946972595604" at="43,0,48,0" />
+      <unit id="2505654946972595608" at="22,111,28,3" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintsFeedback$1" />
+      <unit id="2505654946974364971" at="29,111,35,3" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintsFeedback$2" />
+      <unit id="2505654946972595604" at="19,0,49,0" name="CallScriptLanguage.constraints.ContinuingChatNode_ConstraintsFeedback" />
+    </file>
+  </root>
+  <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/6813169283235316540">
+    <file name="VariableChatNode_ConstraintRules.java">
+      <node id="6813169283235316540" at="24,0,25,0" concept="3" trace="CONCEPT" />
+      <node id="6813169283235318536" at="26,0,27,0" concept="3" trace="check_id6813169283235318536" />
+      <node id="6813169283235316540" at="28,0,29,0" concept="3" trace="RULES" />
+      <node id="6813169283235316540" at="32,43,33,17" concept="2" />
+      <node id="6813169283235318536" at="37,0,38,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="6813169283235318536" at="38,0,39,0" concept="3" trace="ID_isVariableNameUnique" />
+      <node id="6813169283235318536" at="40,40,41,97" concept="4" />
+      <node id="6813169283235318536" at="45,63,46,183" concept="2" />
+      <node id="6813169283235318536" at="50,67,51,18" concept="2" />
+      <node id="6813169283235316540" at="56,50,57,19" concept="4" />
+      <node id="6813169283235316540" at="61,0,62,0" concept="3" trace="ChatBot$6V" />
+      <node id="6813169283235318536" at="40,0,43,0" concept="0" trace="Rule_isVariableNameUnique#()V" />
+      <node id="6813169283235316540" at="56,0,59,0" concept="0" trace="VariableChatNode_ConstraintRules#()V" />
+      <node id="6813169283235318536" at="44,0,48,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="6813169283235318536" at="49,0,53,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="6813169283235316540" at="30,0,35,0" concept="1" trace="getDeclaredRules#()Ljava/util/List;" />
+      <scope id="6813169283235316540" at="32,43,33,17" />
+      <scope id="6813169283235318536" at="40,40,41,97" />
+      <scope id="6813169283235318536" at="45,63,46,183" />
+      <scope id="6813169283235318536" at="50,67,51,18" />
+      <scope id="6813169283235316540" at="56,50,57,19" />
+      <scope id="6813169283235318536" at="40,0,43,0" />
+      <scope id="6813169283235316540" at="56,0,59,0" />
+      <scope id="6813169283235318536" at="44,0,48,0">
+        <var name="context" id="6813169283235318536" />
       </scope>
-      <scope id="8706398762545315676" at="53,0,59,0" />
-      <scope id="8706398762545315677" at="41,0,49,0">
-        <var name="checkingNodeContext" id="8706398762545315677" />
-        <var name="node" id="8706398762545315677" />
-        <var name="propertyValue" id="8706398762545315677" />
+      <scope id="6813169283235318536" at="49,0,53,0">
+        <var name="context" id="6813169283235318536" />
       </scope>
-      <unit id="8706398762545315676" at="60,0,63,0" name="CallScriptLanguage.constraints.ChatNode_Constraints$CONCEPTS" />
-      <unit id="8706398762545315676" at="64,0,67,0" name="CallScriptLanguage.constraints.ChatNode_Constraints$PROPS" />
-      <unit id="8706398762545315677" at="26,0,53,0" name="CallScriptLanguage.constraints.ChatNode_Constraints$Name_Property" />
-      <unit id="8706398762545315676" at="21,0,68,0" name="CallScriptLanguage.constraints.ChatNode_Constraints" />
+      <scope id="6813169283235316540" at="30,0,35,0" />
+      <unit id="6813169283235316540" at="60,0,63,0" name="CallScriptLanguage.constraints.VariableChatNode_ConstraintRules$CONCEPTS" />
+      <unit id="6813169283235318536" at="36,0,55,0" name="CallScriptLanguage.constraints.VariableChatNode_ConstraintRules$Rule_isVariableNameUnique" />
+      <unit id="6813169283235316540" at="23,0,64,0" name="CallScriptLanguage.constraints.VariableChatNode_ConstraintRules" />
+    </file>
+    <file name="VariableChatNode_ConstraintsFeedback.java">
+      <node id="6813169283235316540" at="20,0,21,0" concept="3" trace="CONCEPT" />
+      <node id="6813169283235318535" at="25,73,26,103" concept="2" />
+      <node id="6813169283235316540" at="30,0,31,0" concept="3" trace="PROVIDERS" />
+      <node id="6813169283235316540" at="32,49,33,19" concept="4" />
+      <node id="6813169283235316540" at="38,58,39,30" concept="2" />
+      <node id="6813169283235316540" at="32,0,35,0" concept="0" trace="VariableChatNode_ConstraintsFeedback#()V" />
+      <node id="6813169283235318535" at="23,0,28,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="6813169283235316540" at="36,0,41,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="6813169283235318535" at="22,0,29,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_hwg5cp_a" />
+      <scope id="6813169283235318535" at="25,73,26,103" />
+      <scope id="6813169283235316540" at="32,49,33,19" />
+      <scope id="6813169283235316540" at="38,58,39,30" />
+      <scope id="6813169283235316540" at="32,0,35,0" />
+      <scope id="6813169283235318535" at="23,0,28,0">
+        <var name="context" id="6813169283235318535" />
+      </scope>
+      <scope id="6813169283235316540" at="36,0,41,0" />
+      <unit id="6813169283235318535" at="22,111,28,3" name="CallScriptLanguage.constraints.VariableChatNode_ConstraintsFeedback$1" />
+      <unit id="6813169283235316540" at="19,0,42,0" name="CallScriptLanguage.constraints.VariableChatNode_ConstraintsFeedback" />
+    </file>
+  </root>
+  <root nodeRef="r:78a9156e-a44f-41d3-80a0-48b94124f378(CallScriptLanguage.constraints)/8957642992059005291">
+    <file name="ChatNode_ConstraintRules.java">
+      <node id="8957642992059005291" at="24,0,25,0" concept="3" trace="CONCEPT" />
+      <node id="8957642992059005294" at="26,0,27,0" concept="3" trace="check_id8957642992059005294" />
+      <node id="8957642992061622830" at="27,0,28,0" concept="3" trace="check_id8957642992061622830" />
+      <node id="6813169283234558537" at="28,0,29,0" concept="3" trace="check_id6813169283234558537" />
+      <node id="8957642992059005291" at="30,0,31,0" concept="3" trace="RULES" />
+      <node id="8957642992059005291" at="34,43,35,17" concept="2" />
+      <node id="8957642992059005294" at="39,0,40,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="8957642992059005294" at="40,0,41,0" concept="3" trace="ID_hasWayToEnd" />
+      <node id="8957642992059005294" at="42,31,43,88" concept="4" />
+      <node id="8957642992059005294" at="47,63,48,182" concept="2" />
+      <node id="8957642992059005294" at="52,67,53,18" concept="2" />
+      <node id="8957642992061622830" at="59,0,60,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="8957642992061622830" at="60,0,61,0" concept="3" trace="ID_isVariableCreatedBefore" />
+      <node id="8957642992061622830" at="62,43,63,100" concept="4" />
+      <node id="8957642992061622830" at="67,63,68,195" concept="2" />
+      <node id="8957642992061622830" at="72,67,73,18" concept="2" />
+      <node id="6813169283234558537" at="79,0,80,0" concept="3" trace="SOURCE_NODE_REF" />
+      <node id="6813169283234558537" at="80,0,81,0" concept="3" trace="ID_isNameUnique" />
+      <node id="6813169283234558537" at="82,32,83,89" concept="4" />
+      <node id="6813169283234558537" at="87,63,88,183" concept="2" />
+      <node id="6813169283234558537" at="92,67,93,18" concept="2" />
+      <node id="8957642992059005291" at="98,42,99,19" concept="4" />
+      <node id="8957642992059005291" at="103,0,104,0" concept="3" trace="ChatBot$6V" />
+      <node id="8957642992059005294" at="42,0,45,0" concept="0" trace="Rule_hasWayToEnd#()V" />
+      <node id="8957642992061622830" at="62,0,65,0" concept="0" trace="Rule_isVariableCreatedBefore#()V" />
+      <node id="6813169283234558537" at="82,0,85,0" concept="0" trace="Rule_isNameUnique#()V" />
+      <node id="8957642992059005291" at="98,0,101,0" concept="0" trace="ChatNode_ConstraintRules#()V" />
+      <node id="8957642992059005294" at="46,0,50,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992059005294" at="51,0,55,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992061622830" at="66,0,70,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992061622830" at="71,0,75,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="6813169283234558537" at="86,0,90,0" concept="1" trace="check#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="6813169283234558537" at="91,0,95,0" concept="1" trace="appliesTo#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Z" />
+      <node id="8957642992059005291" at="32,0,37,0" concept="1" trace="getDeclaredRules#()Ljava/util/List;" />
+      <scope id="8957642992059005291" at="34,43,35,17" />
+      <scope id="8957642992059005294" at="42,31,43,88" />
+      <scope id="8957642992059005294" at="47,63,48,182" />
+      <scope id="8957642992059005294" at="52,67,53,18" />
+      <scope id="8957642992061622830" at="62,43,63,100" />
+      <scope id="8957642992061622830" at="67,63,68,195" />
+      <scope id="8957642992061622830" at="72,67,73,18" />
+      <scope id="6813169283234558537" at="82,32,83,89" />
+      <scope id="6813169283234558537" at="87,63,88,183" />
+      <scope id="6813169283234558537" at="92,67,93,18" />
+      <scope id="8957642992059005291" at="98,42,99,19" />
+      <scope id="8957642992059005294" at="42,0,45,0" />
+      <scope id="8957642992061622830" at="62,0,65,0" />
+      <scope id="6813169283234558537" at="82,0,85,0" />
+      <scope id="8957642992059005291" at="98,0,101,0" />
+      <scope id="8957642992059005294" at="46,0,50,0">
+        <var name="context" id="8957642992059005294" />
+      </scope>
+      <scope id="8957642992059005294" at="51,0,55,0">
+        <var name="context" id="8957642992059005294" />
+      </scope>
+      <scope id="8957642992061622830" at="66,0,70,0">
+        <var name="context" id="8957642992061622830" />
+      </scope>
+      <scope id="8957642992061622830" at="71,0,75,0">
+        <var name="context" id="8957642992061622830" />
+      </scope>
+      <scope id="6813169283234558537" at="86,0,90,0">
+        <var name="context" id="6813169283234558537" />
+      </scope>
+      <scope id="6813169283234558537" at="91,0,95,0">
+        <var name="context" id="6813169283234558537" />
+      </scope>
+      <scope id="8957642992059005291" at="32,0,37,0" />
+      <unit id="8957642992059005291" at="102,0,105,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$CONCEPTS" />
+      <unit id="8957642992059005294" at="38,0,57,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$Rule_hasWayToEnd" />
+      <unit id="8957642992061622830" at="58,0,77,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$Rule_isVariableCreatedBefore" />
+      <unit id="6813169283234558537" at="78,0,97,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules$Rule_isNameUnique" />
+      <unit id="8957642992059005291" at="23,0,106,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintRules" />
+    </file>
+    <file name="ChatNode_ConstraintsFeedback.java">
+      <node id="8957642992059005291" at="20,0,21,0" concept="3" trace="CONCEPT" />
+      <node id="8957642992059005293" at="25,73,26,94" concept="2" />
+      <node id="8957642992061622828" at="32,73,33,121" concept="2" />
+      <node id="6813169283234558535" at="39,73,40,85" concept="2" />
+      <node id="8957642992059005291" at="44,0,45,0" concept="3" trace="PROVIDERS" />
+      <node id="8957642992059005291" at="46,41,47,19" concept="4" />
+      <node id="8957642992059005291" at="52,58,53,30" concept="2" />
+      <node id="8957642992059005291" at="46,0,49,0" concept="0" trace="ChatNode_ConstraintsFeedback#()V" />
+      <node id="8957642992059005293" at="23,0,28,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8957642992061622828" at="30,0,35,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="6813169283234558535" at="37,0,42,0" concept="1" trace="yieldMessage#(Ljetbrains/mps/core/aspects/constraints/rules/kinds/ContainmentContext;)Ljetbrains/mps/core/aspects/feedback/messages/MessageProvider/Msg;" />
+      <node id="8957642992059005291" at="50,0,55,0" concept="1" trace="getDeclaredProviders#()Ljava/util/stream/Stream;" />
+      <node id="8957642992059005293" at="22,0,29,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_g9qiff_a" />
+      <node id="8957642992061622828" at="29,0,36,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_g9qiff_b" />
+      <node id="6813169283234558535" at="36,0,43,0" concept="3" trace="MSGPROVIDER_WhenConstraintRuleFails_g9qiff_c" />
+      <scope id="8957642992059005293" at="25,73,26,94" />
+      <scope id="8957642992061622828" at="32,73,33,121" />
+      <scope id="6813169283234558535" at="39,73,40,85" />
+      <scope id="8957642992059005291" at="46,41,47,19" />
+      <scope id="8957642992059005291" at="52,58,53,30" />
+      <scope id="8957642992059005291" at="46,0,49,0" />
+      <scope id="8957642992059005293" at="23,0,28,0">
+        <var name="context" id="8957642992059005293" />
+      </scope>
+      <scope id="8957642992061622828" at="30,0,35,0">
+        <var name="context" id="8957642992061622828" />
+      </scope>
+      <scope id="6813169283234558535" at="37,0,42,0">
+        <var name="context" id="6813169283234558535" />
+      </scope>
+      <scope id="8957642992059005291" at="50,0,55,0" />
+      <unit id="8957642992059005293" at="22,111,28,3" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback$1" />
+      <unit id="8957642992061622828" at="29,111,35,3" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback$2" />
+      <unit id="6813169283234558535" at="36,111,42,3" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback$3" />
+      <unit id="8957642992059005291" at="19,0,56,0" name="CallScriptLanguage.constraints.ChatNode_ConstraintsFeedback" />
     </file>
   </root>
 </debug-info>

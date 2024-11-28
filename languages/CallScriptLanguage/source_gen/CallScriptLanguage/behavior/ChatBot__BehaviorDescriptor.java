@@ -9,24 +9,42 @@ import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
+import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import java.util.LinkedList;
+import java.util.Set;
+import jetbrains.mps.internal.collections.runtime.SetSequence;
+import java.util.HashSet;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 import org.jetbrains.mps.openapi.language.SProperty;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, "CallScriptLanguage.structure.ChatBot");
 
   public static final SMethod<String> generateClassName_id4y5FiRByVhd = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("generateClassName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(5225773355303154765L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2();
+  public static final SMethod<Boolean> isChatNodeNameUnique_id5UdflQ9Lz7_ = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isChatNodeNameUnique").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283234148837L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> isVariabelNameUnique_id5UdflQ9PGRG = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isVariabelNameUnique").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283235237356L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> hasChatNodeWayToEnd_id7LfWdtQrZBy = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasChatNodeWayToEnd").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8957642992058890722L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> hasChatNodeVariableCreatedBefore_id7LfWdtQwd34 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("hasChatNodeVariableCreatedBefore").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(8957642992059994308L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  /*package*/ static final SMethod<List<SNode>> findNextChatNodes_id7LfWdtQzcm7 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("findNextChatNodes").modifiers(0, AccessPrivileges.PRIVATE).concept(CONCEPT).baseMethodId(8957642992060777863L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> getAllChatNodes_id5UdflQ9MnNv = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("getAllChatNodes").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).baseMethodId(6813169283234364639L).languageId(0xa0338212155a1b91L, 0x13a7dce9ad43efL).build2();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(generateClassName_id4y5FiRByVhd);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(generateClassName_id4y5FiRByVhd, isChatNodeNameUnique_id5UdflQ9Lz7_, isVariabelNameUnique_id5UdflQ9PGRG, hasChatNodeWayToEnd_id7LfWdtQrZBy, hasChatNodeVariableCreatedBefore_id7LfWdtQwd34, findNextChatNodes_id7LfWdtQzcm7, getAllChatNodes_id5UdflQ9MnNv);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
+
   }
 
   /*package*/ static String generateClassName_id4y5FiRByVhd(@NotNull SNode __thisNode__) {
@@ -36,6 +54,182 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
       name += part.substring(1, part.length());
     }
     return name;
+  }
+  /*package*/ static boolean isChatNodeNameUnique_id5UdflQ9Lz7_(@NotNull SNode __thisNode__, final SNode chatNode) {
+    List<SNode> allChatNodes = ChatBot__BehaviorDescriptor.getAllChatNodes_id5UdflQ9MnNv.invoke(__thisNode__);
+
+    return !(ListSequence.fromList(allChatNodes).any((it) -> it != chatNode && SPropertyOperations.getString(it, PROPS.name$MnvL).equals(SPropertyOperations.getString(chatNode, PROPS.name$MnvL))));
+  }
+  /*package*/ static boolean isVariabelNameUnique_id5UdflQ9PGRG(@NotNull SNode __thisNode__, final SNode variableChatNode) {
+    return !(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)).any((it) -> variableChatNode != it && SPropertyOperations.getString(it, PROPS.variableName$itx_).equals(SPropertyOperations.getString(variableChatNode, PROPS.variableName$itx_))));
+  }
+  /*package*/ static boolean hasChatNodeWayToEnd_id7LfWdtQrZBy(@NotNull SNode __thisNode__, SNode chatNode) {
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1) == null || ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1)).count() == 0) {
+      return false;
+    }
+    List<SNode> wayToEndChatNodes = ListSequence.fromList(new LinkedList<SNode>());
+    ListSequence.fromList(wayToEndChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1)));
+    int size = ListSequence.fromList(wayToEndChatNodes).count();
+
+    List<SNode> variableChatNodes = ListSequence.fromList(new LinkedList<SNode>());
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7) != null) {
+      ListSequence.fromList(variableChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)));
+    }
+
+    List<SNode> continuingChatNodes = ListSequence.fromList(new LinkedList<>());
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0) != null) {
+      ListSequence.fromList(continuingChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0)));
+    }
+    if (SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE) != null) {
+      ListSequence.fromList(continuingChatNodes).addElement(SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE));
+    }
+
+
+    // loop
+    while (ListSequence.fromList(variableChatNodes).count() + ListSequence.fromList(continuingChatNodes).count() > 0) {
+      // variable chat nodes
+      List<SNode> removableVariableChatNodes = ListSequence.fromList(new LinkedList<>());
+      for (SNode variableChatNode : ListSequence.fromList(variableChatNodes)) {
+        if (ListSequence.fromList(wayToEndChatNodes).contains(SLinkOperations.getTarget(variableChatNode, LINKS.chatNode$itKA))) {
+          ListSequence.fromList(wayToEndChatNodes).addElement(variableChatNode);
+          ListSequence.fromList(removableVariableChatNodes).addElement(variableChatNode);
+        }
+      }
+      ListSequence.fromList(variableChatNodes).removeSequence(ListSequence.fromList(removableVariableChatNodes));
+
+      // continuing chat nodes
+      List<SNode> removableContinuingChatNodes = ListSequence.fromList(new LinkedList<>());
+      for (SNode continuingChatNode : ListSequence.fromList(continuingChatNodes)) {
+        boolean breakNow = false;
+        for (SNode connection : ListSequence.fromList(SLinkOperations.getChildren(continuingChatNode, LINKS.connection$6Qj8))) {
+          if (ListSequence.fromList(wayToEndChatNodes).contains(SLinkOperations.getTarget(connection, LINKS.chatNode$ARFB))) {
+            ListSequence.fromList(wayToEndChatNodes).addElement(continuingChatNode);
+            ListSequence.fromList(removableContinuingChatNodes).addElement(continuingChatNode);
+            breakNow = true;
+            break;
+          }
+        }
+        if (breakNow) {
+          break;
+        }
+      }
+      ListSequence.fromList(continuingChatNodes).removeSequence(ListSequence.fromList(removableContinuingChatNodes));
+
+      if (ListSequence.fromList(wayToEndChatNodes).contains(chatNode)) {
+        return true;
+      }
+
+      if (size == ListSequence.fromList(wayToEndChatNodes).count()) {
+        return false;
+      }
+
+      size = ListSequence.fromList(wayToEndChatNodes).count();
+    }
+    return true;
+  }
+  /*package*/ static boolean hasChatNodeVariableCreatedBefore_id7LfWdtQwd34(@NotNull final SNode __thisNode__, SNode chatNode) {
+    if (SLinkOperations.getTarget(chatNode, LINKS.variable$Q63F) == null) {
+      return true;
+    }
+    List<SNode> allChatNodes = ListSequence.fromList(new LinkedList<>());
+    Set<SNode> chatNodesWithVariableDeclarationBefore = SetSequence.fromSet(new HashSet<SNode>());
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)));
+      boolean found = false;
+      for (SNode variableChatNode : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7))) {
+        if (SPropertyOperations.getString(variableChatNode, PROPS.variableName$itx_).equals(SPropertyOperations.getString(SLinkOperations.getTarget(chatNode, LINKS.variable$Q63F), PROPS.variableName$itx_))) {
+          if (SPropertyOperations.getString(variableChatNode, PROPS.name$MnvL).equals(SPropertyOperations.getString(chatNode, PROPS.name$MnvL))) {
+            return false;
+          }
+          ListSequence.fromList(allChatNodes).removeElement(variableChatNode);
+          SetSequence.fromSet(chatNodesWithVariableDeclarationBefore).addElement(variableChatNode);
+
+          found = true;
+          break;
+        }
+      }
+      if (!(found)) {
+        return false;
+      }
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0)));
+    }
+    int size = ListSequence.fromList(allChatNodes).count();
+
+    while (ListSequence.fromList(allChatNodes).count() > 0) {
+      Set<SNode> removableChatNodes = SetSequence.fromSet(new HashSet<>());
+
+      for (final SNode currentChatNode : ListSequence.fromList(allChatNodes)) {
+        Iterable<SNode> previousUnvalidChatNodes = ListSequence.fromList(allChatNodes).where((it) -> ListSequence.fromList(ChatBot__BehaviorDescriptor.findNextChatNodes_id7LfWdtQzcm7.invokeSpecial(__thisNode__, it)).contains(currentChatNode));
+
+        Iterable<SNode> previousValidChatNodes = SetSequence.fromSet(chatNodesWithVariableDeclarationBefore).where((it) -> ListSequence.fromList(ChatBot__BehaviorDescriptor.findNextChatNodes_id7LfWdtQzcm7.invokeSpecial(__thisNode__, it)).contains(currentChatNode));
+
+        if (Sequence.fromIterable(previousValidChatNodes).count() >= 1 && Sequence.fromIterable(previousUnvalidChatNodes).count() < 1) {
+          if (SPropertyOperations.getString(currentChatNode, PROPS.name$MnvL).equals(SPropertyOperations.getString(chatNode, PROPS.name$MnvL))) {
+            return true;
+          }
+
+          SetSequence.fromSet(removableChatNodes).addElement(currentChatNode);
+          SetSequence.fromSet(chatNodesWithVariableDeclarationBefore).addElement(currentChatNode);
+        }
+      }
+
+      ListSequence.fromList(allChatNodes).removeSequence(SetSequence.fromSet(removableChatNodes));
+
+      // nothing changed
+      if (size == ListSequence.fromList(allChatNodes).count()) {
+        return false;
+      } else {
+        size = ListSequence.fromList(allChatNodes).count();
+      }
+    }
+
+    return true;
+
+  }
+  /*package*/ static List<SNode> findNextChatNodes_id7LfWdtQzcm7(@NotNull SNode __thisNode__, SNode chatNode) {
+    if (SNodeOperations.isInstanceOf(chatNode, CONCEPTS.VariableChatNode$iQ)) {
+      List<SNode> result = ListSequence.fromList(new LinkedList<>());
+      if (SLinkOperations.getTarget(SNodeOperations.as(chatNode, CONCEPTS.VariableChatNode$iQ), LINKS.chatNode$itKA) != null) {
+        ListSequence.fromList(result).addElement(SLinkOperations.getTarget(SNodeOperations.as(chatNode, CONCEPTS.VariableChatNode$iQ), LINKS.chatNode$itKA));
+      }
+      return result;
+    } else if (SNodeOperations.isInstanceOf(chatNode, CONCEPTS.ContinuingChatNode$lW)) {
+      List<SNode> result = ListSequence.fromList(new LinkedList<SNode>());
+      for (SNode connection : ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.as(chatNode, CONCEPTS.ContinuingChatNode$lW), LINKS.connection$6Qj8))) {
+        if (SLinkOperations.getTarget(connection, LINKS.chatNode$ARFB) != null) {
+          ListSequence.fromList(result).addElement(SLinkOperations.getTarget(connection, LINKS.chatNode$ARFB));
+        }
+      }
+      ListSequence.fromList(result).removeElement(chatNode);
+      return result;
+    }
+
+    return ListSequence.fromList(new LinkedList<>());
+
+  }
+  /*package*/ static List<SNode> getAllChatNodes_id5UdflQ9MnNv(@NotNull SNode __thisNode__) {
+    List<SNode> allChatNodes = ListSequence.fromList(new LinkedList<>());
+    if (SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE) != null) {
+      ListSequence.fromList(allChatNodes).addElement(SLinkOperations.getTarget(__thisNode__, LINKS.startChatNode$6wfE));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.endChatNode$6_D1)));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.middleChatNodes$6_q0)));
+    }
+
+    if (SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7) != null) {
+      ListSequence.fromList(allChatNodes).addSequence(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.variableChatNodes$Yau7)));
+    }
+
+    return allChatNodes;
+
   }
 
   /*package*/ ChatBot__BehaviorDescriptor() {
@@ -55,6 +249,18 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
     switch (methodIndex) {
       case 0:
         return (T) ((String) generateClassName_id4y5FiRByVhd(node));
+      case 1:
+        return (T) ((Boolean) isChatNodeNameUnique_id5UdflQ9Lz7_(node, (SNode) parameters[0]));
+      case 2:
+        return (T) ((Boolean) isVariabelNameUnique_id5UdflQ9PGRG(node, (SNode) parameters[0]));
+      case 3:
+        return (T) ((Boolean) hasChatNodeWayToEnd_id7LfWdtQrZBy(node, (SNode) parameters[0]));
+      case 4:
+        return (T) ((Boolean) hasChatNodeVariableCreatedBefore_id7LfWdtQwd34(node, (SNode) parameters[0]));
+      case 5:
+        return (T) ((List<SNode>) findNextChatNodes_id7LfWdtQzcm7(node, (SNode) parameters[0]));
+      case 6:
+        return (T) ((List<SNode>) getAllChatNodes_id5UdflQ9MnNv(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -86,5 +292,22 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty variableName$itx_ = MetaAdapterFactory.getProperty(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, 0x22a9042148cdd600L, "variableName");
+  }
+
+  private static final class LINKS {
+    /*package*/ static final SContainmentLink variableChatNodes$Yau7 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x22a9042148d31014L, "variableChatNodes");
+    /*package*/ static final SContainmentLink endChatNode$6_D1 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a5L, "endChatNode");
+    /*package*/ static final SContainmentLink middleChatNodes$6_q0 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a4L, "middleChatNodes");
+    /*package*/ static final SContainmentLink startChatNode$6wfE = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L, 0x72ca8e62f371e5a3L, "startChatNode");
+    /*package*/ static final SReferenceLink chatNode$itKA = MetaAdapterFactory.getReferenceLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, 0x22a9042148cdd601L, "chatNode");
+    /*package*/ static final SReferenceLink chatNode$ARFB = MetaAdapterFactory.getReferenceLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5a6L, 0x78d3578bca6ace60L, "chatNode");
+    /*package*/ static final SContainmentLink connection$6Qj8 = MetaAdapterFactory.getContainmentLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL, 0x72ca8e62f371e5c1L, "connection");
+    /*package*/ static final SReferenceLink variable$Q63F = MetaAdapterFactory.getReferenceLink(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e594L, 0x22a9042148cdd603L, "variable");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept VariableChatNode$iQ = MetaAdapterFactory.getConcept(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x22a9042148cdd5ffL, "CallScriptLanguage.structure.VariableChatNode");
+    /*package*/ static final SConcept ContinuingChatNode$lW = MetaAdapterFactory.getConcept(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL, "CallScriptLanguage.structure.ContinuingChatNode");
   }
 }
