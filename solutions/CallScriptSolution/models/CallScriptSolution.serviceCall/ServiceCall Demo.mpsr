@@ -85,6 +85,10 @@
           </node>
         </node>
       </node>
+      <node concept="21IQJ4" id="2b5RYok1Mk2" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4gGAv" resolve="New contract" />
+        <node concept="21IQJh" id="2b5RYok1Mk4" role="21IQJd" />
+      </node>
     </node>
     <node concept="21IQJY" id="2qSbJK4gGgJ" role="21IQJ6">
       <property role="TrG5h" value="Change contract" />
@@ -192,15 +196,15 @@
           </node>
         </node>
       </node>
-      <node concept="21IQJ4" id="2qSbJK4gGkL" role="21IQIz">
-        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
-        <node concept="21IQJh" id="2qSbJK4gGkN" role="21IQJd" />
-      </node>
       <node concept="21IQJ4" id="6LT0uGhU4Rq" role="21IQIz">
         <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change contract" />
         <node concept="1Epd8$" id="6LT0uGhU4Rs" role="21IQJd">
           <property role="TrG5h" value="1 gedrückt" />
         </node>
+      </node>
+      <node concept="21IQJ4" id="2qSbJK4gGkL" role="21IQIz">
+        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
+        <node concept="21IQJh" id="2qSbJK4gGkN" role="21IQJd" />
       </node>
     </node>
     <node concept="21IQJQ" id="2qSbJK4g7IM" role="21IQJ7">

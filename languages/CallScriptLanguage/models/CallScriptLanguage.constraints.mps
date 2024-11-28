@@ -235,5 +235,57 @@
       </node>
     </node>
   </node>
+  <node concept="3Oh7Pa" id="2b5RYok07mk">
+    <ref role="3Oh7Pe" to="q9yp:7bazAbNsums" resolve="ContinuingChatNode" />
+    <node concept="3OnDbq" id="2b5RYok07mm" role="3Oh7Pb">
+      <ref role="3OnDbs" to="prp3:6X8eyFnbIRR" resolve="CanBeChild" />
+      <node concept="1DCEPf" id="2b5RYok07mo" role="3OnDbr">
+        <node concept="3Qq5Rn" id="2b5RYok07mp" role="2j4cqI">
+          <property role="EcuMT" value="2505654946972595609" />
+          <property role="TrG5h" value="hasLastDefaultConnection" />
+          <node concept="2K0Yjh" id="2b5RYok07mq" role="2K0Fuo">
+            <node concept="2OqwBi" id="2b5RYok07Dg" role="2K0yoH">
+              <node concept="3QpRc$" id="2b5RYok07se" role="2Oq$k0">
+                <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
+              </node>
+              <node concept="2qgKlT" id="2b5RYok08KX" role="2OqNvi">
+                <ref role="37wK5l" to="apbn:2b5RYojY$Lm" resolve="hasDefaultConnection" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DCEQD" id="2b5RYok07ms" role="1DCEQI">
+          <node concept="16I2mz" id="2b5RYok0909" role="16N$OO">
+            <node concept="16N$OT" id="2b5RYok090a" role="16I2mt">
+              <property role="16N$OU" value="Every continuing chat node needs a default connection (with an empty simple key expression) as the last connection. It's important that the default connection is the last connection of the chat node." />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1DCEPf" id="2b5RYok6RkF" role="3OnDbr">
+        <node concept="3Qq5Rn" id="2b5RYok6RkH" role="2j4cqI">
+          <property role="EcuMT" value="2505654946974364973" />
+          <property role="TrG5h" value="hasOnlyLastAsDefaultConnection" />
+          <node concept="2K0Yjh" id="2b5RYok6RkJ" role="2K0Fuo">
+            <node concept="2OqwBi" id="2b5RYok6RB6" role="2K0yoH">
+              <node concept="3QpRc$" id="2b5RYok6Rrk" role="2Oq$k0">
+                <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
+              </node>
+              <node concept="2qgKlT" id="2b5RYok6Sgp" role="2OqNvi">
+                <ref role="37wK5l" to="apbn:2b5RYok3Ap5" resolve="hasOnlyOneDefaultConnection" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DCEQD" id="2b5RYok6RkN" role="1DCEQI">
+          <node concept="16I2mz" id="2b5RYok6Weo" role="16N$OO">
+            <node concept="16N$OT" id="2b5RYok6Wep" role="16I2mt">
+              <property role="16N$OU" value="A continuing chat node shouldn't contain a default connection besides the last connection." />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

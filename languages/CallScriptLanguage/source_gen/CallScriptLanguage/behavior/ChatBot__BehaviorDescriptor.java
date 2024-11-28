@@ -128,7 +128,6 @@ public final class ChatBot__BehaviorDescriptor extends BaseBHDescriptor {
     return true;
   }
   /*package*/ static boolean hasChatNodeVariableCreatedBefore_id7LfWdtQwd34(@NotNull final SNode __thisNode__, SNode chatNode) {
-    System.out.println("Das ist ein Test");
     if (SLinkOperations.getTarget(chatNode, LINKS.variable$Q63F) == null) {
       return true;
     }

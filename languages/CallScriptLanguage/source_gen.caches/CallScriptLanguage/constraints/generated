@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-du0zhfp6fjp9q4w9oclmzeivjggel9k">
-  <files names="ChatNode_ConstraintRules.java:ChatNode_ConstraintsFeedback.java:ConstraintsAspectDescriptor.java:GeneratedFeedbackAspectConstraints.java:GeneratedRulesConstraintsAspect.java:VariableChatNode_ConstraintRules.java:VariableChatNode_ConstraintsFeedback.java" />
+<product version="3" modelHash="-akeie4f5wkfqq8ibskmntq4e58dk72c">
+  <files names="ChatNode_ConstraintRules.java:ChatNode_ConstraintsFeedback.java:ConstraintsAspectDescriptor.java:ContinuingChatNode_ConstraintRules.java:ContinuingChatNode_ConstraintsFeedback.java:GeneratedFeedbackAspectConstraints.java:GeneratedRulesConstraintsAspect.java:VariableChatNode_ConstraintRules.java:VariableChatNode_ConstraintsFeedback.java" />
 </product>
 
