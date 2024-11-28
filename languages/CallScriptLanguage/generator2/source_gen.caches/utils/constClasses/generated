@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-8daxqjxkn4sr9z1k79dzoi70xj2381e">
+<product version="3" modelHash="7ajfirc9m2tacuxrig5souzgeuxj0ut">
   <files names="ActionKey.java:AndKeyExpression.java:BinaryKeyExpression.java:ChatBot.java:ChatNode.java:Connection.java:ContinuingChatNode.java:Key.java:KeyExpression.java:NotKeyExpression.java:OrKeyExpression.java:SimpleKeyExpression.java:VariableChatNode.java" />
 </product>
 

@@ -1834,7 +1834,7 @@
                     <node concept="1pGfFk" id="8U" role="2ShVmc">
                       <ref role="37wK5l" to="j809:~MessageProvider$StringMsg.&lt;init&gt;(java.lang.String)" resolve="MessageProvider.StringMsg" />
                       <node concept="Xl_RD" id="8V" role="37wK5m">
-                        <property role="Xl_RC" value="Every continuing chat node needs as last a connection a default connection (with an empty simple key expression). It's important, that the default connection is the last connection of the chat node. " />
+                        <property role="Xl_RC" value="Every continuing chat node needs a default connection (with an empty simple key expression) as the last connection. It's important that the default connection is the last connection of the chat node." />
                         <uo k="s:originTrace" v="n:2505654946972602378" />
                       </node>
                     </node>

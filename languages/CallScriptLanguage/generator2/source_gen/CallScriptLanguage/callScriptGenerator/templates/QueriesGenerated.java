@@ -55,7 +55,7 @@ public class QueriesGenerated extends QueryProviderBase {
   public static SNode sourceNodeQuery_2_2(final SourceSubstituteMacroNodeContext _context) {
     SNode stNode = _quotation_createNode_x583g4_a0a0g();
     if (SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null && SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_) != null && !(isEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_)))) {
-      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.name$MnvL));
+      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_));
     }
     return stNode;
   }
@@ -100,7 +100,7 @@ public class QueriesGenerated extends QueryProviderBase {
   public static SNode sourceNodeQuery_8_2(final SourceSubstituteMacroNodeContext _context) {
     SNode stNode = _quotation_createNode_x583g4_a0a0r();
     if (SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null && SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_) != null && !(isEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_)))) {
-      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.name$MnvL));
+      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_));
     }
     return stNode;
   }
@@ -132,7 +132,7 @@ public class QueriesGenerated extends QueryProviderBase {
   public static SNode sourceNodeQuery_11_4(final SourceSubstituteMacroNodeContext _context) {
     SNode stNode = _quotation_createNode_x583g4_a0a0x();
     if (SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F) != null && SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_) != null && !(isEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_)))) {
-      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.name$MnvL));
+      stNode.setProperty("value", SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.variable$Q63F), PROPS.variableName$itx_));
     }
     return stNode;
   }
