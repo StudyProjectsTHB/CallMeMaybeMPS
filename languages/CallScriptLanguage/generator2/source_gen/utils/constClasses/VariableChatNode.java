@@ -6,11 +6,15 @@ package utils.constClasses;
 public class VariableChatNode extends ChatNode {
   private String chatNodeName;
   private String value;
+  private String ownVariableName;
 
-  public VariableChatNode(String name, String text, String variableName, String chatNodeName) {
+  public VariableChatNode(String name, String text, String ownVariableName, String chatNodeName, String variableName) {
     super(name, text, variableName);
+    this.ownVariableName = ownVariableName;
+
     this.chatNodeName = chatNodeName;
   }
+
 
   public void setValue(String value) {
     this.value = value;
@@ -20,8 +24,8 @@ public class VariableChatNode extends ChatNode {
     this.value = input;
     return chatNodeName;
   }
-  public String getVariableName() {
-    return variableName;
+  public String getOwnVariableName() {
+    return ownVariableName;
   }
 
   public String getChatNodeName() {

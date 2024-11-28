@@ -26,13 +26,13 @@
   <root nodeRef="r:d2c0f128-d87f-4be3-9ba4-00cddde9db86(utils.constClasses)/2497532009355841315">
     <file name="ActionKey.java">
       <node id="2497532009355841385" at="7,0,8,0" concept="3" trace="name" />
-      <node id="2497532009355841533" at="9,33,10,21" concept="2" />
+      <node id="2497532009355841533" at="9,33,10,33" concept="2" />
       <node id="2497532009355851384" at="13,27,14,16" concept="8" />
       <node id="615978663793744950" at="17,48,18,28" concept="8" />
       <node id="2497532009355841424" at="9,0,12,0" concept="1" trace="ActionKey#(Ljava/lang/String;)V" />
       <node id="2497532009355851203" at="13,0,16,0" concept="6" trace="getName#()Ljava/lang/String;" />
       <node id="615978663793744948" at="17,0,20,0" concept="6" trace="isRightExpression#(Ljava/lang/String;)Z" />
-      <scope id="2497532009355841428" at="9,33,10,21" />
+      <scope id="2497532009355841428" at="9,33,10,33" />
       <scope id="2497532009355851206" at="13,27,14,16" />
       <scope id="615978663793744949" at="17,48,18,28" />
       <scope id="2497532009355841424" at="9,0,12,0">
@@ -49,42 +49,46 @@
     <file name="VariableChatNode.java">
       <node id="2497532009355867304" at="7,0,8,0" concept="3" trace="chatNodeName" />
       <node id="2497532009356329298" at="8,0,9,0" concept="3" trace="value" />
-      <node id="2497532009355857485" at="10,95,11,36" concept="12" />
-      <node id="2497532009355867932" at="11,36,12,37" concept="2" />
-      <node id="2497532009356330979" at="15,38,16,23" concept="2" />
-      <node id="2497532009356342889" at="19,44,20,23" concept="2" />
-      <node id="2497532009356353682" at="20,23,21,24" concept="8" />
-      <node id="2497532009355872194" at="23,35,24,24" concept="8" />
-      <node id="2497532009355873717" at="27,35,28,24" concept="8" />
-      <node id="3118390593454297815" at="30,28,31,17" concept="8" />
-      <node id="2497532009356330193" at="15,0,18,0" concept="6" trace="setValue#(Ljava/lang/String;)V" />
-      <node id="2497532009355871909" at="23,0,26,0" concept="6" trace="getVariableName#()Ljava/lang/String;" />
-      <node id="2497532009355873397" at="27,0,30,0" concept="6" trace="getChatNodeName#()Ljava/lang/String;" />
-      <node id="615978663794459359" at="30,0,33,0" concept="6" trace="getValue#()Ljava/lang/String;" />
-      <node id="2497532009355856123" at="10,0,14,0" concept="1" trace="VariableChatNode#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
-      <node id="2497532009356341924" at="19,0,23,0" concept="6" trace="processInput#(Ljava/lang/String;)Ljava/lang/String;" />
-      <scope id="2497532009356330196" at="15,38,16,23" />
-      <scope id="2497532009355871912" at="23,35,24,24" />
-      <scope id="2497532009355873400" at="27,35,28,24" />
-      <scope id="615978663794459362" at="30,28,31,17" />
-      <scope id="2497532009355856126" at="10,95,12,37" />
-      <scope id="2497532009356341927" at="19,44,21,24" />
-      <scope id="2497532009356330193" at="15,0,18,0">
+      <node id="3134173118001610723" at="9,0,10,0" concept="3" trace="ownVariableName" />
+      <node id="2497532009355857485" at="11,119,12,36" concept="12" />
+      <node id="3134173118001622804" at="12,36,13,43" concept="2" />
+      <node id="3134173118001635192" at="13,43,14,0" concept="10" />
+      <node id="2497532009355867932" at="14,0,15,37" concept="2" />
+      <node id="2497532009356330979" at="19,38,20,23" concept="2" />
+      <node id="2497532009356342889" at="23,44,24,23" concept="2" />
+      <node id="2497532009356353682" at="24,23,25,24" concept="8" />
+      <node id="2497532009355872194" at="27,38,28,27" concept="8" />
+      <node id="2497532009355873717" at="31,35,32,24" concept="8" />
+      <node id="3118390593454297815" at="34,28,35,17" concept="8" />
+      <node id="2497532009356330193" at="19,0,22,0" concept="6" trace="setValue#(Ljava/lang/String;)V" />
+      <node id="2497532009355871909" at="27,0,30,0" concept="6" trace="getOwnVariableName#()Ljava/lang/String;" />
+      <node id="2497532009355873397" at="31,0,34,0" concept="6" trace="getChatNodeName#()Ljava/lang/String;" />
+      <node id="615978663794459359" at="34,0,37,0" concept="6" trace="getValue#()Ljava/lang/String;" />
+      <node id="2497532009356341924" at="23,0,27,0" concept="6" trace="processInput#(Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="2497532009355856123" at="11,0,17,0" concept="1" trace="VariableChatNode#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
+      <scope id="2497532009356330196" at="19,38,20,23" />
+      <scope id="2497532009355871912" at="27,38,28,27" />
+      <scope id="2497532009355873400" at="31,35,32,24" />
+      <scope id="615978663794459362" at="34,28,35,17" />
+      <scope id="2497532009356341927" at="23,44,25,24" />
+      <scope id="2497532009356330193" at="19,0,22,0">
         <var name="value" id="2497532009356330503" />
       </scope>
-      <scope id="2497532009355871909" at="23,0,26,0" />
-      <scope id="2497532009355873397" at="27,0,30,0" />
-      <scope id="615978663794459359" at="30,0,33,0" />
-      <scope id="2497532009355856123" at="10,0,14,0">
-        <var name="chatNodeName" id="2497532009355868074" />
-        <var name="name" id="2497532009355856139" />
-        <var name="text" id="2497532009355856141" />
-        <var name="variableName" id="2497532009355857983" />
-      </scope>
-      <scope id="2497532009356341924" at="19,0,23,0">
+      <scope id="2497532009355871909" at="27,0,30,0" />
+      <scope id="2497532009355873397" at="31,0,34,0" />
+      <scope id="615978663794459359" at="34,0,37,0" />
+      <scope id="2497532009355856126" at="11,119,15,37" />
+      <scope id="2497532009356341924" at="23,0,27,0">
         <var name="input" id="2497532009356342356" />
       </scope>
-      <unit id="2497532009355853097" at="6,0,35,0" name="utils.constClasses.VariableChatNode" />
+      <scope id="2497532009355856123" at="11,0,17,0">
+        <var name="chatNodeName" id="2497532009355868074" />
+        <var name="name" id="2497532009355856139" />
+        <var name="ownVariableName" id="2497532009355857983" />
+        <var name="text" id="2497532009355856141" />
+        <var name="variableName" id="3134173118001612010" />
+      </scope>
+      <unit id="2497532009355853097" at="6,0,39,0" name="utils.constClasses.VariableChatNode" />
     </file>
   </root>
   <root nodeRef="r:d2c0f128-d87f-4be3-9ba4-00cddde9db86(utils.constClasses)/2613937481707824700">
@@ -212,72 +216,73 @@
       <node id="2613937481707843885" at="14,21,15,21" concept="2" />
       <node id="2497532009355879778" at="15,21,16,37" concept="2" />
       <node id="2497532009355886931" at="19,45,20,27" concept="13" />
-      <node id="615978663794384911" at="23,72,24,148" concept="7" />
-      <node id="615978663794444328" at="25,27,26,46" concept="8" />
-      <node id="615978663794472888" at="27,12,28,18" concept="8" />
-      <node id="2613937481708119459" at="32,27,33,16" concept="8" />
-      <node id="2613937481708068837" at="37,24,38,19" concept="8" />
-      <node id="2613937481708092591" at="40,46,41,19" concept="8" />
-      <node id="2613937481708093235" at="42,5,43,0" concept="10" />
-      <node id="2613937481708096243" at="43,0,44,70" concept="7" />
-      <node id="2613937481708100978" at="44,70,45,0" concept="10" />
-      <node id="2613937481708113625" at="46,23,47,45" concept="8" />
-      <node id="2613937481708141209" at="48,5,49,48" concept="8" />
-      <node id="2613937481708199971" at="53,23,54,16" concept="8" />
-      <node id="2613937481708166104" at="55,5,56,32" concept="8" />
-      <node id="2613937481708100662" at="58,67,59,47" concept="8" />
-      <node id="615978663794469968" at="27,10,29,5" concept="0" />
+      <node id="615978663794384911" at="23,72,24,151" concept="7" />
+      <node id="8392599784050089400" at="24,151,25,0" concept="10" />
+      <node id="615978663794444328" at="26,27,27,46" concept="8" />
+      <node id="615978663794472888" at="28,12,29,18" concept="8" />
+      <node id="2613937481708119459" at="33,27,34,16" concept="8" />
+      <node id="2613937481708068837" at="38,24,39,19" concept="8" />
+      <node id="2613937481708092591" at="41,46,42,19" concept="8" />
+      <node id="2613937481708093235" at="43,5,44,0" concept="10" />
+      <node id="2613937481708096243" at="44,0,45,70" concept="7" />
+      <node id="2613937481708100978" at="45,70,46,0" concept="10" />
+      <node id="2613937481708113625" at="47,23,48,45" concept="8" />
+      <node id="2613937481708141209" at="49,5,50,48" concept="8" />
+      <node id="2613937481708199971" at="54,23,55,16" concept="8" />
+      <node id="2613937481708166104" at="56,5,57,32" concept="8" />
+      <node id="2613937481708100662" at="59,67,60,47" concept="8" />
+      <node id="615978663794469968" at="28,10,30,5" concept="0" />
       <node id="2497532009355885771" at="19,0,22,0" concept="1" trace="ChatNode#(Ljava/lang/String;Ljava/lang/String;)V" />
-      <node id="2613937481708119017" at="32,0,35,0" concept="6" trace="getName#()Ljava/lang/String;" />
-      <node id="2613937481708067043" at="36,39,39,5" concept="5" />
-      <node id="2613937481708069524" at="39,5,42,5" concept="5" />
-      <node id="2613937481708105706" at="45,0,48,5" concept="5" />
-      <node id="2613937481708186704" at="52,25,55,5" concept="5" />
-      <node id="2613937481708100662" at="58,0,61,0" concept="11" trace="as_cf345p_a0a3a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="2613937481708119017" at="33,0,36,0" concept="6" trace="getName#()Ljava/lang/String;" />
+      <node id="2613937481708067043" at="37,39,40,5" concept="5" />
+      <node id="2613937481708069524" at="40,5,43,5" concept="5" />
+      <node id="2613937481708105706" at="46,0,49,5" concept="5" />
+      <node id="2613937481708186704" at="53,25,56,5" concept="5" />
+      <node id="2613937481708100662" at="59,0,62,0" concept="11" trace="as_cf345p_a0a3a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
       <node id="2613937481707836501" at="13,0,18,0" concept="1" trace="ChatNode#(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V" />
-      <node id="615978663794437788" at="24,148,29,5" concept="5" />
-      <node id="2613937481708164833" at="52,0,58,0" concept="6" trace="hashCode#()I" />
-      <node id="2613937481708005004" at="23,0,31,0" concept="6" trace="getTextToSay#(Ljava/util/List;)Ljava/lang/String;" />
-      <node id="2613937481708066579" at="36,0,51,0" concept="6" trace="equals#(Ljava/lang/Object;)Z" />
+      <node id="615978663794437788" at="25,0,30,5" concept="5" />
+      <node id="2613937481708164833" at="53,0,59,0" concept="6" trace="hashCode#()I" />
+      <node id="2613937481708005004" at="23,0,32,0" concept="6" trace="getTextToSay#(Ljava/util/List;)Ljava/lang/String;" />
+      <node id="2613937481708066579" at="37,0,52,0" concept="6" trace="equals#(Ljava/lang/Object;)Z" />
       <scope id="2497532009355885775" at="19,45,20,27" />
-      <scope id="615978663794437790" at="25,27,26,46" />
-      <scope id="615978663794469969" at="27,12,28,18" />
-      <scope id="2613937481708119020" at="32,27,33,16" />
-      <scope id="2613937481708067045" at="37,24,38,19" />
-      <scope id="2613937481708069526" at="40,46,41,19" />
-      <scope id="2613937481708105708" at="46,23,47,45" />
-      <scope id="2613937481708186706" at="53,23,54,16" />
-      <scope id="2613937481708100662" at="58,67,59,47" />
+      <scope id="615978663794437790" at="26,27,27,46" />
+      <scope id="615978663794469969" at="28,12,29,18" />
+      <scope id="2613937481708119020" at="33,27,34,16" />
+      <scope id="2613937481708067045" at="38,24,39,19" />
+      <scope id="2613937481708069526" at="41,46,42,19" />
+      <scope id="2613937481708105708" at="47,23,48,45" />
+      <scope id="2613937481708186706" at="54,23,55,16" />
+      <scope id="2613937481708100662" at="59,67,60,47" />
       <scope id="2613937481707836505" at="13,66,16,37" />
       <scope id="2497532009355885771" at="19,0,22,0">
         <var name="name" id="2497532009355886687" />
         <var name="text" id="2497532009355886689" />
       </scope>
-      <scope id="2613937481708119017" at="32,0,35,0" />
-      <scope id="2613937481708100662" at="58,0,61,0">
+      <scope id="2613937481708119017" at="33,0,36,0" />
+      <scope id="2613937481708100662" at="59,0,62,0">
         <var name="o" id="2613937481708100662" />
         <var name="type" id="2613937481708100662" />
       </scope>
-      <scope id="2613937481708164836" at="52,25,56,32" />
+      <scope id="2613937481708164836" at="53,25,57,32" />
       <scope id="2613937481707836501" at="13,0,18,0">
         <var name="name" id="2613937481707836631" />
         <var name="text" id="2613937481707836704" />
         <var name="variableName" id="2497532009355879053" />
       </scope>
-      <scope id="2613937481708005007" at="23,72,29,5">
+      <scope id="2613937481708164833" at="53,0,59,0" />
+      <scope id="2613937481708005007" at="23,72,30,5">
         <var name="matching" id="615978663794384912" />
       </scope>
-      <scope id="2613937481708164833" at="52,0,58,0" />
-      <scope id="2613937481708005004" at="23,0,31,0">
+      <scope id="2613937481708005004" at="23,0,32,0">
         <var name="variableChatNodes" id="615978663794375626" />
       </scope>
-      <scope id="2613937481708066582" at="36,39,49,48">
+      <scope id="2613937481708066582" at="37,39,50,48">
         <var name="otherChatNode" id="2613937481708096244" />
       </scope>
-      <scope id="2613937481708066579" at="36,0,51,0">
+      <scope id="2613937481708066579" at="37,0,52,0">
         <var name="other" id="2613937481708066727" />
       </scope>
-      <unit id="2613937481707836316" at="8,0,62,0" name="utils.constClasses.ChatNode" />
+      <unit id="2613937481707836316" at="8,0,63,0" name="utils.constClasses.ChatNode" />
     </file>
   </root>
   <root nodeRef="r:d2c0f128-d87f-4be3-9ba4-00cddde9db86(utils.constClasses)/2613937481707850378">
