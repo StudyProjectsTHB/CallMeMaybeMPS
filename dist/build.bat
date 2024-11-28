@@ -5,10 +5,16 @@ set "ziel=.\dist"
 echo Copy Language!
 set "quelle=.\languages\CallScriptLanguage\generator2\classes_gen"
 robocopy "%quelle%" "%ziel%" /E
+
+set "quelle=.\languages\CallScriptLanguage\generator2\source_gen"
+robocopy "%quelle%" "%ziel%" /E
 echo Language copied!
 
 echo Copy Solution!
 set "quelle=.\solutions\CallScriptSolution\classes_gen"
+robocopy "%quelle%" "%ziel%" /E
+
+set "quelle=.\solutions\CallScriptSolution\source_gen"
 robocopy "%quelle%" "%ziel%" /E
 echo Solution copied!
 

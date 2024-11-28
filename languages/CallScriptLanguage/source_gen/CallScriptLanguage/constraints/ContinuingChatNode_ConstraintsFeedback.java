@@ -23,7 +23,7 @@ public final class ContinuingChatNode_ConstraintsFeedback extends BaseFeedbackDe
     @NotNull
     @Override
     public MessageProvider.Msg yieldMessage(ContainmentContext context) {
-      return new MessageProvider.StringMsg("Every continuing chat node needs as last a connection a default connection (with an empty simple key expression). It's important, that the default connection is the last connection of the chat node. ");
+      return new MessageProvider.StringMsg("Every continuing chat node needs a default connection (with an empty simple key expression) as the last connection. It's important that the default connection is the last connection of the chat node.");
     }
   };
   private static final FeedbackProvider<ContainmentContext> MSGPROVIDER_WhenConstraintRuleFails_v5y4rx_b = new BaseMessageProvider<ContainmentContext>(new FailingRuleProblemId(ContinuingChatNode_ConstraintRules.Rule_hasOnlyLastAsDefaultConnection.ID_hasOnlyLastAsDefaultConnection)) {
