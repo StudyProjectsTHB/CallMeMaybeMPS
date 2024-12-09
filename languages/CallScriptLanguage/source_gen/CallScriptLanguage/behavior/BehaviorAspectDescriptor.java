@@ -14,6 +14,7 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myChatBot__BehaviorDescriptor = new ChatBot__BehaviorDescriptor();
   private final BHDescriptor myContinuingChatNode__BehaviorDescriptor = new ContinuingChatNode__BehaviorDescriptor();
+  private final BHDescriptor myConnection__BehaviorDescriptor = new Connection__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -25,10 +26,12 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myChatBot__BehaviorDescriptor;
       case 1:
+        return myConnection__BehaviorDescriptor;
+      case 2:
         return myContinuingChatNode__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L), MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e592L), MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e5a6L), MetaIdFactory.conceptId(0x13a7dce9ad43efL, 0xa0338212155a1b91L, 0x72ca8e62f371e59cL)).seal();
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="8rc97sicwy82fvkapis6v01s8yp3ky">
-  <files names="BehaviorAspectDescriptor.java:ChatBot__BehaviorDescriptor.java:ContinuingChatNode__BehaviorDescriptor.java" />
+<product version="3" modelHash="5ow9cnqo1o4ns8cqp93yb53us104xif">
+  <files names="BehaviorAspectDescriptor.java:ChatBot__BehaviorDescriptor.java:Connection__BehaviorDescriptor.java:ContinuingChatNode__BehaviorDescriptor.java" />
 </product>
 

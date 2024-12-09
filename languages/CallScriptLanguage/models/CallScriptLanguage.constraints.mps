@@ -278,5 +278,34 @@
       </node>
     </node>
   </node>
+  <node concept="3Oh7Pa" id="xD1jqnai3j">
+    <ref role="3Oh7Pe" to="q9yp:7bazAbNsumA" resolve="Connection" />
+    <node concept="3OnDbq" id="xD1jqnai3k" role="3Oh7Pb">
+      <ref role="3OnDbs" to="prp3:6X8eyFnbIRR" resolve="CanBeChild" />
+      <node concept="1DCEPf" id="xD1jqnai3l" role="3OnDbr">
+        <node concept="3Qq5Rn" id="xD1jqnai3m" role="2j4cqI">
+          <property role="EcuMT" value="606021356880470230" />
+          <property role="TrG5h" value="hasNoCapsulatedDefaultKeys" />
+          <node concept="2K0Yjh" id="xD1jqnai3n" role="2K0Fuo">
+            <node concept="2OqwBi" id="xD1jqnaidd" role="2K0yoH">
+              <node concept="3QpRc$" id="xD1jqnai3w" role="2Oq$k0">
+                <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
+              </node>
+              <node concept="2qgKlT" id="xD1jqnaiFs" role="2OqNvi">
+                <ref role="37wK5l" to="apbn:xD1jqn9IV8" resolve="hasNoCapsulatedDefaultKeys" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DCEQD" id="xD1jqnai3p" role="1DCEQI">
+          <node concept="16I2mz" id="xD1jqnaiSg" role="16N$OO">
+            <node concept="16N$OT" id="xD1jqnaiSh" role="16I2mt">
+              <property role="16N$OU" value="A connections key should'nt have a default key in it." />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

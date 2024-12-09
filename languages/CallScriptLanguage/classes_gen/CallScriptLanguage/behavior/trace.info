@@ -18,7 +18,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,35,0" name="CallScriptLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,38,0" name="CallScriptLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:8f498900-1830-4c42-a705-43c0e6523a31(CallScriptLanguage.behavior)/2505654946972191811">
@@ -505,6 +505,141 @@
       <unit id="5225773355303154746" at="309,0,313,0" name="CallScriptLanguage.behavior.ChatBot__BehaviorDescriptor$CONCEPTS" />
       <unit id="5225773355303154746" at="298,0,308,0" name="CallScriptLanguage.behavior.ChatBot__BehaviorDescriptor$LINKS" />
       <unit id="5225773355303154746" at="33,0,314,0" name="CallScriptLanguage.behavior.ChatBot__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:8f498900-1830-4c42-a705-43c0e6523a31(CallScriptLanguage.behavior)/606021356880326325">
+    <file name="Connection__BehaviorDescriptor.java">
+      <node id="606021356880326325" at="27,0,28,0" concept="11" trace="CONCEPT" />
+      <node id="606021356880326325" at="29,0,30,0" concept="11" trace="hasNoCapsulatedDefaultKeys_idxD1jqn9IV8" />
+      <node id="606021356880326325" at="30,0,31,0" concept="11" trace="containsNoDefaultKeyExpression_idxD1jqn9IWu" />
+      <node id="606021356880326325" at="31,0,32,0" concept="11" trace="isDefaultKeyExpression_idxD1jqn9NiI" />
+      <node id="606021356880326325" at="33,0,34,0" concept="11" trace="BH_METHODS" />
+      <node id="606021356880400142" at="40,169,41,20" concept="8" />
+      <node id="606021356880401504" at="42,14,43,227" concept="8" />
+      <node id="606021356880337114" at="45,12,46,18" concept="8" />
+      <node id="606021356880416890" at="50,125,51,19" concept="8" />
+      <node id="606021356880422941" at="52,94,53,18" concept="8" />
+      <node id="606021356880432916" at="54,91,55,233" concept="8" />
+      <node id="606021356880446378" at="56,94,57,471" concept="8" />
+      <node id="606021356880464959" at="58,5,59,0" concept="10" />
+      <node id="606021356880466147" at="59,0,60,17" concept="8" />
+      <node id="606021356880395782" at="64,246,65,20" concept="8" />
+      <node id="606021356880370052" at="67,5,68,17" concept="8" />
+      <node id="606021356880326325" at="75,114,76,21" concept="3" />
+      <node id="606021356880326325" at="80,114,81,49" concept="7" />
+      <node id="606021356880326325" at="82,26,83,56" concept="14" />
+      <node id="606021356880326325" at="86,13,87,77" concept="8" />
+      <node id="606021356880326325" at="88,13,89,104" concept="8" />
+      <node id="606021356880326325" at="90,13,91,96" concept="8" />
+      <node id="606021356880326325" at="92,14,93,58" concept="14" />
+      <node id="606021356880326325" at="98,128,99,49" concept="7" />
+      <node id="606021356880326325" at="100,26,101,56" concept="14" />
+      <node id="606021356880326325" at="104,14,105,58" concept="14" />
+      <node id="606021356880326325" at="111,48,112,22" concept="8" />
+      <node id="606021356880326325" at="117,40,118,19" concept="8" />
+      <node id="606021356880395461" at="120,52,121,40" concept="8" />
+      <node id="606021356880326325" at="125,0,126,0" concept="11" trace="key$6Hoy" />
+      <node id="606021356880326325" at="126,0,127,0" concept="11" trace="operand$5qjn" />
+      <node id="606021356880326325" at="127,0,128,0" concept="11" trace="leftOperand$6Jj5" />
+      <node id="606021356880326325" at="128,0,129,0" concept="11" trace="rightOperand$6Jy6" />
+      <node id="606021356880326325" at="132,0,133,0" concept="11" trace="KeyExpression$Cm" />
+      <node id="606021356880326325" at="133,0,134,0" concept="11" trace="SimpleKeyExpression$Pr" />
+      <node id="606021356880326325" at="134,0,135,0" concept="11" trace="NotKeyExpression$3u" />
+      <node id="606021356880326325" at="135,0,136,0" concept="11" trace="BinaryKeyExpression$Qp" />
+      <node id="606021356880326325" at="139,0,140,0" concept="11" trace="key$6IO5" />
+      <node id="606021356880326325" at="35,0,37,0" concept="12" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="606021356880401045" at="42,12,44,7" concept="0" />
+      <node id="606021356880336700" at="45,10,47,5" concept="0" />
+      <node id="606021356880326325" at="71,0,73,0" concept="2" trace="Connection__BehaviorDescriptor#()V" />
+      <node id="606021356880349485" at="63,77,66,7" concept="5" />
+      <node id="606021356880326325" at="81,49,84,5" concept="5" />
+      <node id="606021356880326325" at="99,49,102,5" concept="5" />
+      <node id="606021356880395461" at="120,0,123,0" concept="12" trace="isEmptyString#(Ljava/lang/String;)Z" />
+      <node id="606021356880326325" at="74,0,78,0" concept="6" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="606021356880326325" at="102,5,106,5" concept="13" />
+      <node id="606021356880337960" at="39,123,44,7" concept="5" />
+      <node id="606021356880344866" at="62,106,67,5" concept="5" />
+      <node id="606021356880326325" at="109,0,114,0" concept="6" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="606021356880326325" at="115,0,120,0" concept="6" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="606021356880326325" at="62,0,70,0" concept="12" trace="isDefaultKeyExpression_idxD1jqn9NiI#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="606021356880332715" at="38,99,47,5" concept="5" />
+      <node id="606021356880409924" at="49,124,58,5" concept="5" />
+      <node id="606021356880326325" at="84,5,94,5" concept="13" />
+      <node id="606021356880326325" at="38,0,49,0" concept="12" trace="hasNoCapsulatedDefaultKeys_idxD1jqn9IV8#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="606021356880326325" at="97,0,108,0" concept="6" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="606021356880326325" at="49,0,62,0" concept="12" trace="containsNoDefaultKeyExpression_idxD1jqn9IWu#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="606021356880326325" at="79,0,96,0" concept="6" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="606021356880326325" at="35,63,35,63" />
+      <scope id="606021356880326325" at="71,48,71,48" />
+      <scope id="606021356880337962" at="40,169,41,20" />
+      <scope id="606021356880401046" at="42,14,43,227" />
+      <scope id="606021356880336701" at="45,12,46,18" />
+      <scope id="606021356880409926" at="50,125,51,19" />
+      <scope id="606021356880417981" at="52,94,53,18" />
+      <scope id="606021356880423669" at="54,91,55,233" />
+      <scope id="606021356880440854" at="56,94,57,471" />
+      <scope id="606021356880349487" at="64,246,65,20" />
+      <scope id="606021356880326325" at="75,114,76,21" />
+      <scope id="606021356880326325" at="82,26,83,56" />
+      <scope id="606021356880326325" at="86,13,87,77" />
+      <scope id="606021356880326325" at="88,13,89,104" />
+      <scope id="606021356880326325" at="90,13,91,96" />
+      <scope id="606021356880326325" at="92,14,93,58" />
+      <scope id="606021356880326325" at="100,26,101,56" />
+      <scope id="606021356880326325" at="104,14,105,58" />
+      <scope id="606021356880326325" at="111,48,112,22" />
+      <scope id="606021356880326325" at="117,40,118,19" />
+      <scope id="606021356880395461" at="120,52,121,40" />
+      <scope id="606021356880326325" at="35,0,37,0">
+        <var name="__thisNode__" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880326325" at="71,0,73,0" />
+      <scope id="606021356880344868" at="63,77,66,7" />
+      <scope id="606021356880395461" at="120,0,123,0">
+        <var name="str" id="606021356880395461" />
+      </scope>
+      <scope id="606021356880326325" at="74,0,78,0">
+        <var name="constructor" id="606021356880326325" />
+        <var name="node" id="606021356880326325" />
+        <var name="parameters" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880332717" at="39,123,44,7" />
+      <scope id="606021356880326325" at="109,0,114,0" />
+      <scope id="606021356880326325" at="115,0,120,0" />
+      <scope id="606021356880344241" at="62,106,68,17" />
+      <scope id="606021356880326325" at="62,0,70,0">
+        <var name="__thisNode__" id="606021356880326325" />
+        <var name="key" id="606021356880344792" />
+      </scope>
+      <scope id="606021356880326325" at="98,128,106,5">
+        <var name="methodIndex" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880326347" at="38,99,47,5" />
+      <scope id="606021356880326325" at="38,0,49,0">
+        <var name="__thisNode__" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880326433" at="49,124,60,17" />
+      <scope id="606021356880326325" at="97,0,108,0">
+        <var name="concept" id="606021356880326325" />
+        <var name="method" id="606021356880326325" />
+        <var name="parameters" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880326325" at="49,0,62,0">
+        <var name="__thisNode__" id="606021356880326325" />
+        <var name="keyExpression" id="606021356880326777" />
+      </scope>
+      <scope id="606021356880326325" at="80,114,94,5">
+        <var name="methodIndex" id="606021356880326325" />
+      </scope>
+      <scope id="606021356880326325" at="79,0,96,0">
+        <var name="method" id="606021356880326325" />
+        <var name="node" id="606021356880326325" />
+        <var name="parameters" id="606021356880326325" />
+      </scope>
+      <unit id="606021356880326325" at="138,0,141,0" name="CallScriptLanguage.behavior.Connection__BehaviorDescriptor$PROPS" />
+      <unit id="606021356880326325" at="124,0,130,0" name="CallScriptLanguage.behavior.Connection__BehaviorDescriptor$LINKS" />
+      <unit id="606021356880326325" at="131,0,137,0" name="CallScriptLanguage.behavior.Connection__BehaviorDescriptor$CONCEPTS" />
+      <unit id="606021356880326325" at="26,0,142,0" name="CallScriptLanguage.behavior.Connection__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>
