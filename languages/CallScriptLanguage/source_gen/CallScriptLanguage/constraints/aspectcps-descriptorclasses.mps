@@ -1620,7 +1620,7 @@
                     <node concept="1pGfFk" id="7$" role="2ShVmc">
                       <ref role="37wK5l" to="j809:~MessageProvider$StringMsg.&lt;init&gt;(java.lang.String)" resolve="MessageProvider.StringMsg" />
                       <node concept="Xl_RD" id="7_" role="37wK5m">
-                        <property role="Xl_RC" value="A connections key should'nt have a defualt key in it." />
+                        <property role="Xl_RC" value="A connections key should'nt have a default key in it." />
                         <uo k="s:originTrace" v="n:606021356880473617" />
                       </node>
                     </node>
