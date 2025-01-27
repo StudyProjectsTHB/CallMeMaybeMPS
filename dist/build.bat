@@ -53,3 +53,4 @@ echo JAR executed!
 
 echo JAR can be executed with the following command:
 echo java -cp .\CallMeMaybe.jar .\Test.java
+echo java -cp .\dist\CallMeMaybe.jar .\dist\Test.java

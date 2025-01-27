@@ -134,7 +134,7 @@
         <ref role="1k5W1q" node="7ePDp5VuxT9" resolve="ChatNodeCategory" />
       </node>
       <node concept="3F2HdR" id="7ePDp5VnDYa" role="3EZMnx">
-        <ref role="1NtTu8" to="q9yp:2aD1258OL0k" />
+        <ref role="1NtTu8" to="q9yp:2aD1258OL0k" resolve="variableChatNodes" />
         <ref role="1k5W1q" node="2Go$l$l2P3e" resolve="List" />
         <node concept="2iRkQZ" id="7ePDp5VnDYd" role="2czzBx" />
         <node concept="3EZMnI" id="7ePDp5VnDYh" role="2czzBI">
@@ -194,7 +194,7 @@
         </node>
         <node concept="1iCGBv" id="NBaVM6SHHJ" role="3EZMnx">
           <property role="1$x2rV" value="&lt;no variable&gt;" />
-          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" />
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
           <ref role="1k5W1q" node="2Go$l$l2P8U" resolve="VariableValue" />
           <node concept="1sVBvm" id="NBaVM6SHHL" role="1sWHZn">
             <node concept="3F0A7n" id="NBaVM6SHHR" role="2wV5jI">
@@ -275,7 +275,7 @@
         <property role="3F0ifm" value=")" />
       </node>
       <node concept="3F0ifn" id="7zjlSJan$xT" role="3EZMnx">
-        <property role="3F0ifm" value="--&gt; " />
+        <property role="3F0ifm" value="=&gt;" />
       </node>
       <node concept="3EZMnI" id="7zjlSJaqGTp" role="3EZMnx">
         <node concept="2iRfu4" id="7zjlSJaqGTq" role="2iSdaV" />
@@ -383,7 +383,7 @@
         </node>
         <node concept="1iCGBv" id="7ePDp5VpjIk" role="3EZMnx">
           <property role="1$x2rV" value="&lt;no variable&gt;" />
-          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" />
+          <ref role="1NtTu8" to="q9yp:2aD1258Nto3" resolve="variable" />
           <ref role="1k5W1q" node="2Go$l$l2P8U" resolve="VariableValue" />
           <node concept="1sVBvm" id="7ePDp5VpjIl" role="1sWHZn">
             <node concept="3F0A7n" id="7ePDp5VpjIm" role="2wV5jI">

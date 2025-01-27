@@ -126,7 +126,7 @@
         </node>
       </node>
       <node concept="21IQJ4" id="2qSbJK4gGrv" role="21IQIz">
-        <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change Contract" />
+        <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change contract" />
         <node concept="21IQJh" id="2qSbJK4gGrx" role="21IQJd" />
       </node>
     </node>
@@ -199,14 +199,7 @@
       <node concept="21IQJ4" id="6LT0uGhU4Rq" role="21IQIz">
         <ref role="2MIpBF" node="2qSbJK4gGgJ" resolve="Change contract" />
         <node concept="1Epd8$" id="6LT0uGhU4Rs" role="21IQJd">
-          <property role="TrG5h" value="1" />
-        </node>
-      </node>
-      <node concept="21IQJ4" id="xD1jqn9IIw" role="21IQIz">
-        <ref role="2MIpBF" node="2qSbJK4g7IJ" resolve="Start" />
-        <node concept="21IQJo" id="xD1jqnbxAH" role="21IQJd">
-          <node concept="21IQJh" id="xD1jqnbxAN" role="21IQJk" />
-          <node concept="21IQJh" id="xD1jqnbxAP" role="21IQJl" />
+          <property role="TrG5h" value="Ändere  Vertrag" />
         </node>
       </node>
       <node concept="21IQJ4" id="2HW__KogfAg" role="21IQIz">

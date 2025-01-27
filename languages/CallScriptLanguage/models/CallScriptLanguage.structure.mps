@@ -208,7 +208,7 @@
   <node concept="1TIwiD" id="2aD1258Nto4">
     <property role="EcuMT" value="2497532009355531780" />
     <property role="TrG5h" value="Key" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="2aD1258Nto5">
     <property role="EcuMT" value="2497532009355531781" />

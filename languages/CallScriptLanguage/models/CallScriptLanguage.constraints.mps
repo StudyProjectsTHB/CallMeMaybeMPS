@@ -240,7 +240,7 @@
                 <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
               </node>
               <node concept="2qgKlT" id="2b5RYok08KX" role="2OqNvi">
-                <ref role="37wK5l" to="apbn:2b5RYojY$Lm" resolve="hasDefaultConnection" />
+                <ref role="37wK5l" to="apbn:2b5RYojY$Lm" resolve="hasLastDefaultConnection" />
               </node>
             </node>
           </node>
@@ -263,7 +263,7 @@
                 <ref role="3QpVTF" to="prp3:6X8eyFnbL3m" resolve="childNode" />
               </node>
               <node concept="2qgKlT" id="2b5RYok6Sgp" role="2OqNvi">
-                <ref role="37wK5l" to="apbn:2b5RYok3Ap5" resolve="hasOnlyOneDefaultConnection" />
+                <ref role="37wK5l" to="apbn:2b5RYok3Ap5" resolve="hasOnlyLastAsDefaultConnection" />
               </node>
             </node>
           </node>

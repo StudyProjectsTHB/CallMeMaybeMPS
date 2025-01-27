@@ -93,118 +93,134 @@
   </root>
   <root nodeRef="r:d2c0f128-d87f-4be3-9ba4-00cddde9db86(utils.constClasses)/2613937481707824700">
     <file name="ChatBot.java">
-      <node id="2613937481708005276" at="10,0,11,0" concept="3" trace="startChatNode" />
-      <node id="2613937481708005347" at="11,0,12,0" concept="3" trace="middleChatNodes" />
-      <node id="2613937481708005518" at="12,0,13,0" concept="3" trace="endChatNodes" />
-      <node id="2497532009355912119" at="13,0,14,0" concept="3" trace="variableChatNodes" />
-      <node id="2613937481708057540" at="14,0,15,0" concept="3" trace="currentChatNode" />
-      <node id="2613937481708013793" at="16,20,17,81" concept="2" />
-      <node id="2613937481708040774" at="17,81,18,68" concept="2" />
-      <node id="2497532009355917305" at="18,68,19,81" concept="2" />
-      <node id="2613937481708254715" at="23,34,24,61" concept="8" />
-      <node id="2613937481708254396" at="25,12,26,16" concept="8" />
-      <node id="615978663795453821" at="31,26,32,92" concept="8" />
-      <node id="615978663795314687" at="33,5,34,0" concept="10" />
-      <node id="615978663795322779" at="34,0,35,61" concept="8" />
-      <node id="3036021755341523478" at="39,102,40,41" concept="7" />
-      <node id="615978663794140881" at="40,41,41,41" concept="7" />
-      <node id="2497532009356295203" at="41,41,42,0" concept="10" />
-      <node id="615978663794181863" at="43,58,44,122" concept="2" />
-      <node id="615978663794233471" at="45,14,46,118" concept="2" />
-      <node id="615978663794294677" at="46,118,47,64" concept="9" />
-      <node id="615978663794208868" at="48,7,49,0" concept="10" />
-      <node id="615978663794065667" at="49,0,50,70" concept="2" />
-      <node id="2613937481708272358" at="50,70,51,0" concept="10" />
-      <node id="2613937481708306009" at="52,39,53,45" concept="2" />
-      <node id="615978663794213688" at="54,7,55,0" concept="10" />
-      <node id="615978663793976453" at="59,58,60,29" concept="7" />
-      <node id="615978663794002359" at="61,72,62,31" concept="2" />
-      <node id="615978663793928436" at="63,69,64,96" concept="2" />
-      <node id="615978663793928453" at="65,5,66,0" concept="10" />
-      <node id="615978663793928456" at="67,79,68,93" concept="2" />
-      <node id="615978663794032938" at="69,5,70,0" concept="10" />
-      <node id="615978663794042163" at="71,84,72,98" concept="2" />
-      <node id="615978663794037551" at="73,5,74,0" concept="10" />
-      <node id="615978663793928482" at="74,0,75,0" concept="10" />
-      <node id="615978663793958322" at="75,0,76,20" concept="8" />
-      <node id="5225773355303612512" at="79,64,80,34" concept="2" />
-      <node id="5225773355303621407" at="80,34,81,36" concept="2" />
-      <node id="2293187598782414333" at="84,31,85,83" concept="8" />
-      <node id="615978663795462896" at="88,69,89,47" concept="8" />
-      <node id="2497532009356287818" at="91,71,92,47" concept="8" />
-      <node id="615978663794107920" at="94,73,95,47" concept="8" />
-      <node id="2613937481708253159" at="25,10,27,5" concept="0" />
-      <node id="615978663795274329" at="30,49,33,5" concept="5" />
-      <node id="2497532009356155107" at="45,12,48,7" concept="0" />
-      <node id="2613937481708302178" at="51,0,54,7" concept="5" />
-      <node id="615978663793928454" at="66,0,69,5" concept="5" />
-      <node id="615978663794042161" at="70,0,73,5" concept="5" />
-      <node id="2293187598782412633" at="84,0,87,0" concept="6" trace="isFinished#()Z" />
-      <node id="615978663795462896" at="88,0,91,0" concept="11" trace="as_jvk907_a0a0a0a01#(Ljava/lang/Object;Ljava/lang/Class;)null" />
-      <node id="2497532009356287818" at="91,0,94,0" concept="11" trace="as_jvk907_a0a0a0d0a0m#(Ljava/lang/Object;Ljava/lang/Class;)null" />
-      <node id="615978663794107920" at="94,0,97,0" concept="11" trace="as_jvk907_a0a0a0a3a0a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
-      <node id="5225773355301819800" at="79,0,83,0" concept="6" trace="setStartChatNode#(Lutils/constClasses/ContinuingChatNode;)V" />
-      <node id="2613937481708005572" at="16,0,21,0" concept="1" trace="ChatBot#()V" />
-      <node id="2613937481708249145" at="22,34,27,5" concept="5" />
-      <node id="615978663793928413" at="60,29,65,5" concept="5" />
-      <node id="2497532009356063390" at="42,0,48,7" concept="5" />
-      <node id="2613937481708248868" at="22,0,29,0" concept="6" trace="getCurrentText#()Ljava/lang/String;" />
-      <node id="615978663795269495" at="30,0,37,0" concept="6" trace="getCurrentActionKeys#()Ljava/util/List;" />
-      <node id="2613937481708267739" at="38,42,56,5" concept="5" />
-      <node id="615978663793920574" at="59,0,78,0" concept="6" trace="findChatNodeByName#(Ljava/lang/String;)Lutils/constClasses/ChatNode;" />
-      <node id="2613937481708261313" at="38,0,58,0" concept="6" trace="continueChat#(Ljava/lang/String;)V" />
-      <scope id="2613937481708249147" at="23,34,24,61" />
-      <scope id="2613937481708253160" at="25,12,26,16" />
-      <scope id="615978663795274331" at="31,26,32,92" />
-      <scope id="2497532009356063392" at="43,58,44,122" />
-      <scope id="2613937481708302180" at="52,39,53,45" />
-      <scope id="615978663793928414" at="61,72,62,31" />
-      <scope id="615978663793928435" at="63,69,64,96" />
-      <scope id="615978663793928455" at="67,79,68,93" />
-      <scope id="615978663794042162" at="71,84,72,98" />
-      <scope id="2293187598782412636" at="84,31,85,83" />
-      <scope id="615978663795462896" at="88,69,89,47" />
-      <scope id="2497532009356287818" at="91,71,92,47" />
-      <scope id="615978663794107920" at="94,73,95,47" />
-      <scope id="2497532009356155108" at="45,14,47,64" />
-      <scope id="5225773355301819803" at="79,64,81,36" />
-      <scope id="2613937481708005576" at="16,20,19,81" />
-      <scope id="2293187598782412633" at="84,0,87,0" />
-      <scope id="615978663795462896" at="88,0,91,0">
+      <node id="2613937481708005276" at="13,0,14,0" concept="3" trace="startChatNode" />
+      <node id="2613937481708005347" at="14,0,15,0" concept="3" trace="middleChatNodes" />
+      <node id="2613937481708005518" at="15,0,16,0" concept="3" trace="endChatNodes" />
+      <node id="2497532009355912119" at="16,0,17,0" concept="3" trace="variableChatNodes" />
+      <node id="2613937481708057540" at="17,0,18,0" concept="3" trace="currentChatNode" />
+      <node id="2613937481708013793" at="19,20,20,81" concept="2" />
+      <node id="2613937481708040774" at="20,81,21,68" concept="2" />
+      <node id="2497532009355917305" at="21,68,22,81" concept="2" />
+      <node id="2613937481708254715" at="26,34,27,61" concept="8" />
+      <node id="2613937481708254396" at="28,12,29,16" concept="8" />
+      <node id="615978663795453821" at="34,26,35,92" concept="8" />
+      <node id="615978663795314687" at="36,5,37,0" concept="10" />
+      <node id="615978663795322779" at="37,0,38,61" concept="8" />
+      <node id="3036021755341523478" at="42,102,43,41" concept="7" />
+      <node id="615978663794140881" at="43,41,44,41" concept="7" />
+      <node id="2497532009356295203" at="44,41,45,0" concept="10" />
+      <node id="615978663794181863" at="46,58,47,122" concept="2" />
+      <node id="615978663794233471" at="48,14,49,118" concept="2" />
+      <node id="615978663794294677" at="49,118,50,64" concept="9" />
+      <node id="615978663794208868" at="51,7,52,0" concept="10" />
+      <node id="615978663794065667" at="52,0,53,70" concept="2" />
+      <node id="2613937481708272358" at="53,70,54,0" concept="10" />
+      <node id="2613937481708306009" at="55,39,56,45" concept="2" />
+      <node id="615978663794213688" at="57,7,58,0" concept="10" />
+      <node id="615978663793976453" at="62,58,63,29" concept="7" />
+      <node id="615978663794002359" at="64,72,65,31" concept="2" />
+      <node id="615978663793928436" at="66,69,67,96" concept="2" />
+      <node id="615978663793928453" at="68,5,69,0" concept="10" />
+      <node id="615978663793928456" at="70,79,71,93" concept="2" />
+      <node id="615978663794032938" at="72,5,73,0" concept="10" />
+      <node id="615978663794042163" at="74,84,75,98" concept="2" />
+      <node id="615978663794037551" at="76,5,77,0" concept="10" />
+      <node id="615978663793928482" at="77,0,78,0" concept="10" />
+      <node id="615978663793958322" at="78,0,79,20" concept="8" />
+      <node id="5225773355303612512" at="82,64,83,34" concept="2" />
+      <node id="5225773355303621407" at="83,34,84,36" concept="2" />
+      <node id="2293187598782414333" at="87,31,88,83" concept="8" />
+      <node id="2786750473905479586" at="91,52,92,80" concept="7" />
+      <node id="2786750473905752052" at="92,80,93,0" concept="10" />
+      <node id="2786750473905863865" at="95,92,96,118" concept="2" />
+      <node id="2786750473905919812" at="98,5,99,28" concept="8" />
+      <node id="615978663795462896" at="102,69,103,47" concept="8" />
+      <node id="2497532009356287818" at="105,71,106,47" concept="8" />
+      <node id="615978663794107920" at="108,73,109,47" concept="8" />
+      <node id="2613937481708253159" at="28,10,30,5" concept="0" />
+      <node id="615978663795274329" at="33,49,36,5" concept="5" />
+      <node id="2497532009356155107" at="48,12,51,7" concept="0" />
+      <node id="2613937481708302178" at="54,0,57,7" concept="5" />
+      <node id="615978663793928454" at="69,0,72,5" concept="5" />
+      <node id="615978663794042161" at="73,0,76,5" concept="5" />
+      <node id="2293187598782412633" at="87,0,90,0" concept="6" trace="isFinished#()Z" />
+      <node id="2786750473905640723" at="94,88,97,7" concept="5" />
+      <node id="615978663795462896" at="102,0,105,0" concept="11" trace="as_jvk907_a0a0a0a01#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="2497532009356287818" at="105,0,108,0" concept="11" trace="as_jvk907_a0a0a0d0a0m#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="615978663794107920" at="108,0,111,0" concept="11" trace="as_jvk907_a0a0a0a3a0a21#(Ljava/lang/Object;Ljava/lang/Class;)null" />
+      <node id="5225773355301819800" at="82,0,86,0" concept="6" trace="setStartChatNode#(Lutils/constClasses/ContinuingChatNode;)V" />
+      <node id="2613937481708005572" at="19,0,24,0" concept="1" trace="ChatBot#()V" />
+      <node id="2613937481708249145" at="25,34,30,5" concept="5" />
+      <node id="615978663793928413" at="63,29,68,5" concept="5" />
+      <node id="2786750473905597862" at="93,0,98,5" concept="4" />
+      <node id="2497532009356063390" at="45,0,51,7" concept="5" />
+      <node id="2613937481708248868" at="25,0,32,0" concept="6" trace="getCurrentText#()Ljava/lang/String;" />
+      <node id="615978663795269495" at="33,0,40,0" concept="6" trace="getCurrentActionKeys#()Ljava/util/List;" />
+      <node id="2786750473905463071" at="91,0,101,0" concept="6" trace="getVariableMappings#()Ljava/util/Map;" />
+      <node id="2613937481708267739" at="41,42,59,5" concept="5" />
+      <node id="615978663793920574" at="62,0,81,0" concept="6" trace="findChatNodeByName#(Ljava/lang/String;)Lutils/constClasses/ChatNode;" />
+      <node id="2613937481708261313" at="41,0,61,0" concept="6" trace="continueChat#(Ljava/lang/String;)V" />
+      <scope id="2613937481708249147" at="26,34,27,61" />
+      <scope id="2613937481708253160" at="28,12,29,16" />
+      <scope id="615978663795274331" at="34,26,35,92" />
+      <scope id="2497532009356063392" at="46,58,47,122" />
+      <scope id="2613937481708302180" at="55,39,56,45" />
+      <scope id="615978663793928414" at="64,72,65,31" />
+      <scope id="615978663793928435" at="66,69,67,96" />
+      <scope id="615978663793928455" at="70,79,71,93" />
+      <scope id="615978663794042162" at="74,84,75,98" />
+      <scope id="2293187598782412636" at="87,31,88,83" />
+      <scope id="2786750473905640725" at="95,92,96,118" />
+      <scope id="615978663795462896" at="102,69,103,47" />
+      <scope id="2497532009356287818" at="105,71,106,47" />
+      <scope id="615978663794107920" at="108,73,109,47" />
+      <scope id="2497532009356155108" at="48,14,50,64" />
+      <scope id="5225773355301819803" at="82,64,84,36" />
+      <scope id="2613937481708005576" at="19,20,22,81" />
+      <scope id="2293187598782412633" at="87,0,90,0" />
+      <scope id="2786750473905597868" at="94,88,97,7" />
+      <scope id="615978663795462896" at="102,0,105,0">
         <var name="o" id="615978663795462896" />
         <var name="type" id="615978663795462896" />
       </scope>
-      <scope id="2497532009356287818" at="91,0,94,0">
+      <scope id="2497532009356287818" at="105,0,108,0">
         <var name="o" id="2497532009356287818" />
         <var name="type" id="2497532009356287818" />
       </scope>
-      <scope id="615978663794107920" at="94,0,97,0">
+      <scope id="615978663794107920" at="108,0,111,0">
         <var name="o" id="615978663794107920" />
         <var name="type" id="615978663794107920" />
       </scope>
-      <scope id="5225773355301819800" at="79,0,83,0">
+      <scope id="5225773355301819800" at="82,0,86,0">
         <var name="chatNode" id="5225773355301820708" />
       </scope>
-      <scope id="2613937481708005572" at="16,0,21,0" />
-      <scope id="2613937481708248871" at="22,34,27,5" />
-      <scope id="615978663795269498" at="30,49,35,61" />
-      <scope id="2613937481708248868" at="22,0,29,0" />
-      <scope id="615978663795269495" at="30,0,37,0" />
-      <scope id="2613937481708267741" at="39,102,55,0">
+      <scope id="2613937481708005572" at="19,0,24,0" />
+      <scope id="2613937481708248871" at="25,34,30,5" />
+      <scope id="615978663795269498" at="33,49,38,61" />
+      <scope id="2786750473905597862" at="93,0,98,5">
+        <var name="variableChatNode" id="2786750473905597864" />
+      </scope>
+      <scope id="2613937481708248868" at="25,0,32,0" />
+      <scope id="615978663795269495" at="33,0,40,0" />
+      <scope id="2786750473905463074" at="91,52,99,28">
+        <var name="variableMappings" id="2786750473905479589" />
+      </scope>
+      <scope id="2786750473905463071" at="91,0,101,0" />
+      <scope id="2613937481708267741" at="42,102,58,0">
         <var name="newCurrentChatNode" id="3036021755341523479" />
         <var name="newCurrentChatNodeName" id="615978663794140884" />
       </scope>
-      <scope id="615978663793920577" at="59,58,76,20">
+      <scope id="615978663793920577" at="62,58,79,20">
         <var name="chatNode" id="615978663793976454" />
       </scope>
-      <scope id="2613937481708261316" at="38,42,56,5" />
-      <scope id="615978663793920574" at="59,0,78,0">
+      <scope id="2613937481708261316" at="41,42,59,5" />
+      <scope id="615978663793920574" at="62,0,81,0">
         <var name="name" id="615978663793924802" />
       </scope>
-      <scope id="2613937481708261313" at="38,0,58,0">
+      <scope id="2613937481708261313" at="41,0,61,0">
         <var name="input" id="2613937481708262602" />
       </scope>
-      <unit id="2613937481707824700" at="9,0,98,0" name="utils.constClasses.ChatBot" />
+      <unit id="2613937481707824700" at="12,0,112,0" name="utils.constClasses.ChatBot" />
     </file>
   </root>
   <root nodeRef="r:d2c0f128-d87f-4be3-9ba4-00cddde9db86(utils.constClasses)/2613937481707836316">

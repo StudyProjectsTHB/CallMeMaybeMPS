@@ -2,7 +2,9 @@
 <dependenciesRoot>
   <uses language="l:0013a7dc-e9ad-43ef-a033-8212155a1b91:CallScriptLanguage" />
   <uses language="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
+  <uses language="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" />
   <uses language="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" />
+  <uses language="l:df345b11-b8c7-4213-ac66-48d2a9b75d88:jetbrains.mps.baseLanguageInternal" />
   <uses language="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
   <uses language="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
   <uses language="l:698a8d22-a104-47a0-ba8d-10e3ec237f13:jetbrains.mps.build.workflow" />

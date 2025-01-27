@@ -5,6 +5,7 @@ package CallScriptSolution.serviceCall;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import jetbrains.mps.internal.collections.runtime.MapSequence;
 
 public class Main {
   public static void main(String[] args) throws IOException {
@@ -19,6 +20,6 @@ public class Main {
     }
     String text = chatBot.getCurrentText();
     System.out.println(text);
-
+    MapSequence.fromMap(chatBot.getVariableMappings()).visitAll((it) -> System.out.println(it.key() + " : " + it.value()));
   }
 }

@@ -130,7 +130,7 @@
       <property role="TrG5h" value="mps_home" />
     </node>
     <node concept="2sgV4H" id="6oT$cGZP_eQ" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="6oT$cGZP_eR" role="2JcizS">
         <ref role="398BVh" node="6oT$cGZP_eP" resolve="mps_home" />
       </node>
@@ -164,10 +164,10 @@
         <ref role="m$f5T" node="6oT$cGZP_f4" resolve="CallMeMaybeMPS" />
       </node>
       <node concept="m$_yC" id="6oT$cGZP_fb" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="m$_yC" id="6oT$cGZP_h1" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" />
+        <ref role="m$_y1" to="ffeo:5HVSRHdVm9a" resolve="jetbrains.mps.build" />
       </node>
       <node concept="3_J27D" id="6oT$cGZP_fc" role="m_cZH">
         <node concept="3Mxwew" id="6oT$cGZP_fd" role="3MwsjC">

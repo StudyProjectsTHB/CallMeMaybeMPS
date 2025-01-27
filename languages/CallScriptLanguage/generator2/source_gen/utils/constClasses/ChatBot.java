@@ -5,6 +5,9 @@ package utils.constClasses;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
+import java.util.Map;
+import jetbrains.mps.internal.collections.runtime.MapSequence;
+import java.util.HashMap;
 
 public abstract class ChatBot {
   protected ContinuingChatNode startChatNode;
@@ -83,6 +86,17 @@ public abstract class ChatBot {
 
   public boolean isFinished() {
     return ListSequence.fromList(this.endChatNodes).contains(this.currentChatNode);
+  }
+
+  public Map<String, String> getVariableMappings() {
+    Map<String, String> variableMappings = MapSequence.fromMap(new HashMap<>());
+
+    for (VariableChatNode variableChatNode : ListSequence.fromList(variableChatNodes)) {
+      if (variableChatNode.getValue() != null && !(variableChatNode.getValue().isEmpty())) {
+        MapSequence.fromMap(variableMappings).put(variableChatNode.getOwnVariableName(), variableChatNode.getValue());
+      }
+    }
+    return variableMappings;
   }
 
   private static <T> T as_jvk907_a0a0a0a01(Object o, Class<T> type) {
